@@ -1,0 +1,1042 @@
+// Define a TABLE
+#VAR(Table, TABLE)
+#VAR(engTable, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/bomberman.tbl", Table)
+#ADDTBL("melissa font/melissa8x8.tbl", engTable)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($55B000)
+
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #004 NAME:		Block 5 (POINTER)
+
+//POINTER #0 @ $1C7664 - STRING #0 @ $1C54B4
+
+#WRITE(GBA,$1C7664)
+マイティ ワシじゃ アインじゃ<LINE>
+その セカセカせいの<NEWBOX>
+クロノはかせの けんきゅうじょが<LINE>
+ヒゲヒゲだんに おそわれた!<NEWBOX>
+おそらく クロノはかせの はつめい<LINE>
+タイムドライバ-が ヤツらの ねらいじゃ<NEWBOX>
+タイムドライバ-は タイムマシンの<LINE>
+エンジンの しさくひんじゃ!<NEWBOX>
+まだ かんせいしていない とはいえ<LINE>
+あくようされれば たいへんなことになる<NEWBOX>
+いそいで クロノはかせを たすけだすのじゃ<LINE>
+たのんだぞ マイティ!<END>
+
+//POINTER #1 @ $1C7668 - STRING #1 @ $1C557F
+
+#WRITE(GBA,$1C7668)
+お ちゅうしゃじょうを ごりようかい?<LINE>
+いま とびらを あけるから まっててな<END>
+
+//POINTER #2 @ $1C766C - STRING #2 @ $1C55A7
+
+#WRITE(GBA,$1C766C)
+ホイ これで OK<LINE>
+きをつけて いってきな<END>
+
+//POINTER #3 @ $1C7670 - STRING #3 @ $1C55BD
+
+#WRITE(GBA,$1C7670)
+この ちゅうしゃじょうは<LINE>
+りょうきん むりょうだよ<END>
+
+//POINTER #4 @ $1C7674 - STRING #4 @ $1C55D7
+
+#WRITE(GBA,$1C7674)
+<CONTROL_CODE><$01><$02>ネ55カ-ドキ-ヲ イレテ クダサイ<END>
+
+//POINTER #5 @ $1C7678 - STRING #5 @ $1C55ED
+
+#WRITE(GBA,$1C7678)
+カ-ドキ- カクニン<LINE>
+シャッタ-ヲ ヒラキマス<END>
+
+//POINTER #6 @ $1C767C - STRING #6 @ $1C5605
+
+#WRITE(GBA,$1C767C)
+ラバシティニ ヨウコソ<END>
+
+//POINTER #7 @ $1C7680 - STRING #7 @ $1C5611
+
+#WRITE(GBA,$1C7680)
+ありがとうございます<LINE>
+もう だめかと おもいました<NEWBOX>
+ヤツらが とつぜん やってきて<LINE>
+ほとんどのひとが とらわれてしまいました<NEWBOX>
+のこりのひとは あと 2つのビルに<LINE>
+わかれて とらわれています<NEWBOX>
+どうか ほかのひとたちも<LINE>
+たすけだしてください<NEWBOX>
+カルデラこへつづく ちかつうろの<LINE>
+シャッタ-を あけられるひとも<NEWBOX>
+ラバシティの どこかのビルに<LINE>
+とらわれている はずです<END>
+
+//POINTER #8 @ $1C7684 - STRING #8 @ $1C56C5
+
+#WRITE(GBA,$1C7684)
+みんな たすかったぞ!<LINE>
+ジェッタ-ズが きてくれたんだ!<NEWBOX>
+ありがとう!<LINE>
+もう たすからないかと おもったよ<NEWBOX>
+え? カルデラこへの シャッタ-を<LINE>
+あけられるひとは いないかって?<NEWBOX>
+う-ん ざんねんだけど このなかには<LINE>
+いないみたいだ‥‥<NEWBOX>
+あと ひとつのビルに のこりの<LINE>
+ひとたちが とらわれて いるらしい<NEWBOX>
+きっと そのなかに シャッタ-を<LINE>
+あけられるひとが いるはずだ<END>
+
+//POINTER #9 @ $1C7688 - STRING #9 @ $1C577D
+
+#WRITE(GBA,$1C7688)
+ほんとうに ありがとうございます<LINE>
+もう だめかと おもいました<NEWBOX>
+これで とらわれていた ひとは<LINE>
+ぜんいん かいほうされました‥‥<NEWBOX>
+ただひとり アイドルの<LINE>
+アカネさんを のぞいて‥‥<NEWBOX>
+アカネさんは ひがしにある<LINE>
+テレビきょくに とらわれています<NEWBOX>
+まちの ひがしがわ いちばん<LINE>
+おおきいビルが テレビきょくです<NEWBOX>
+カルデラこへつづく ちかつうろの<LINE>
+いりぐちを あけておきます<NEWBOX>
+アクアボムの ちからで<LINE>
+まちなかの ほのおをけして<NEWBOX>
+ラバシティ ひがしがわへ<LINE>
+いそいでください<END>
+
+//POINTER #10 @ $1C768C - STRING #10 @ $1C5866
+
+#WRITE(GBA,$1C768C)
+たすけに きてくれたの?<LINE>
+ありがとう!<NEWBOX>
+いちにちしちょうの イベントちゅうに<LINE>
+じけんに まきこまれるなんて<NEWBOX>
+まったくツイてないわ‥‥<NEWBOX>
+オマケに ほんものの しちょうは<LINE>
+ひとりで にげだしちゃうし‥‥<NEWBOX>
+あ コレ たすけてくれた おれいに<LINE>
+アタシの サインを あげるわ<NEWBOX>
+なんの やくにも<LINE>
+たたないかも しれないけど<NEWBOX>
+おれいのきもちよ うけとって<NEWBOX>
+ボンバ-マンは アカネのサインを<LINE>
+<CONTROL_CODE><$12><$0C>てにいれた!<END>
+
+//POINTER #11 @ $1C7690 - STRING #11 @ $1C592C
+
+#WRITE(GBA,$1C7690)
+よし これで このまちの ひとたちは<LINE>
+ぜんいん たすけだしたな<NEWBOX>
+ボンバ-マン いっしょに<LINE>
+クロノけんきゅうじょに いって<NEWBOX>
+クロノはかせを たすけだして<LINE>
+くれないか?<NEWBOX>
+オレは あそこで じょしゅとして<LINE>
+はたらいて いたんだが<NEWBOX>
+クロノはかせと オレのともだち<LINE>
+プチラってやつが<NEWBOX>
+ヒゲヒゲだんに つかまってる<LINE>
+はずなんだ<NEWBOX>
+ヤツらに タイムドライバ-を<LINE>
+うばわれるまえに なんとかしないと‥‥<END>
+
+//POINTER #12 @ $1C7694 - STRING #12 @ $1C59ED
+
+#WRITE(GBA,$1C7694)
+それなら かざんちたいへの<LINE>
+ちかつうろを あけるわ<NEWBOX>
+いちにちしちょうで つうろの<LINE>
+スイッチを あずかっていたのよ<END>
+
+//POINTER #13 @ $1C7698 - STRING #13 @ $1C5A26
+
+#WRITE(GBA,$1C7698)
+クロノけんきゅうじょは かざんちたいの<LINE>
+いちばんおく ほくせいに ある<NEWBOX>
+さぁ いそいで<LINE>
+はかせを たすけに いこう!<END>
+
+//POINTER #14 @ $1C769C - STRING #14 @ $1C5A61
+
+#WRITE(GBA,$1C769C)
+<CONTROL_CODE><$16><$06>ヤおや ケガをしとるじゃないか<LINE>
+ちょっと ワシにみせてみなさい ‥‥ソレ!<NEWBOX>
+<CONTROL_CODE><$11><$E0>くよよし これで だいじょうぶじゃ<LINE>
+ラクに なったじゃろ? しゃっしゃっしゃっ<END>
+
+//POINTER #15 @ $1C76A0 - STRING #15 @ $1C5AB5
+
+#WRITE(GBA,$1C76A0)
+<CONTROL_CODE><$01><$02>お5かクロノはかせの けんきゅうじょの<LINE>
+とびらをあける きかいは<NEWBOX>
+けんきゅうじょの となりの<LINE>
+はつでんしょの おくにあるんだよ<NEWBOX>
+けれど そこも ヒゲヒゲだんに<LINE>
+おさえられて しまって‥‥<END>
+
+//POINTER #16 @ $1C76A4 - STRING #16 @ $1C5B16
+
+#WRITE(GBA,$1C76A4)
+あんたが ヒゲヒゲだんを<LINE>
+やっつけて くれたのかい<NEWBOX>
+さいきんの わかいもんは<LINE>
+どきょうが あるねぇ‥‥<END>
+
+//POINTER #17 @ $1C76A8 - STRING #17 @ $1C5B4A
+
+#WRITE(GBA,$1C76A8)
+ちょっとまえに このほしに<LINE>
+ヒゲヒゲだんが やってきたんだ!<NEWBOX>
+ヤツらは ずっときたにある<LINE>
+クロノはかせの けんきゅうじょと<NEWBOX>
+ひがしにある ラバシティを<LINE>
+せんりょうしちゃったんだよ!<END>
+
+//POINTER #18 @ $1C76AC - STRING #18 @ $1C5BA5
+
+#WRITE(GBA,$1C76AC)
+きたの かざんちたいにすむ<LINE>
+クロノはかせが すこしまえに<NEWBOX>
+タイムドライバ- とかいうものの<LINE>
+かいはつに せいこうしたんだ<NEWBOX>
+ヒゲヒゲだんは それをねらって<LINE>
+やってきたんだろうか‥‥<END>
+
+//POINTER #19 @ $1C76B0 - STRING #19 @ $1C5BFF
+
+#WRITE(GBA,$1C76B0)
+<CONTROL_CODE><$01><$02>ム5こあのとき ひがしの ラバシティでは<LINE>
+ちょうど アイドルの アカネちゃんが<NEWBOX>
+いちにち しちょうの<LINE>
+イベントを してたんだ‥‥<NEWBOX>
+アカネちゃんは ラバシティの<LINE>
+テレビきょくに とらわれて いるらしいよ<END>
+
+//POINTER #20 @ $1C76B4 - STRING #20 @ $1C5C67
+
+#WRITE(GBA,$1C76B4)
+だれかが ヒゲヒゲだんを やっつけて<LINE>
+ラバシティを かいほうしたらしいよ<END>
+
+//POINTER #21 @ $1C76B8 - STRING #21 @ $1C5C8C
+
+#WRITE(GBA,$1C76B8)
+このうえのかいに ラバシティから<LINE>
+にげてきた しちょうが いるわ<NEWBOX>
+まったく じぶんのまちの しみんが<LINE>
+たいへんなめに あっているのに<NEWBOX>
+ひとりで にげだしてくるなんて<LINE>
+どういう しんけいかしら‥‥<END>
+
+//POINTER #22 @ $1C76BC - STRING #22 @ $1C5CEE
+
+#WRITE(GBA,$1C76BC)
+<CONTROL_CODE><$01><$02>ぽ5すいかにも わたしが ラバしちょうです<LINE>
+じぶんのまちの しみんを みすてて<NEWBOX>
+ひとりで にげだした<LINE>
+ひどい おとこだと おもわれるでしょう<NEWBOX>
+しかし だれかが たすけを<LINE>
+よばねば ならなかったのです<NEWBOX>
+いま ひがしの ラバシティは<LINE>
+ヒゲヒゲだんに せんりょうされて<NEWBOX>
+おおくの しみんが<LINE>
+ビルのなかに とらわれています<NEWBOX>
+おねがいです! ボンバ-マンさん<LINE>
+とらわれた しみんを たすけだしてください<NEWBOX>
+ラバシティに はいるには<LINE>
+この カ-ドキ-が ひつようです<NEWBOX>
+ボンバ-マンは カ-ドキ-を<LINE>
+<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$02>ぽ<CONTROL_CODE><$03><$01>みてにいれた!<NEWBOX>
+ラバシティは このまちからでて<LINE>
+みちぞいに ひがしにすすめば あります<NEWBOX>
+ヒゲヒゲだんは ほとんどのビルに<LINE>
+はいりこんでいます きをつけてください<END>
+
+//POINTER #23 @ $1C76C0 - STRING #23 @ $1C5E3E
+
+#WRITE(GBA,$1C76C0)
+<CONTROL_CODE><$01><$02>ム5せまだ ラバシティの しみんを<LINE>
+たすけだせないのですか?<END>
+
+//POINTER #24 @ $1C76C4 - STRING #24 @ $1C5E60
+
+#WRITE(GBA,$1C76C4)
+おぉ すべての しみんを<LINE>
+たすけだして くれましたか!<NEWBOX>
+ありがとうございます!<END>
+
+//POINTER #25 @ $1C76C8 - STRING #25 @ $1C5E88
+
+#WRITE(GBA,$1C76C8)
+きたの かざんのほうに すんでいる<LINE>
+クロノはかせは<NEWBOX>
+タイムマシンの けんきゅうを<LINE>
+しているんだ<NEWBOX>
+さいきん タイムマシンの<LINE>
+エンジンになるものを はつめいして<NEWBOX>
+けっこう ニュ-スになったんだよ<END>
+
+//POINTER #26 @ $1C76CC - STRING #26 @ $1C5EE8
+
+#WRITE(GBA,$1C76CC)
+<CONTROL_CODE><$01><$02>ム5ちエル オ- ブイ イ-!<LINE>
+アイ ラブ アカネ!<NEWBOX>
+ボクの だいすきな アカネちゃんが<LINE>
+ヒゲヒゲだんに つかまっちゃったよ!<NEWBOX>
+あぁ~ しんぱいだぁ~ しんぱいだぁ~<LINE>
+オロオロオロオロ‥‥‥‥<END>
+
+//POINTER #27 @ $1C76D0 - STRING #27 @ $1C5F4C
+
+#WRITE(GBA,$1C76D0)
+エル オ- ブイ イ-!<LINE>
+アイ ラブ アカ‥‥<NEWBOX>
+あっ! そ それは<LINE>
+アカネちゃんの サイン!<NEWBOX>
+いいな- いいな-<LINE>
+うらやましいなぁ-<END>
+
+//POINTER #28 @ $1C76D4 - STRING #28 @ $1C5F8F
+
+#WRITE(GBA,$1C76D4)
+いらっしゃいませ しょうひんを<LINE>
+てにとって ごらんください<END>
+
+//POINTER #29 @ $1C76D8 - STRING #29 @ $1C5FAD
+
+#WRITE(GBA,$1C76D8)
+ここ セカセカせいは かざんのほし<LINE>
+まちのそとは きけんな かざんちたいなんだ<END>
+
+//POINTER #30 @ $1C76DC - STRING #30 @ $1C5FD5
+
+#WRITE(GBA,$1C76DC)
+<CONTROL_CODE><$01><$02>ム5なあ! ジェッタ-ズの おにいちゃんだ!<LINE>
+ここは ボルケシティよ<NEWBOX>
+ここから ひがしにいくと もっとおおきな<LINE>
+ラバシティが あるのよ<NEWBOX>
+‥‥でも ラバシティは いま<LINE>
+たいへんなことに なっているの‥‥<END>
+
+//POINTER #31 @ $1C76E0 - STRING #31 @ $1C603D
+
+#WRITE(GBA,$1C76E0)
+あ! ジェッタ-ズの おにいちゃんだ!<LINE>
+ここは ボルケシティよ<NEWBOX>
+ここから ひがしにいくと もっとおおきな<LINE>
+ラバシティが あるのよ<END>
+
+//POINTER #32 @ $1C76E4 - STRING #32 @ $1C607E
+
+#WRITE(GBA,$1C76E4)
+<CONTROL_CODE><$01><$02>ム5ぬきたの かざんちたいに クロノはかせの<LINE>
+けんきゅうじょが あるんだ<NEWBOX>
+なんでも タイムマシンけんきゅうの けんいで<LINE>
+さいきん あたらしい はつめいをしたとか‥‥<NEWBOX>
+やっぱり ヒゲヒゲだんは<LINE>
+タイムマシンを ねらってきたんだろうか‥‥<END>
+
+//POINTER #33 @ $1C76E8 - STRING #33 @ $1C60F7
+
+#WRITE(GBA,$1C76E8)
+ヒゲヒゲだんは でていったけど まだ<LINE>
+ラバシティには モンスタ-が いるらしいよ<END>
+
+//POINTER #34 @ $1C76EC - STRING #34 @ $1C6120
+
+#WRITE(GBA,$1C76EC)
+ついさいきん ひがしの ラバシティが<LINE>
+ヒゲヒゲだんに せんりょうされてしまったの<NEWBOX>
+かざんちたいにある クロノはかせの<LINE>
+けんきゅうじょも おそわれたそうよ<NEWBOX>
+このボルケシティも おそわれないか<LINE>
+しんぱいだわ‥‥‥‥<END>
+
+//POINTER #35 @ $1C76F0 - STRING #35 @ $1C618A
+
+#WRITE(GBA,$1C76F0)
+<CONTROL_CODE><$01><$02>ム5はラバシティでは おおくの ひとびとが<LINE>
+ビルのなかに とらわれているらしい‥‥<END>
+
+//POINTER #36 @ $1C76F4 - STRING #36 @ $1C61B7
+
+#WRITE(GBA,$1C76F4)
+しかし なぜ ラバシティが<LINE>
+ヒゲヒゲだんに おそわれたんじゃろうか‥‥<END>
+
+//POINTER #37 @ $1C76F8 - STRING #37 @ $1C61DB
+
+#WRITE(GBA,$1C76F8)
+ラバシティの まちなかは モンスタ-が<LINE>
+うろついていて きけんらしいよ<END>
+
+//POINTER #38 @ $1C76FC - STRING #38 @ $1C61FF
+
+#WRITE(GBA,$1C76FC)
+クロノはかせの かいはつした<LINE>
+タイムドライバ-ってのは タイムマシンの<NEWBOX>
+エンジンぶぶんに なるものらしいよ<END>
+
+//POINTER #39 @ $1C7700 - STRING #39 @ $1C6235
+
+#WRITE(GBA,$1C7700)
+ごうせいやで いろいろ ごうせいしていると<LINE>
+たまに ゲ-ムソフトが できるよね<NEWBOX>
+アルバムは けっこう うまった?<LINE>
+なかには レアなソフトも あるらしいよ<END>
+
+//POINTER #40 @ $1C7704 - STRING #40 @ $1C6282
+
+#WRITE(GBA,$1C7704)
+ここ ラバシティは ひがしエリアと<LINE>
+にしエリアに わかれているんだ<NEWBOX>
+このたてものの みぎにある<LINE>
+れんらくビルを ぬけると ひがしエリアだよ<NEWBOX>
+ただ れんらくビルの いりぐちは<LINE>
+ほのおで ふさがれてしまって はいれないんだ<END>
+
+//POINTER #41 @ $1C7708 - STRING #41 @ $1C62F0
+
+#WRITE(GBA,$1C7708)
+このビルの ちかくの つうろを ぬけると<LINE>
+カルデラこに でるわ<NEWBOX>
+カルデラこの ちかには<LINE>
+ふしぎな みずの しずくが あるそうよ<NEWBOX>
+そのしずくで つくったボムなら<LINE>
+まちなかの ほのおを けせるかも‥‥<END>
+
+//POINTER #42 @ $1C770C - STRING #42 @ $1C6353
+
+#WRITE(GBA,$1C770C)
+いらっしゃいませ しょうひんを<LINE>
+てにとって ごらんください<END>
+
+//POINTER #43 @ $1C7710 - STRING #43 @ $1C6371
+
+#WRITE(GBA,$1C7710)
+このビルは ヒゲヒゲだんが みおとしたのか<LINE>
+おそわれなかったんだ<NEWBOX>
+もしかしたら ほかにも ヤツらのめをのがれた<LINE>
+たてものが あるかもしれないよ<NEWBOX>
+いまごろ みんな どうしてるのかなぁ‥‥<END>
+
+//POINTER #44 @ $1C7714 - STRING #44 @ $1C63CE
+
+#WRITE(GBA,$1C7714)
+<CONTROL_CODE><$01><$02>ム5もまちの ひがしエリアの<LINE>
+いちばん おおきなビルが テレビきょくだよ<NEWBOX>
+テレビきょくに とらわれている<LINE>
+キャラボンの とくしゅのうりょくは<NEWBOX>
+おいた ボムを はやく<LINE>
+ばくはつさせることが できるらしい<END>
+
+//POINTER #45 @ $1C7718 - STRING #45 @ $1C6436
+
+#WRITE(GBA,$1C7718)
+まちの ひがしエリアの<LINE>
+いちばん おおきなビルが テレビきょくだよ<END>
+
+//POINTER #46 @ $1C771C - STRING #46 @ $1C6458
+
+#WRITE(GBA,$1C771C)
+クロノけんきゅうじょが おそわれたとき<LINE>
+キャラボンが ラバシティに にげてきたの<NEWBOX>
+でも そのキャラボンも このまちで<LINE>
+ヒゲヒゲだんに つかまって しまったそうよ<END>
+
+//POINTER #47 @ $1C7720 - STRING #47 @ $1C64A9
+
+#WRITE(GBA,$1C7720)
+てきにも ぞくせいを もつものが いるぞ<LINE>
+ボムと てきの ぞくせいの<NEWBOX>
+くみあわせによっては あたえる ダメ-ジが<LINE>
+ふえたり へったり するそうじゃ<NEWBOX>
+ダメ-ジを あたえられないときは<LINE>
+べつの ボムを ためしてみることじゃ<END>
+
+//POINTER #48 @ $1C7724 - STRING #48 @ $1C6517
+
+#WRITE(GBA,$1C7724)
+<CONTROL_CODE><$01><$02>ム5らヒゲヒゲだんに とらわれた ひとたちは<LINE>
+3つのビルに とじこめられて いるらしい<END>
+
+//POINTER #49 @ $1C7728 - STRING #49 @ $1C6546
+
+#WRITE(GBA,$1C7728)
+ヒゲヒゲだんに とらわれていた ひとたちは<LINE>
+ぜんいん ぶじに かえってこられた らしいよ<END>
+
+//POINTER #50 @ $1C772C - STRING #50 @ $1C6573
+
+#WRITE(GBA,$1C772C)
+ここは ラバシティの にしエリアじゃ<NEWBOX>
+きたにある ちかつうろを とおって<LINE>
+カルデラこに ぬけられるんじゃ<NEWBOX>
+しかし その つうろの かんりにんも<LINE>
+ヤツらに つかまってしまってな‥‥<END>
+
+//POINTER #51 @ $1C7730 - STRING #51 @ $1C65CD
+
+#WRITE(GBA,$1C7730)
+<CONTROL_CODE><$16><$06>モおにいちゃん やけどだらけね<LINE>
+ちょっと じっとしていてね‥‥<NEWBOX>
+<CONTROL_CODE><$11><$E0>くよハイ これでだいじょうぶ<LINE>
+あんまり ムリしちゃ ダメよ<END>
+
+//POINTER #52 @ $1C7734 - STRING #52 @ $1C6611
+
+#WRITE(GBA,$1C7734)
+この にしエリアの つうろからは<LINE>
+カルデラこにしか でられないわよ<NEWBOX>
+クロノけんきゅうじょのある かざんエリアへは<LINE>
+まちの ひがしエリアの つうろから でるのよ<END>
+
+//POINTER #53 @ $1C7738 - STRING #53 @ $1C6661
+
+#WRITE(GBA,$1C7738)
+クロノけんきゅうじょへ いくには<LINE>
+この ようがんちたいを ぬけていくんだよ<NEWBOX>
+ようがんは いっていの タイミングで<LINE>
+ながれているから<NEWBOX>
+タイミングを みはからって<LINE>
+いっきに かけぬけるんだよ<END>
+
+//POINTER #54 @ $1C773C - STRING #54 @ $1C66BF
+
+#WRITE(GBA,$1C773C)
+<CONTROL_CODE><$00><$06>を<CONTROL_CODE><$01><$02>ユ5をあ ジェッタ-ズさん!<LINE>
+ハイ これ おやくに たててください(HEART)<NEWBOX>
+ボンバ-マンは ハ-トを<LINE>
+<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$02>ユ<CONTROL_CODE><$0E><$01>てにいれた!<NEWBOX>
+ヒゲヒゲだんなんか やっつけて くださいね!<END>
+
+//POINTER #55 @ $1C7740 - STRING #55 @ $1C671E
+
+#WRITE(GBA,$1C7740)
+<CONTROL_CODE><$16><$06>んあ! けがを しているじゃないですか!<LINE>
+ちょっと じっとしていてくださいね‥‥<NEWBOX>
+<CONTROL_CODE><$11><$E0>くよハイ これで だいじょうび!<LINE>
+ヒゲヒゲだんなんか やっつけて くださいね!<END>
+
+//POINTER #56 @ $1C7744 - STRING #56 @ $1C6775
+
+#WRITE(GBA,$1C7744)
+あ ジェッタ-ズさん!<LINE>
+ヒゲヒゲだんなんか やっつけて くださいね!<END>
+
+//POINTER #57 @ $1C7748 - STRING #57 @ $1C6798
+
+#WRITE(GBA,$1C7748)
+こんなときに こんなところに くるなんて<LINE>
+よっぽど ヒマなんだな‥‥‥‥‥‥‥<NEWBOX>
+‥‥って アンタ ジェッタ-ズじゃないか!<LINE>
+クロノはかせの けんきゅうじょは<NEWBOX>
+この かざんちたいを ずっと にしに<LINE>
+すすんだところに あるよ<NEWBOX>
+かざんちたいには ほのおが きかない<LINE>
+モンスタ-が おおいから きをつけてくれ!<END>
+
+//POINTER #58 @ $1C774C - STRING #58 @ $1C6830
+
+#WRITE(GBA,$1C774C)
+きたの かざんちたいへ ぬける つうろは<LINE>
+このまちの しちょうだけが あけられるんだ<NEWBOX>
+いまは アイドルの アカネちゃんが<LINE>
+いちにち しちょうだから かのじょだけが<NEWBOX>
+つうろを あけしめ できるんだよ<END>
+
+//POINTER #59 @ $1C7750 - STRING #59 @ $1C6893
+
+#WRITE(GBA,$1C7750)
+<CONTROL_CODE><$02><$02>き5ぇ<CONTROL_CODE><$02><$01>す5ぇ<CONTROL_CODE><$02><$01>せ5ぇ<CONTROL_CODE><$02><$01>そ5ぇ<CONTROL_CODE><$02><$01>た5ぇ<CONTROL_CODE><$02><$01>ち5ぇおとなりの ビルの ゲ-ムセンタ-<NEWBOX>
+やっと ぜんぶの ゲ-ムが<LINE>
+あそべるように なったよ!<END>
+
+//POINTER #60 @ $1C7754 - STRING #60 @ $1C68E5
+
+#WRITE(GBA,$1C7754)
+すぐ となりの ビルに<LINE>
+ゲ-ムセンタ-が あるんだけど<NEWBOX>
+あそべない ゲ-ムがあるんだ‥‥<LINE>
+そのうち あそべるように なるのかな?<END>
+
+//POINTER #61 @ $1C7758 - STRING #61 @ $1C6926
+
+#WRITE(GBA,$1C7758)
+いらっしゃい ここは ゲ-ムセンタ-だよ!<LINE>
+どのゲ-ムも いっかい 10ゴ-ルド<NEWBOX>
+きろくを こうしんすると<LINE>
+しょうきんを かくとく できるよ!<END>
+
+//POINTER #62 @ $1C775C - STRING #62 @ $1C696E
+
+#WRITE(GBA,$1C775C)
+いらっしゃい 2かいは ボスバトルだよ!<LINE>
+どのゲ-ムも いっかい 10ゴ-ルド<NEWBOX>
+そのエリアの コロコロを もっていれば<LINE>
+いままで たおしたボスと バトルできるよ<END>
+
+//POINTER #63 @ $1C7760 - STRING #63 @ $1C69BF
+
+#WRITE(GBA,$1C7760)
+きたの かざんちたいにある<LINE>
+クロノはかせの けんきゅうじょには<NEWBOX>
+ボムの ばくはつするじかんを あやつる<LINE>
+キャラボンが いるそうよ<END>
+
+//POINTER #64 @ $1C7764 - STRING #64 @ $1C6A00
+
+#WRITE(GBA,$1C7764)
+おっ たすけてくれるのか<LINE>
+ありがとう!<NEWBOX>
+こんな きけんなところに<LINE>
+はいってくるなんて<NEWBOX>
+アンタ ゆうきが あるな‥‥<LINE>
+よし アンタの ちからになるぜ!<END>
+
+//POINTER #65 @ $1C7768 - STRING #65 @ $1C6A4B
+
+#WRITE(GBA,$1C7768)
+キャラボン ド-ラが<LINE>
+<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C>なかまになった!<NEWBOX>
+オレの のうりょくは せっかちボム<LINE>
+ボムが はやく ばくはつするぜ<NEWBOX>
+オレを セットするかい?<LINE>
+    はい       いいえ<CONTROL_CODE><$05><$03>1い15ア5イ<CONTROL_CODE><$0D><$06>オレのいた クロノけんきゅうじょが<LINE>
+ヒゲヒゲだんに おそわれたんで<NEWBOX>
+なんとか たすけをよぼうと<LINE>
+だっしゅつ してきたんだ<NEWBOX>
+だが あいにく ここでも<LINE>
+ヤツらに つかまっちまってな‥‥<NEWBOX>
+アイドルの アカネは このビルの<LINE>
+いちばんうえに とらわれているらしい<NEWBOX>
+まずは かのじょだ<LINE>
+いそいで たすけにいこうぜ!<END>
+
+//POINTER #66 @ $1C776C - STRING #66 @ $1C6AAE
+
+#WRITE(GBA,$1C776C)
+<CONTROL_CODE><$0D><$06>オレのいた クロノけんきゅうじょが<LINE>
+ヒゲヒゲだんに おそわれたんで<NEWBOX>
+なんとか たすけをよぼうと<LINE>
+だっしゅつ してきたんだ<NEWBOX>
+だが あいにく ここでも<LINE>
+ヤツらに つかまっちまってな‥‥<NEWBOX>
+アイドルの アカネは このビルの<LINE>
+いちばんうえに とらわれているらしい<NEWBOX>
+まずは かのじょだ<LINE>
+いそいで たすけにいこうぜ!<END>
+
+//POINTER #67 @ $1C7770 - STRING #67 @ $1C6AB1
+
+#WRITE(GBA,$1C7770)
+オレのいた クロノけんきゅうじょが<LINE>
+ヒゲヒゲだんに おそわれたんで<NEWBOX>
+なんとか たすけをよぼうと<LINE>
+だっしゅつ してきたんだ<NEWBOX>
+だが あいにく ここでも<LINE>
+ヤツらに つかまっちまってな‥‥<NEWBOX>
+アイドルの アカネは このビルの<LINE>
+いちばんうえに とらわれているらしい<NEWBOX>
+まずは かのじょだ<LINE>
+いそいで たすけにいこうぜ!<END>
+
+//POINTER #68 @ $1C7774 - STRING #68 @ $1C6B49
+
+#WRITE(GBA,$1C7774)
+<CONTROL_CODE><$01><$01>ゆ5エクロノけんきゅうじょ<LINE>
+かんけいしゃいがい たちいり きんし<END>
+
+//POINTER #69 @ $1C7778 - STRING #69 @ $1C6B6D
+
+#WRITE(GBA,$1C7778)
+クロノけんきゅうじょ<LINE>
+かんけいしゃいがい たちいり きんし<NEWBOX>
+なんで こんなところに けんきゅうじょが<LINE>
+たっているか しってるかい?<NEWBOX>
+かざんの ちねつを りようするためなんだ<LINE>
+‥‥って このまえ はかせが いってたよ<END>
+
+//POINTER #70 @ $1C777C - STRING #70 @ $1C6BD9
+
+#WRITE(GBA,$1C777C)
+<CONTROL_CODE><$01><$01>ゆ5エ‥‥‥‥‥‥‥‥‥‥‥‥?<END>
+
+//POINTER #71 @ $1C7780 - STRING #71 @ $1C6BED
+
+#WRITE(GBA,$1C7780)
+‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
+ボンバ-マンは カンバンをたてた!<END>
+
+//POINTER #72 @ $1C7784 - STRING #72 @ $1C6C0C
+
+#WRITE(GBA,$1C7784)
+<CONTROL_CODE><$01><$01>ゆ5クこのさき クロノけんきゅうじょ<END>
+
+//POINTER #73 @ $1C7788 - STRING #73 @ $1C6C22
+
+#WRITE(GBA,$1C7788)
+このさき クロノけんきゅうじょ<NEWBOX>
+ふ- あっつい あっつい<LINE>
+たまに はねるほのおで こげそうに なるよ<END>
+
+//POINTER #74 @ $1C778C - STRING #74 @ $1C6C55
+
+#WRITE(GBA,$1C778C)
+<CONTROL_CODE><$01><$01>ゆ5コここは カルデラこ<LINE>
+キケン! ゆうえい きんし<END>
+
+//POINTER #75 @ $1C7790 - STRING #75 @ $1C6C73
+
+#WRITE(GBA,$1C7790)
+ここは カルデラこ<LINE>
+キケン! ゆうえい きんし<NEWBOX>
+そのエリアの ボスを たおした あと<LINE>
+たいおうする コロコロを もっていると<NEWBOX>
+ラバシティの ゲ-ムセンタ-で<LINE>
+ボスバトルの ミニゲ-ムを あそべるよ<END>
+
+//POINTER #76 @ $1C7794 - STRING #76 @ $1C6CD6
+
+#WRITE(GBA,$1C7794)
+‥‥‥‥‥‥‥‥‥‥‥‥?<END>
+
+//POINTER #77 @ $1C7798 - STRING #77 @ $1C6CE4
+
+#WRITE(GBA,$1C7798)
+‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
+ボンバ-マンは カンバンをたてた!<END>
+
+//POINTER #78 @ $1C779C - STRING #78 @ $1C6D03
+
+#WRITE(GBA,$1C779C)
+<CONTROL_CODE><$01><$01>ゆ5セここより かざんエリア<LINE>
+しちょうの きょかなく たちいらないこと!<END>
+
+//POINTER #79 @ $1C77A0 - STRING #79 @ $1C6D2B
+
+#WRITE(GBA,$1C77A0)
+ここより かざんエリア<LINE>
+しちょうの きょかなく たちいらないこと!<NEWBOX>
+‥‥つか ラバシティの しちょうさん<LINE>
+ひとりで にげたじゃんか!<END>
+
+//POINTER #80 @ $1C77A4 - STRING #80 @ $1C6D6E
+
+#WRITE(GBA,$1C77A4)
+<CONTROL_CODE><$01><$01>ゆ5タこれより ヒバシリロ-ド<LINE>
+ふきだす ほのおに ちゅうい<END>
+
+//POINTER #81 @ $1C77A8 - STRING #81 @ $1C6D90
+
+#WRITE(GBA,$1C77A8)
+これより ヒバシリロ-ド<LINE>
+ふきだす ほのおに ちゅうい<NEWBOX>
+ところで キミは どのキャラボンが<LINE>
+おきにいりだい?<NEWBOX>
+う-んと ボクは エレファンが すきだな!<END>
+
+//POINTER #82 @ $1C77AC - STRING #82 @ $1C6DDD
+
+#WRITE(GBA,$1C77AC)
+<CONTROL_CODE><$01><$01>ゆ5ツラバシティへ ようこそ!<END>
+
+//POINTER #83 @ $1C77B0 - STRING #83 @ $1C6DF0
+
+#WRITE(GBA,$1C77B0)
+ラバシティへ ようこそ!<NEWBOX>
+ヒゲヒゲだんは やっつけたのに なんで まだ<LINE>
+モンスタ-が あるいてるのかなぁ‥‥<END>
+
+//POINTER #84 @ $1C77B4 - STRING #84 @ $1C6E27
+
+#WRITE(GBA,$1C77B4)
+<CONTROL_CODE><$01><$01>ゆ5トラバテレビ ほんしゃ<END>
+
+//POINTER #85 @ $1C77B8 - STRING #85 @ $1C6E38
+
+#WRITE(GBA,$1C77B8)
+ラバテレビ ほんしゃ<NEWBOX>
+すいよう よる 6じより<LINE>
+こうひょう ほうえいちゅう!<END>
+
+//POINTER #86 @ $1C77BC - STRING #86 @ $1C6E5F
+
+#WRITE(GBA,$1C77BC)
+<CONTROL_CODE><$01><$02>お5リおぉ ジェッタ-ズか!<LINE>
+ありがとう たすかったよ<NEWBOX>
+だが‥‥‥‥<LINE>
+いっぽ おそかったようだ<NEWBOX>
+ヤツらは ワシのはつめいした<LINE>
+タイムドライバ-を つかって<NEWBOX>
+こだいの ノンビリせいに<LINE>
+タイムワ-プ してしまった!<NEWBOX>
+おそらく せいぎょクリスタルごと<LINE>
+こうせんほうを うばってくる つもりだ<NEWBOX>
+ここに タイムドライバ-の<LINE>
+しさくひんが ひとつある<NEWBOX>
+ヤツらに みつからないように<LINE>
+かくして おいたものだ<NEWBOX>
+これを つかって<LINE>
+こだいノンビリせいに いき<NEWBOX>
+ヤツらの けいかくを そし してくれ<LINE>
+たのんだぞ!<END>
+
+//POINTER #87 @ $1C77C0 - STRING #87 @ $1C6F58
+
+#WRITE(GBA,$1C77C0)
+ヒゲ! ヒゲヒゲ ヒゲヒゲヒゲ!<LINE>
+ヒゲヒゲ ヒゲヒゲ!<NEWBOX>
+ヒゲヒゲ‥‥<LINE>
+ヒゲ---------------!<END>
+
+//POINTER #88 @ $1C77C4 - STRING #88 @ $1C6F8E
+
+#WRITE(GBA,$1C77C4)
+オイ プチラ!<LINE>
+だいじょうぶだったか?<NEWBOX>
+あ! ド-ラ! ありがとう たすかった~<LINE>
+もう だめかとおもったよ<NEWBOX>
+たすけにくるのが おくれて すまない<LINE>
+クロノはかせは ぶじか?<NEWBOX>
+わからない ボクは ずっとここに<LINE>
+とじこめられて いたから‥‥<NEWBOX>
+たぶん はかせは けんきゅうじょの<LINE>
+いちばんおくに とらわれているとおもう<NEWBOX>
+ボンバ-マンさん!<LINE>
+このおくにある きかいで<NEWBOX>
+けんきゅうじょの いりぐちの<LINE>
+とびらを あけて<NEWBOX>
+クロノはかせを たすけに いきましょう!<LINE>
+ボクも あなたに きょうりょくします<END>
+
+//POINTER #89 @ $1C77C8 - STRING #89 @ $1C7081
+
+#WRITE(GBA,$1C77C8)
+キャラボン プチラが<LINE>
+<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C>なかまになった!<NEWBOX>
+ボクの のうりょくは のんびりボム<LINE>
+ボムが ゆっくり ばくはつするよ<NEWBOX>
+ボクを セットする?<LINE>
+    はい       いいえ<CONTROL_CODE><$05><$03>1い15ノ5ハ<CONTROL_CODE><$0D><$07><$FD>スロットバトルの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$06><$5D><$06><$5E>じゅうじキ-の したを おすと<LINE>
+スロットが まわります<NEWBOX>
+Aボタンを おすと<LINE>
+ひだりから リ-ルが とまります<NEWBOX>
+ジェッタ-ズえがらを そろえると<LINE>
+あいてを こうげきできます<NEWBOX>
+ヒゲヒゲだんえがらを そろえてしまうと<LINE>
+せんとういんが こうげき してきます<NEWBOX>
+せんとういんを たおせば<LINE>
+ミニゲ-ム クリア-です<NEWBOX>
+それでは がんばってください!<END>
+
+//POINTER #90 @ $1C77CC - STRING #90 @ $1C70E3
+
+#WRITE(GBA,$1C77CC)
+<CONTROL_CODE><$0D><$07><$FD>スロットバトルの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$06><$5D><$06><$5E>じゅうじキ-の したを おすと<LINE>
+スロットが まわります<NEWBOX>
+Aボタンを おすと<LINE>
+ひだりから リ-ルが とまります<NEWBOX>
+ジェッタ-ズえがらを そろえると<LINE>
+あいてを こうげきできます<NEWBOX>
+ヒゲヒゲだんえがらを そろえてしまうと<LINE>
+せんとういんが こうげき してきます<NEWBOX>
+せんとういんを たおせば<LINE>
+ミニゲ-ム クリア-です<NEWBOX>
+それでは がんばってください!<END>
+
+//POINTER #91 @ $1C77D0 - STRING #91 @ $1C70E6
+
+#WRITE(GBA,$1C77D0)
+<$FD>スロットバトルの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$06><$5D><$06><$5E>じゅうじキ-の したを おすと<LINE>
+スロットが まわります<NEWBOX>
+Aボタンを おすと<LINE>
+ひだりから リ-ルが とまります<NEWBOX>
+ジェッタ-ズえがらを そろえると<LINE>
+あいてを こうげきできます<NEWBOX>
+ヒゲヒゲだんえがらを そろえてしまうと<LINE>
+せんとういんが こうげき してきます<NEWBOX>
+せんとういんを たおせば<LINE>
+ミニゲ-ム クリア-です<NEWBOX>
+それでは がんばってください!<END>
+
+//POINTER #92 @ $1C77D4 - STRING #92 @ $1C70E7
+
+#WRITE(GBA,$1C77D4)
+スロットバトルの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$06><$5D><$06><$5E>じゅうじキ-の したを おすと<LINE>
+スロットが まわります<NEWBOX>
+Aボタンを おすと<LINE>
+ひだりから リ-ルが とまります<NEWBOX>
+ジェッタ-ズえがらを そろえると<LINE>
+あいてを こうげきできます<NEWBOX>
+ヒゲヒゲだんえがらを そろえてしまうと<LINE>
+せんとういんが こうげき してきます<NEWBOX>
+せんとういんを たおせば<LINE>
+ミニゲ-ム クリア-です<NEWBOX>
+それでは がんばってください!<END>
+
+//POINTER #93 @ $1C77D8 - STRING #93 @ $1C7117
+
+#WRITE(GBA,$1C77D8)
+じゅうじキ-の したを おすと<LINE>
+スロットが まわります<NEWBOX>
+Aボタンを おすと<LINE>
+ひだりから リ-ルが とまります<NEWBOX>
+ジェッタ-ズえがらを そろえると<LINE>
+あいてを こうげきできます<NEWBOX>
+ヒゲヒゲだんえがらを そろえてしまうと<LINE>
+せんとういんが こうげき してきます<NEWBOX>
+せんとういんを たおせば<LINE>
+ミニゲ-ム クリア-です<NEWBOX>
+それでは がんばってください!<END>
+
+//POINTER #94 @ $1C77DC - STRING #94 @ $1C71AE
+
+#WRITE(GBA,$1C77DC)
+それでは がんばってください!<END>
+
+//POINTER #95 @ $1C77E0 - STRING #95 @ $1C71BE
+
+#WRITE(GBA,$1C77E0)
+<CONTROL_CODE><$13><$0D>マイティ! ワイや ガングや!<LINE>
+ノンビリせいの しゅうへんで<NEWBOX>
+<CONTROL_CODE><$13><$0D>じくうの ゆがみが けんしゅつされたんや!<LINE>
+おそらく ヒゲヒゲだんの しわざや<NEWBOX>
+<CONTROL_CODE><$13><$0D>クロノはかせから うけとった そうちを<LINE>
+モトジェッタ-に そうちゃくすれば<NEWBOX>
+<CONTROL_CODE><$13><$0D>ヤツらと おなじ じだいに<LINE>
+ワ-プできるはず!<NEWBOX>
+<CONTROL_CODE><$13><$0D>こだい ノンビリせいに タイムワ-プして<LINE>
+ヤツらの けいかくを そしするんや!<NEWBOX>
+<CONTROL_CODE><$13><$0D>たのんだデェ マイティ!<END>
+
+//POINTER #96 @ $1C77E4 - STRING #96 @ $1C728A
+
+#WRITE(GBA,$1C77E4)
+<CONTROL_CODE><$13><$0D>もしもし こちら バ-ディ<LINE>
+その セカセカせいにある<NEWBOX>
+<CONTROL_CODE><$13><$0D>クロノはかせの けんきゅうじょが<LINE>
+ヒゲヒゲだんに おそわれたらしい!<NEWBOX>
+<CONTROL_CODE><$13><$0D>おそらく クロノはかせの はつめい<LINE>
+タイムドライバ-が ヤツらの ねらいだ<NEWBOX>
+<CONTROL_CODE><$13><$0D>タイムドライバ-は タイムマシンの<LINE>
+エンジンの しさくひんらしい!<NEWBOX>
+<CONTROL_CODE><$13><$0D>まだ かんせいしていない とはいえ<LINE>
+あくようされれば たいへんなことになる<NEWBOX>
+<CONTROL_CODE><$13><$0D>いそいで クロノはかせを たすけだすんだ<LINE>
+たのんだぜ マイティ!<$F8><CONTROL_CODE><$13><$0D>マイティ そろそろ てきのこうげきが<LINE>
+きつくなってきたんと ちゃうか?<NEWBOX>
+<CONTROL_CODE><$13><$0D>いちど こきょうの ボンバ-せいで<LINE>
+しゅぎょうしてくるのも わるくないで<NEWBOX>
+<CONTROL_CODE><$13><$0D>いそがばまわれ っちゅうヤツや!<END>
+
+//POINTER #97 @ $1C77E8 - STRING #97 @ $1C7369
+
+#WRITE(GBA,$1C77E8)
+<CONTROL_CODE><$13><$0D>マイティ そろそろ てきのこうげきが<LINE>
+きつくなってきたんと ちゃうか?<NEWBOX>
+<CONTROL_CODE><$13><$0D>いちど こきょうの ボンバ-せいで<LINE>
+しゅぎょうしてくるのも わるくないで<NEWBOX>
+<CONTROL_CODE><$13><$0D>いそがばまわれ っちゅうヤツや!<END>
+
+//POINTER #98 @ $1C77EC - STRING #98 @ $1C73CC
+
+#WRITE(GBA,$1C77EC)
+<WAIT>
+
+//POINTER #99 @ $1C77F0 - STRING #99 @ $1C73CD
+
+#WRITE(GBA,$1C77F0)
+この カルデラこには ごうせいそざい<LINE>
+カルデラのしずくが あるんだけど<NEWBOX>
+さいきん ヘンな モンスタ-が<LINE>
+すみついちゃっているんだ<NEWBOX>
+アイツを たおさないと<LINE>
+しずくが とれないな‥‥<NEWBOX>
+しずくと ボムノモトを ごうせいして<LINE>
+アクアボムを つくれば<NEWBOX>
+ラバシティの ほのおが<LINE>
+けせるのに‥‥‥‥<END>
+
+//POINTER #100 @ $1C77F4 - STRING #100 @ $1C745C
+
+#WRITE(GBA,$1C77F4)
+きたにある カルデラこの おくには<LINE>
+カルデラのしずく っていう みずがあるの<NEWBOX>
+いろんなものと ごうせいできる<LINE>
+ふしぎな みずなのよ<END>
+
+//POINTER #101 @ $1C77F8 - STRING #101 @ $1C749E
+
+#WRITE(GBA,$1C77F8)
+ここから すこし<LINE>
+きたに いったところにある<NEWBOX>
+クロノはかせの けんきゅうじょが<LINE>
+なんにちか まえに<NEWBOX>
+ヒゲヒゲだんとか いうやつらに<LINE>
+せんりょうされて しまったんじゃ‥‥<NEWBOX>
+そういえば ヤツらが<LINE>
+おそってきたとき キャラボンがいっぴき<NEWBOX>
+まちのほうへ にげていったが<LINE>
+ぶじに にげきれたんじゃろうか‥‥<END>
+
+//POINTER #102 @ $1C77FC - STRING #102 @ $1C7533
+
+#WRITE(GBA,$1C77FC)
+スロットバトルの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$06><$67><$06><$68>じゅうじキ-の したを おすと<LINE>
+スロットが まわります<NEWBOX>
+Aボタンを おすと<LINE>
+ひだりから リ-ルが とまります<NEWBOX>
+ジェッタ-ズえがらを そろえると<LINE>
+あいてを こうげきできます<NEWBOX>
+ヒゲヒゲだんえがらを そろえてしまうと<LINE>
+せんとういんが こうげき してきます<NEWBOX>
+それでは がんばってください!<END>
+
+//POINTER #103 @ $1C7800 - STRING #103 @ $1C7563
+
+#WRITE(GBA,$1C7800)
+じゅうじキ-の したを おすと<LINE>
+スロットが まわります<NEWBOX>
+Aボタンを おすと<LINE>
+ひだりから リ-ルが とまります<NEWBOX>
+ジェッタ-ズえがらを そろえると<LINE>
+あいてを こうげきできます<NEWBOX>
+ヒゲヒゲだんえがらを そろえてしまうと<LINE>
+せんとういんが こうげき してきます<NEWBOX>
+それでは がんばってください!<END>
+
+//POINTER #104 @ $1C7804 - STRING #104 @ $1C75F0
+
+#WRITE(GBA,$1C7804)
+それでは がんばってください<END>
+
+//POINTER #105 @ $1C7808 - STRING #105 @ $1C75FF
+
+#WRITE(GBA,$1C7808)
+キミにわたした しさくひんの<LINE>
+タイムドライバ-は ちゃんと うごいたかい?<NEWBOX>
+あまりパ-ツで つくったものだから<LINE>
+ちょっと じしん なかったんだけど‥‥<NEWBOX>
+まぁ もんだいなく うごいて なによりだ!<END>

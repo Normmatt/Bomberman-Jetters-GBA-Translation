@@ -1,0 +1,1112 @@
+// Define a TABLE
+#VAR(Table, TABLE)
+#VAR(engTable, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/bomberman.tbl", Table)
+#ADDTBL("melissa font/melissa8x8.tbl", engTable)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($565000)
+
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #007 NAME:		Block 8 (POINTER)
+
+//POINTER #0 @ $1CF708 - STRING #0 @ $1CCBB8
+
+#WRITE(GBA,$1CF708)
+ たすかったぁ‥‥ありがとう!<NEWBOX>
+ ボクは ストロング!<LINE>
+ おれいに これから てだすけします!<NEWBOX>
+ キャラボン ストロングが<LINE>
+ なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
+ ボクの のうりょくは<LINE>
+ パワ-グロ-ブ!<NEWBOX>
+ Aボタンで ボムを おいてから‥‥<NEWBOX>
+ もういちど Aボタンをおすと<LINE>
+ ボムを もちあげられるよ<NEWBOX>
+ おしっぱなしで ボムを<LINE>
+ もちあげたまま あるけて‥‥<NEWBOX>
+ Aボタンをはなすと むいている<LINE>
+ ほうこうに なげられるんだ<NEWBOX>
+ しかも なんと ボクの のうりょくは<LINE>
+ ボクを つれてさえいれば‥‥<NEWBOX>
+ とくに ボクを セットしてなくても<LINE>
+ いつでも つかえるんだよ<NEWBOX>
+ でも ボクを そだてたいときは<LINE>
+ セット していないと ダメなんだ<NEWBOX>
+ あと マリンゴンという キャラボンを<LINE>
+ セットしているときだけは<NEWBOX>
+ パワ-グロ-ブの のうりょくが<LINE>
+ つかえなくなるから ちゅういしてね<NEWBOX>
+ Bボタンにボクを セットする?<LINE>
+  はい  いいえ<CONTROL_CODE><$05><$01>1418わ8を ほぉ ここが よく わかったな‥‥<NEWBOX>
+ なんと ここは<LINE>
+ ひみつの おんせんなのじゃ!<NEWBOX>
+ ‥‥まぁ もう バレとるがな<NEWBOX>
+ はいっても ええが じつは<LINE>
+ このおんせんの ゆかげんは<NEWBOX>
+ キャラボンのタマゴを かえすのに<LINE>
+ ピッタリなんじゃ<NEWBOX>
+ おまえさんも キャラボンのタマゴを<LINE>
+ てにいれたら ここに くると よいぞ<END>
+
+//POINTER #1 @ $1CF70C - STRING #1 @ $1CCD59
+
+#WRITE(GBA,$1CF70C)
+ ほぉ ここが よく わかったな‥‥<NEWBOX>
+ なんと ここは<LINE>
+ ひみつの おんせんなのじゃ!<NEWBOX>
+ ‥‥まぁ もう バレとるがな<NEWBOX>
+ はいっても ええが じつは<LINE>
+ このおんせんの ゆかげんは<NEWBOX>
+ キャラボンのタマゴを かえすのに<LINE>
+ ピッタリなんじゃ<NEWBOX>
+ おまえさんも キャラボンのタマゴを<LINE>
+ てにいれたら ここに くると よいぞ<END>
+
+//POINTER #2 @ $1CF710 - STRING #2 @ $1CCDF6
+
+#WRITE(GBA,$1CF710)
+<CONTROL_CODE><$04><$00>る おっ キャラボンのタマゴを<LINE>
+ もってきたようじゃな!<NEWBOX>
+ ほれ さっそく<LINE>
+ おんせんに つけてみなされ!<END>
+
+//POINTER #3 @ $1CF714 - STRING #3 @ $1CCE2F
+
+#WRITE(GBA,$1CF714)
+ ‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
+ ‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<NEWBOX>
+ ‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
+ ‥‥‥‥‥おおっ!? うまれたぞ!!<END>
+
+//POINTER #4 @ $1CF718 - STRING #4 @ $1CCE7F
+
+#WRITE(GBA,$1CF718)
+ ガウガウ~ いいきもちで ねてたのに<LINE>
+ ボクを おこすのは だれガウ~<END>
+
+//POINTER #5 @ $1CF71C - STRING #5 @ $1CCEA4
+
+#WRITE(GBA,$1CF71C)
+<CONTROL_CODE><$01><$01>ケ8ケ こんにちは きょうも さむいわね<NEWBOX>
+ そういえば ここらへんには<LINE>
+ こおりづけのはな という‥‥<NEWBOX>
+ はなが さくんだけど あなたは<LINE>
+ もう みた?<NEWBOX>
+ まぁ さいたそばから プテラドンに<LINE>
+ たべられてしまうから<NEWBOX>
+ かんたんには みつからないと<LINE>
+ おもうけどね<END>
+
+//POINTER #6 @ $1CF720 - STRING #6 @ $1CCF2B
+
+#WRITE(GBA,$1CF720)
+ フェアリ-パレスに すんでいる<LINE>
+ エメラリ-ダさまはねぇ‥‥<NEWBOX>
+ むかしから このほしを<LINE>
+ おさめてらっしゃるんだよ<NEWBOX>
+ もともとは そらのうえに ある<LINE>
+ おしろに すんでたんだけどね<NEWBOX>
+ いんせきが おちたときに<LINE>
+ おしろに なにか あったとかで<NEWBOX>
+ ちじょうに おりてきたそうだよ<NEWBOX>
+ そういえば おしろには むかし<LINE>
+ 4にんの けんじゃが いたんじゃが<NEWBOX>
+ この さむいなか<LINE>
+ げんきにしてるかねぇ‥‥<NEWBOX>
+ あのかたたちも もう トシだから<LINE>
+ しんぱいじゃ‥‥とか いっていたら<NEWBOX>
+ わしゃ まだまだ わかいのぢゃ!<NEWBOX>
+ ‥‥なんて おこられるんじゃろうがの<END>
+
+//POINTER #7 @ $1CF724 - STRING #7 @ $1CD03E
+
+#WRITE(GBA,$1CF724)
+<CONTROL_CODE><$01><$01>っ87<CONTROL_CODE><$16><$09>エ え? おしろにいきたいの‥‥?<LINE>
+ それは ムリよ ムリ ムリ!<NEWBOX>
+ だって いま おしろに いくための<LINE>
+ はしが こおって おちちゃってるもん<NEWBOX>
+ いま おしろと ここを<LINE>
+ いったりきたりできるのは‥‥<NEWBOX>
+ あそこの ガケを ひとっとび! の<LINE>
+ ビ-ストポミュぐらいのものよ<NEWBOX>
+ ‥‥あら? あなた ケガしてない?<LINE>
+ ‥‥ちょっと じっとしててね(HEART)<CONTROL_CODE><$11><$E0>くよ<NEWBOX>
+ はい これで よし! あんまり<LINE>
+ ケガしないように きをつけてね(HEART)<END>
+
+//POINTER #8 @ $1CF728 - STRING #8 @ $1CD11C
+
+#WRITE(GBA,$1CF728)
+<CONTROL_CODE><$16><$09>オ みてみて! おしろの こおりが<LINE>
+ とけたんだよ!<NEWBOX>
+ ‥‥あら? あなた ケガしてない?<LINE>
+ ‥‥ちょっと じっとしててね(HEART)<CONTROL_CODE><$11><$E0>くよ<NEWBOX>
+ はい これで よし! あんまり<LINE>
+ ケガしないように きをつけてね(HEART)<END>
+
+//POINTER #9 @ $1CF72C - STRING #9 @ $1CD186
+
+#WRITE(GBA,$1CF72C)
+<CONTROL_CODE><$01><$01>っ89 ここに くるまでに ばくふうを<LINE>
+ ジャンプで よけるヤツを みましたか?<NEWBOX>
+ あいつらは どうやら いちど<LINE>
+ ジャンプすると‥‥<NEWBOX>
+ しばらく つぎの ジャンプが<LINE>
+ できないみたいなんです<NEWBOX>
+ それを りようすれば たおせると<LINE>
+ おもうから ためしてみては?<END>
+
+//POINTER #10 @ $1CF730 - STRING #10 @ $1CD20C
+
+#WRITE(GBA,$1CF730)
+ そらが はれてきたら てんくうのしろ<LINE>
+ ファンタシ-が よくみえてきましたね<NEWBOX>
+ ほんらい あそこに おられるはずの<LINE>
+ エメラリ-ダさまが<NEWBOX>
+ すぐそこの フェアリ-パレスに<LINE>
+ おられるなんて ふしぎな かんじです<NEWBOX>
+ むかし いまのように ファンタシ-が<LINE>
+ せめおとされたときいらいですね<NEWBOX>
+ ‥‥あの あおい めの せんし‥‥<LINE>
+ なまえは たしか‥‥マックス?<NEWBOX>
+ そう たしか そんな なまえでした<LINE>
+ わたしの いのちの おんじんなんです<NEWBOX>
+ ぜひ いちど あって おれいを<LINE>
+ いいたいんですけど<NEWBOX>
+ きいても いま そういう なまえの<LINE>
+ せんしは いないといわれましてね<NEWBOX>
+ もし あなたが うちゅうの どこかで<LINE>
+ かれに あうことが あったなら<NEWBOX>
+ わたしが かんしゃしていたことを<LINE>
+ かれに つたえてくれませんか?<NEWBOX>
+ よろしく おねがいしますね<END>
+
+//POINTER #11 @ $1CF734 - STRING #11 @ $1CD37F
+
+#WRITE(GBA,$1CF734)
+<CONTROL_CODE><$01><$01>っ8い え? じょうきょうを せいりして<LINE>
+ ききたいの? いいわよ‥‥え-と‥‥<NEWBOX>
+ 1ねんまえに いんせきがおちて<LINE>
+ ほくせいに ヘンなとうが できたの<NEWBOX>
+ ファンタシ-が なにものかに<LINE>
+ こうげきされたのも このころらしいわ<NEWBOX>
+ はんとしまえ ヘンなモンスタ-が<LINE>
+ そとを うろつくようになったころに<NEWBOX>
+ ファンタシ-から にげてきた<LINE>
+ エメラリ-ダさまたちが<NEWBOX>
+ フェアリ-パレスに やってきたの<LINE>
+ ‥‥このへんの くわしい じじょうは<NEWBOX>
+ フェアリ-パレスの せんしに<LINE>
+ きいたほうが いいとおもうわ<NEWBOX>
+ あなたが さがしているらしい ひとを<LINE>
+ みたのは つい せんしゅうよ<NEWBOX>
+ その つぎのひから いきなり すごい<LINE>
+ ふぶきが なんにちもつづいて‥‥<NEWBOX>
+ フェアリ-パレスに<LINE>
+ つながる はしが おちてしまったの<NEWBOX>
+ いま フェアリ-パレスの おくは<LINE>
+ すっかり こおってしまっているそうよ<NEWBOX>
+ ‥‥こんなところだけど<LINE>
+ おやくに たてたかしら?<END>
+
+//POINTER #12 @ $1CF738 - STRING #12 @ $1CD524
+
+#WRITE(GBA,$1CF738)
+ エメラリ-ダさまの へやの とびらが<LINE>
+ あいたんですって!<NEWBOX>
+ エメラリ-ダさま ぶじだったそうよ<LINE>
+ ‥‥よかったわぁ‥‥<END>
+
+//POINTER #13 @ $1CF73C - STRING #13 @ $1CD562
+
+#WRITE(GBA,$1CF73C)
+ ねぇねぇ きいて きいて!<LINE>
+ せんしゅうさぁ‥‥<NEWBOX>
+ ぜんしん まっくろの カッコイイ<LINE>
+ ひとが ここに きたんだ!<NEWBOX>
+ マックス? へえぇ あのひと<LINE>
+ マックスって いうんだ?<NEWBOX>
+ ほかの ほしから きたわりには<LINE>
+ このへんのことについて くわしいから<NEWBOX>
+ オイラ ビックリしちゃったよ<LINE>
+ ‥‥まえに きたことが あるのかな?<END>
+
+//POINTER #14 @ $1CF740 - STRING #14 @ $1CD604
+
+#WRITE(GBA,$1CF740)
+<CONTROL_CODE><$01><$01>ア8ま<CONTROL_CODE><$01><$01>ょ8お<CONTROL_CODE><$01><$01>ゅ8ほ<CONTROL_CODE><$03><$01>ゅ<CONTROL_CODE><$03><$00>ぁ いらっしゃい よくきたね‥‥ん?<LINE>
+ このタマゴが きになるかい?<NEWBOX>
+ これは ビ-ストポミュっていう<LINE>
+ キャラボンの タマゴだよ<NEWBOX>
+ もともとは ガケのうえに あったのが<LINE>
+ すべりおちちゃったみたいでね<NEWBOX>
+ ほうっておけないから<LINE>
+ ここに もってきたのさ<NEWBOX>
+ え? このタマゴが ほしいのかい?<LINE>
+ ‥‥そうだねぇ<NEWBOX>
+ じゃあ ちょっと おつかいを<LINE>
+ してくれたら おだちんに あげるよ<NEWBOX>
+ このコムギコを きたイプシロンにいる<LINE>
+ あねのギンに とどけて<NEWBOX>
+ やいてもらったパンを うけとって<LINE>
+ ここまで もってきてくれれば いい<NEWBOX>
+ じゃ たのんだよ<NEWBOX>
+ ボンバ-マンは コムギコを<LINE>
+ てにいれた!<CONTROL_CODE><$12><$0C><END>
+
+//POINTER #15 @ $1CF744 - STRING #15 @ $1CD745
+
+#WRITE(GBA,$1CF744)
+<CONTROL_CODE><$04><$00>ぃ おぉ いってきてくれたのかい<LINE>
+ ありがとうよ<NEWBOX>
+ ボンバ-マンは パンを<LINE>
+ わたした<CONTROL_CODE><$12><$0C><NEWBOX>
+ こりゃあ また おいしそうなパンだね<LINE>
+ たべるのが たのしみだよ<NEWBOX>
+ それじゃ やくそくだからね<LINE>
+ ちゃんと めんどう みてあげるんだよ<NEWBOX>
+<CONTROL_CODE><$03><$00>る<CONTROL_CODE><$03><$01>ア ボンバ-マンは タマゴを<LINE>
+ てにいれた!<CONTROL_CODE><$12><$0C><END>
+
+//POINTER #16 @ $1CF748 - STRING #16 @ $1CD7DD
+
+#WRITE(GBA,$1CF748)
+<CONTROL_CODE><$01><$01>ウ8カ おぉ わかいの!<LINE>
+ このへんは はじめてか?<NEWBOX>
+ ここにきたら やはり<LINE>
+ おんせんに はいらんとな!<NEWBOX>
+ まぁ しかし わかりにくいところに<LINE>
+ あるからな<NEWBOX>
+ ここにくるまえに みかけたなら<LINE>
+ かなり ラッキ-じゃぞ<NEWBOX>
+ まだ みつけていないなら<LINE>
+ もときたみちを もどって<NEWBOX>
+ さがしてみると いいじゃろう<LINE>
+ ‥‥フホホ<END>
+
+//POINTER #17 @ $1CF74C - STRING #17 @ $1CD881
+
+#WRITE(GBA,$1CF74C)
+ はやく あたたかくならないかな‥‥<LINE>
+ はんとしも このちょうしだからねぇ<END>
+
+//POINTER #18 @ $1CF750 - STRING #18 @ $1CD8A7
+
+#WRITE(GBA,$1CF750)
+<CONTROL_CODE><$02><$01>ゅ8み<CONTROL_CODE><$01><$01>ょ8む<CONTROL_CODE><$03><$01>ょ<CONTROL_CODE><$03><$00>ぃ<CONTROL_CODE><$04><$00>ぁ おや みなみイプシロンの いもうとの<LINE>
+ キンの おつかいで きたのかい?<NEWBOX>
+ それは ごくろうだったね‥‥じゃあ<LINE>
+ まず コムギコを わたしておくれ<NEWBOX>
+ ボンバ-マンは コムギコを<LINE>
+ わたした<CONTROL_CODE><$12><$0C><NEWBOX>
+ よし それじゃあ いまから パンを<LINE>
+ やくから ちょっと まってておくれ<NEWBOX>
+ ‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
+ ‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<NEWBOX>
+ はい おいしく やきあがった<LINE>
+ やきたてのパンだよ<NEWBOX>
+ ボンバ-マンは パンを<LINE>
+ てにいれた!<CONTROL_CODE><$12><$0C><NEWBOX>
+ たしかに わたしたからね<LINE>
+ さめないうちに とどけておくれ<END>
+
+//POINTER #19 @ $1CF754 - STRING #19 @ $1CD9C2
+
+#WRITE(GBA,$1CF754)
+<CONTROL_CODE><$01><$01>っ8こ エメラリ-ダさまの へやの とびらが<LINE>
+ こおってしまい ビクともしないのだ<NEWBOX>
+ なかのようすが まったくわからん‥‥<LINE>
+ エメラリ-ダさまは ぶじなのだろうか<END>
+
+//POINTER #20 @ $1CF758 - STRING #20 @ $1CDA17
+
+#WRITE(GBA,$1CF758)
+ とびらの こおりが とけたぞ!<NEWBOX>
+ エメラリ-ダさまも ぶじだったし<LINE>
+ とりあえず ひとあんしんだ<END>
+
+//POINTER #21 @ $1CF75C - STRING #21 @ $1CDA49
+
+#WRITE(GBA,$1CF75C)
+<CONTROL_CODE><$01><$01>っ8し なんねんかまえ このほしが<LINE>
+ いまのように てきに せめられたとき<NEWBOX>
+ このフェアリ-パレスに つかえていた<LINE>
+ われわれ せんしたちが<NEWBOX>
+ ちからを あわせて てきに<LINE>
+ たちむかったのだ<NEWBOX>
+ せんしたちの なかでも とくに<LINE>
+ ゆうかんだったのが‥‥<NEWBOX>
+ あおい めをした サムライと<LINE>
+ よばれていた‥‥マックスだった<NEWBOX>
+ こんなときにこそ マックスが<LINE>
+ いてくれれば‥‥<NEWBOX>
+ ヤツは いまごろ いったい どこで<LINE>
+ どうしてるのだろうか‥‥<END>
+
+//POINTER #22 @ $1CF760 - STRING #22 @ $1CDB26
+
+#WRITE(GBA,$1CF760)
+ むかし このほしを すくった<LINE>
+ マックスという せんしは‥‥<NEWBOX>
+ てきの ようさいを はかいしたあと<LINE>
+ けっきょく もどってこなかった<NEWBOX>
+ ようさいの ばくはつに<LINE>
+ まきこまれてしまったのか‥‥<NEWBOX>
+ それとも にげた てきを<LINE>
+ おって たびだってしまったのか‥‥<NEWBOX>
+ いま どこで どうしているのかは<LINE>
+ まったくわからない<NEWBOX>
+ しかし じょおう<LINE>
+ エメラリ-ダさまは いまも‥‥<NEWBOX>
+ マックスが かえってくる ひを<LINE>
+ しんじて まちつづけているのだ<END>
+
+//POINTER #23 @ $1CF764 - STRING #23 @ $1CDC02
+
+#WRITE(GBA,$1CF764)
+<CONTROL_CODE><$01><$01>っ8せ わたしは ここ さいきん<LINE>
+ さむくなったのは<NEWBOX>
+ にしの とうが げんいんではないかと<LINE>
+ にらんでいる<NEWBOX>
+ いんせきのおちた つぎのひに<LINE>
+ とつぜん あの とうが あらわれて<NEWBOX>
+ それから だんだんと じめんが<LINE>
+ こおりだしたのだ<NEWBOX>
+ とはいえ フェアリ-パレスが こんな<LINE>
+ じょうたいでは しらべにも いけん<NEWBOX>
+ ‥‥どうしたものか‥‥<END>
+
+//POINTER #24 @ $1CF768 - STRING #24 @ $1CDCAE
+
+#WRITE(GBA,$1CF768)
+ てんくうのしろ ファンタシ-に<LINE>
+ あのひ せめてきた てきを<NEWBOX>
+ わたしたちは しっている‥‥<NEWBOX>
+ ‥‥かつて このほしを<LINE>
+ きょうふの ドンぞこに おとしいれた<NEWBOX>
+ きょうあくボンバ- 5にんしゅう!<NEWBOX>
+ みまちがえるハズもない!<LINE>
+ やつらは しんではいなかった‥‥!<NEWBOX>
+ かつての たたかいで マックスを<LINE>
+ うしなってまで たたかいぬいた<NEWBOX>
+ われわれは‥‥あの たたかいは<LINE>
+ いったい なんだったというのだ‥‥<END>
+
+//POINTER #25 @ $1CF76C - STRING #25 @ $1CDD7A
+
+#WRITE(GBA,$1CF76C)
+<CONTROL_CODE><$01><$01>っ8た とうの たっているところから ずっと<LINE>
+ みなみに いった ガケのそばに<NEWBOX>
+ こおりづけのはなが さいている<LINE>
+ ばしょがある<NEWBOX>
+ あのはなは プテラドンという<LINE>
+ キャラボンの だいこうぶつだそうだ<END>
+
+//POINTER #26 @ $1CF770 - STRING #26 @ $1CDDE1
+
+#WRITE(GBA,$1CF770)
+ エメラリ-ダさまは つがいの<LINE>
+ キャラボンを かっておられた‥‥だが<NEWBOX>
+ ファンタシ-が せめこまれたときに<LINE>
+ オスのほうは うばわれてしまった‥‥<NEWBOX>
+ オスのほうには たしか つちを<LINE>
+ たがやす のうりょくが あったのだが<NEWBOX>
+ こんな よのなかでは たいして<LINE>
+ やくに たたないかも しれんな‥‥<END>
+
+//POINTER #27 @ $1CF774 - STRING #27 @ $1CDE75
+
+#WRITE(GBA,$1CF774)
+<CONTROL_CODE><$01><$01>メ8ア おお あなたですか<LINE>
+ このしろを すくってくださったのは<NEWBOX>
+ エメラリ-ダさまに これを あなたに<LINE>
+ わたすようにと いわれておりました<NEWBOX>
+<CONTROL_CODE><$03><$01>メ<CONTROL_CODE><$03><$00>ひ ボンバ-マンは フ-センを<LINE>
+ てにいれた!<CONTROL_CODE><$12><$0C><NEWBOX>
+ このフ-センは あたらしいボムを<LINE>
+ つくるための ごうせいそざいです<NEWBOX>
+ これからの たたかいに<LINE>
+ やくだててください<NEWBOX>
+ さきほど エメラリ-ダさまに<LINE>
+ つかえる 4けんじゃの ひとり‥‥<NEWBOX>
+ ブゥさまが もどられて あなたに<LINE>
+ でんごんを のこしていかれました<NEWBOX>
+ でんごんを おつたえします<NEWBOX>
+ ‥‥ワシら 4けんじゃは あるひ<LINE>
+ きょうあくボンバ-たちを<NEWBOX>
+ たおすほうほうについての<LINE>
+ ある じょうほうを てにいれたのぢゃ<NEWBOX>
+ じつは ヤツらには それぞれ<LINE>
+ にがてとする キャラボンが いる<NEWBOX>
+ ‥‥という じょうほうを もとに<LINE>
+ ワシらは かくちに ちり<NEWBOX>
+ みつけた キャラボンを つれて<LINE>
+ それぞれの ようさいに いったんぢゃ<NEWBOX>
+ ぢゃが それは ブレインボンバ-が<LINE>
+ ながした にせじょうほうぢゃった‥‥<NEWBOX>
+ けっかてきに ワシらは やつらを<LINE>
+ パワ-アップさせる キャラボンを<NEWBOX>
+ あつめる てだすけを させられて<LINE>
+ しまったのぢゃ‥‥めんぼくない<NEWBOX>
+ ‥‥でんごん おわります<LINE>
+ ‥‥にてました?<END>
+
+//POINTER #28 @ $1CF778 - STRING #28 @ $1CE0A3
+
+#WRITE(GBA,$1CF778)
+ あの いんせきの おちた ひ<LINE>
+ てんくうのしろ ファンタシ-は<NEWBOX>
+ きょうあくボンバ- 5にんしゅうに<LINE>
+ よって せめおとされた<NEWBOX>
+ われわれは なんとか さばくにある<LINE>
+ てんくうへのみちから にげのび<NEWBOX>
+ やつらが おって こられないように<LINE>
+ メダリオンを はずし みちを とじた<NEWBOX>
+ だが さばくも すでに やつらの<LINE>
+ てに おちていて<NEWBOX>
+ たたかいの なかで てきに 4つの<LINE>
+ メダリオンを うばわれてしまった<NEWBOX>
+ そこで すうねんまえに おなじような<LINE>
+ ことがあったときに つかった<NEWBOX>
+ この フェアリ-パレスへと<LINE>
+ うつってきたのだ<NEWBOX>
+ だが やつらは ここでも われわれの<LINE>
+ せんてを うっていた‥‥あのとうだ<NEWBOX>
+ けっきょく われわれは ここに<LINE>
+ とじこめられた かっこうになって<NEWBOX>
+ そのあいだに やつらに すきに<LINE>
+ やられてしまった‥‥めんぼくない<NEWBOX>
+ まだ ちじょうに おおくの まものが<LINE>
+ いるいじょうは‥‥<NEWBOX>
+ われわれは ちじょうを<LINE>
+ はなれるわけにはいかない<NEWBOX>
+ すまないが あなたに ファンタシ-を<LINE>
+ とりもどすことを おねがいしたい<NEWBOX>
+ ‥‥よろしく たのむ<END>
+
+//POINTER #29 @ $1CF77C - STRING #29 @ $1CE286
+
+#WRITE(GBA,$1CF77C)
+ あなたが ボンバ-マンですか‥‥<LINE>
+ はじめまして<NEWBOX>
+ わたしが このほしの じょおう<LINE>
+ エメラリ-ダです<NEWBOX>
+ いろいろなところで ひとびとを<LINE>
+ たすけてくださっているそうで‥‥<NEWBOX>
+ ほんとうに ありがとうございます<NEWBOX>
+ なにぶん さきほどまで あのような<LINE>
+ じょうたいでしたので<NEWBOX>
+ たいした おれいも できませんが‥‥<NEWBOX>
+ このキャラボンを おつれください<LINE>
+ きっと たすけに なるでしょう<END>
+
+//POINTER #30 @ $1CF780 - STRING #30 @ $1CE346
+
+#WRITE(GBA,$1CF780)
+ わたしは ユニコルノス<LINE>
+ こんごとも よろしく‥‥<NEWBOX>
+ キャラボン ユニコルノスが<LINE>
+ なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
+ わたしの のうりょくは<LINE>
+ かぜおこし<NEWBOX>
+ セットしていると たつまきを<LINE>
+ しずめたりできます<NEWBOX>
+ Bボタンに わたしを セットしますか?<LINE>
+  はい  いいえ<CONTROL_CODE><$05><$01>1418ぁ8ぃ ‥‥! それは‥‥メダリオンでは<LINE>
+ ありませんか!‥‥どこでそれを?<NEWBOX>
+ ‥‥そうですか<LINE>
+ ‥‥じつは それらのメダリオンは‥‥<NEWBOX>
+ てんくうへのみちを ひらく<LINE>
+ カギなのです<NEWBOX>
+ おねがいです! メダリオンを すべて<LINE>
+ とりもどしていただけないでしょうか?<NEWBOX>
+ すべて そろえれば てきに<LINE>
+ うばわれてしまった ファンタシ-を<NEWBOX>
+ とりもどせるかもしれません<NEWBOX>
+ メダリオンは ぜんぶで 4つですから<LINE>
+ のこりは 1つ‥‥<NEWBOX>
+ おそらく かざんの ほうに<LINE>
+ あるのではないかと おもいます<NEWBOX>
+ わたしたちが てんくうから<LINE>
+ ここへ にげるときに つかった<NEWBOX>
+ さばくへの ゲ-トを<LINE>
+ ひらかせておきます<NEWBOX>
+ ばしょは きたイプシロンの そばです<LINE>
+ いけば すぐわかると おもいます<NEWBOX>
+ そこから かざんへ むかってください<LINE>
+ それでは どうぞ おきをつけて‥‥<END>
+
+//POINTER #31 @ $1CF784 - STRING #31 @ $1CE3D4
+
+#WRITE(GBA,$1CF784)
+ ‥‥! それは‥‥メダリオンでは<LINE>
+ ありませんか!‥‥どこでそれを?<NEWBOX>
+ ‥‥そうですか<LINE>
+ ‥‥じつは それらのメダリオンは‥‥<NEWBOX>
+ てんくうへのみちを ひらく<LINE>
+ カギなのです<NEWBOX>
+ おねがいです! メダリオンを すべて<LINE>
+ とりもどしていただけないでしょうか?<NEWBOX>
+ すべて そろえれば てきに<LINE>
+ うばわれてしまった ファンタシ-を<NEWBOX>
+ とりもどせるかもしれません<NEWBOX>
+ メダリオンは ぜんぶで 4つですから<LINE>
+ のこりは 1つ‥‥<NEWBOX>
+ おそらく かざんの ほうに<LINE>
+ あるのではないかと おもいます<NEWBOX>
+ わたしたちが てんくうから<LINE>
+ ここへ にげるときに つかった<NEWBOX>
+ さばくへの ゲ-トを<LINE>
+ ひらかせておきます<NEWBOX>
+ ばしょは きたイプシロンの そばです<LINE>
+ いけば すぐわかると おもいます<NEWBOX>
+ そこから かざんへ むかってください<LINE>
+ それでは どうぞ おきをつけて‥‥<END>
+
+//POINTER #32 @ $1CF788 - STRING #32 @ $1CE548
+
+#WRITE(GBA,$1CF788)
+ わ-い! こおりづけのはなだ~<LINE>
+ モグモグモグ‥‥<END>
+
+//POINTER #33 @ $1CF78C - STRING #33 @ $1CE563
+
+#WRITE(GBA,$1CF78C)
+ よくきた ボンバ-マン<LINE>
+ ワシは ブゥというモノぢゃ!<NEWBOX>
+ ボスのへやの おくにある<LINE>
+ メダリオンを とりもどさぬかぎり‥‥<NEWBOX>
+ ワシは ここから にげられん‥‥<NEWBOX>
+ よいか よくきけ‥‥この ようさいの<LINE>
+ ボスのへやの とびらを あけるには<NEWBOX>
+ ビ-ストポミュと ドラコを<LINE>
+ ごうせいさせた キャラボンが‥‥<NEWBOX>
+ ひつようなのぢゃ!<NEWBOX>
+ キャラボンは キャラボンごうせい<LINE>
+ マシ-ンで ごうせいすることができる<NEWBOX>
+ キャラボンごうせいマシ-ンは この<LINE>
+ ようさいの どこかに あるはずぢゃ!<NEWBOX>
+ ここに ごうせいの もととなる<LINE>
+ ドラコが おる<NEWBOX>
+ つれていくがよい<END>
+
+//POINTER #34 @ $1CF790 - STRING #34 @ $1CE678
+
+#WRITE(GBA,$1CF790)
+ ボスのへやの おくにある<LINE>
+ メダリオンを とりもどさぬかぎり‥‥<NEWBOX>
+ ワシは ここから にげられん‥‥<NEWBOX>
+ よいか よくきけ‥‥この ようさいの<LINE>
+ ボスのへやの とびらを あけるには<NEWBOX>
+ ビ-ストポミュと ドラコを<LINE>
+ ごうせいさせた キャラボンが‥‥<NEWBOX>
+ ひつようなのぢゃ!<NEWBOX>
+ キャラボンは キャラボンごうせい<LINE>
+ マシ-ンで ごうせいすることができる<NEWBOX>
+ キャラボンごうせいマシ-ンは この<LINE>
+ ようさいの どこかに あるはずぢゃ!<NEWBOX>
+ なんとか みつけだして キャラボンを<LINE>
+ ごうせいさせるのぢゃ!<NEWBOX>
+ それと 3かいに のぼる かいだんは<LINE>
+ ふしぎな ちからで かくされておる<NEWBOX>
+ しかし かくされたものを みつけだす<LINE>
+ キャラボンの ちからを かりれば‥‥<NEWBOX>
+ きっと みちは<LINE>
+ ひらかれることぢゃろう!<END>
+
+//POINTER #35 @ $1CF794 - STRING #35 @ $1CE7D3
+
+#WRITE(GBA,$1CF794)
+ よくきたな ボンバ-マン‥‥<LINE>
+ ここまでくるとは たいしたもんだ<NEWBOX>
+ もくてきは マックスか?<LINE>
+ だったら ておくれだ あきらめな!<NEWBOX>
+ フフフ‥‥かてるつもりか? あまいな<LINE>
+ むかしの オレとは ちがうぜ!<NEWBOX>
+ ポミュドラゴン! おまえのちから‥‥<NEWBOX>
+ このプラズマボンバ-が<LINE>
+ もらったぁぁぁぁぁっ!!<END>
+
+//POINTER #36 @ $1CF798 - STRING #36 @ $1CE86A
+
+#WRITE(GBA,$1CF798)
+ まっていたぞ ボンバ-マン‥‥<NEWBOX>
+ これで フェアリ-パレスの こおりも<LINE>
+ とけることだろう‥‥<NEWBOX>
+ これが ここに ふういんされていた<LINE>
+ あいのメダリオンだ‥‥もっていけ<END>
+
+//POINTER #37 @ $1CF79C - STRING #37 @ $1CE8C0
+
+#WRITE(GBA,$1CF79C)
+ フフフ‥‥オレは ドラコ! あんたが<LINE>
+ ボンバ-マンか ウワサは きいてるよ<NEWBOX>
+ まっ よろしくたのむぜ!<NEWBOX>
+ キャラボン ドラコが<LINE>
+ なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
+ オレの のうりょくは<LINE>
+ ライト!<NEWBOX>
+ セットしていると くらいへやでも<LINE>
+ あかるくてらすぜ!<NEWBOX>
+ Bボタンに オレを セットするか?<LINE>
+  はい  いいえ<CONTROL_CODE><$05><$01>1418ふ8へ<CONTROL_CODE><$0D><$0E><$FD> それじゃ たのんだよ<END>
+
+//POINTER #38 @ $1CF7A0 - STRING #38 @ $1CE964
+
+#WRITE(GBA,$1CF7A0)
+<CONTROL_CODE><$0D><$0E><$FD> それじゃ たのんだよ<END>
+
+//POINTER #39 @ $1CF7A4 - STRING #39 @ $1CE967
+
+#WRITE(GBA,$1CF7A4)
+<$FD> それじゃ たのんだよ<END>
+
+//POINTER #40 @ $1CF7A8 - STRING #40 @ $1CE968
+
+#WRITE(GBA,$1CF7A8)
+ それじゃ たのんだよ<END>
+
+//POINTER #41 @ $1CF7AC - STRING #41 @ $1CE974
+
+#WRITE(GBA,$1CF7AC)
+ さっきは ありがとうね<END>
+
+//POINTER #42 @ $1CF7B0 - STRING #42 @ $1CE981
+
+#WRITE(GBA,$1CF7B0)
+ きょうも さむいねぇ<END>
+
+//POINTER #43 @ $1CF7B4 - STRING #43 @ $1CE98D
+
+#WRITE(GBA,$1CF7B4)
+ キンは げんきに してるかい?<END>
+
+//POINTER #44 @ $1CF7B8 - STRING #44 @ $1CE99E
+
+#WRITE(GBA,$1CF7B8)
+ ガウ? ねてるあいだに ずいぶん<LINE>
+ さむくなったガウ‥‥なぜガウ?<END>
+
+//POINTER #45 @ $1CF7BC - STRING #45 @ $1CE9C1
+
+#WRITE(GBA,$1CF7BC)
+<CONTROL_CODE><$03><$01>ウ ‥‥なるほど そうだったんガウか‥‥<NEWBOX>
+ そういうことなら この<LINE>
+ ビ-ストポミュが てを かすガウ~!<NEWBOX>
+ キャラボン ビ-ストポミュが<LINE>
+ なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
+ ボクの のうりょくは<LINE>
+ くうちゅういどうガウ!<NEWBOX>
+ セットしていると ガケとかも<LINE>
+ ひとっとびガウ!<NEWBOX>
+ Bボタンに ボクを セットするガウ?<LINE>
+  はい  いいえ<CONTROL_CODE><$05><$01>1418や8ゆ<CONTROL_CODE><$0D><$0C><$FD> ここを きたにいくと<LINE>
+ きたイプシロンが あるんだが<NEWBOX>
+ きたイプシロンの まちの<LINE>
+ いりぐちしゅうへんは<NEWBOX>
+ ふっかつする ユキダルマの<LINE>
+ トラップで まもられていて<NEWBOX>
+ へたに はいろうとすると<LINE>
+ とじこめられてしまうんだ<NEWBOX>
+ ここは ストロングの のうりょく<LINE>
+ ボムなげで ボムを なげこむと いい<NEWBOX>
+ どうしても ぬけだせなくなって<LINE>
+ しまったら ポミュの テレポ-トで<NEWBOX>
+ みなみイプシロンに もどって<LINE>
+ でなおすのが いいだろう<NEWBOX>
+ ヒントとしては みぎがわから<LINE>
+ はいっていくのが いいとおもうぞ<END>
+
+//POINTER #46 @ $1CF7C0 - STRING #46 @ $1CEA71
+
+#WRITE(GBA,$1CF7C0)
+<CONTROL_CODE><$0D><$0C><$FD> ここを きたにいくと<LINE>
+ きたイプシロンが あるんだが<NEWBOX>
+ きたイプシロンの まちの<LINE>
+ いりぐちしゅうへんは<NEWBOX>
+ ふっかつする ユキダルマの<LINE>
+ トラップで まもられていて<NEWBOX>
+ へたに はいろうとすると<LINE>
+ とじこめられてしまうんだ<NEWBOX>
+ ここは ストロングの のうりょく<LINE>
+ ボムなげで ボムを なげこむと いい<NEWBOX>
+ どうしても ぬけだせなくなって<LINE>
+ しまったら ポミュの テレポ-トで<NEWBOX>
+ みなみイプシロンに もどって<LINE>
+ でなおすのが いいだろう<NEWBOX>
+ ヒントとしては みぎがわから<LINE>
+ はいっていくのが いいとおもうぞ<END>
+
+//POINTER #47 @ $1CF7C4 - STRING #47 @ $1CEA74
+
+#WRITE(GBA,$1CF7C4)
+<$FD> ここを きたにいくと<LINE>
+ きたイプシロンが あるんだが<NEWBOX>
+ きたイプシロンの まちの<LINE>
+ いりぐちしゅうへんは<NEWBOX>
+ ふっかつする ユキダルマの<LINE>
+ トラップで まもられていて<NEWBOX>
+ へたに はいろうとすると<LINE>
+ とじこめられてしまうんだ<NEWBOX>
+ ここは ストロングの のうりょく<LINE>
+ ボムなげで ボムを なげこむと いい<NEWBOX>
+ どうしても ぬけだせなくなって<LINE>
+ しまったら ポミュの テレポ-トで<NEWBOX>
+ みなみイプシロンに もどって<LINE>
+ でなおすのが いいだろう<NEWBOX>
+ ヒントとしては みぎがわから<LINE>
+ はいっていくのが いいとおもうぞ<END>
+
+//POINTER #48 @ $1CF7C8 - STRING #48 @ $1CEA75
+
+#WRITE(GBA,$1CF7C8)
+ ここを きたにいくと<LINE>
+ きたイプシロンが あるんだが<NEWBOX>
+ きたイプシロンの まちの<LINE>
+ いりぐちしゅうへんは<NEWBOX>
+ ふっかつする ユキダルマの<LINE>
+ トラップで まもられていて<NEWBOX>
+ へたに はいろうとすると<LINE>
+ とじこめられてしまうんだ<NEWBOX>
+ ここは ストロングの のうりょく<LINE>
+ ボムなげで ボムを なげこむと いい<NEWBOX>
+ どうしても ぬけだせなくなって<LINE>
+ しまったら ポミュの テレポ-トで<NEWBOX>
+ みなみイプシロンに もどって<LINE>
+ でなおすのが いいだろう<NEWBOX>
+ ヒントとしては みぎがわから<LINE>
+ はいっていくのが いいとおもうぞ<END>
+
+//POINTER #49 @ $1CF7CC - STRING #49 @ $1CEB6F
+
+#WRITE(GBA,$1CF7CC)
+ うごいている ゆかは とめないと<LINE>
+ のれないよ<NEWBOX>
+ とめるための スイッチは<LINE>
+ ゆかのそばに あるはずさ<NEWBOX>
+ このスイッチは ふめないから<LINE>
+ ばくふうで いれるんだよ<END>
+
+//POINTER #50 @ $1CF7D0 - STRING #50 @ $1CEBC2
+
+#WRITE(GBA,$1CF7D0)
+ あら あなた もしかして<LINE>
+ ガケの むこうから きたの?<NEWBOX>
+ え? あなたが わたれるように<LINE>
+ してくれたの? たすかったわぁ!<NEWBOX>
+ じつは フィアンセが うみのほうに<LINE>
+ いったきり かえってこないから<NEWBOX>
+ むかえに いこうとしてたんだけど<LINE>
+ あの ガケで あしどめされてたのよ<NEWBOX>
+ なにか ちからに なれることが<LINE>
+ あったら いってちょうだい<NEWBOX>
+ え? マックスを みなかったか?<LINE>
+ ‥‥あ! もしかして あのひとかしら<NEWBOX>
+ ここの きたに さいきん<LINE>
+ 2つならんだ とうが できたのよ<NEWBOX>
+ そこへの いきかたを たしか<LINE>
+ そんなひとに きかれたわ<NEWBOX>
+ あそこへは フェアリ-パレスの<LINE>
+ にしがわからしか いけないのよ<NEWBOX>
+ とりあえず みなみイプシロンに<LINE>
+ いけば なんとかなるんじゃないかしら<NEWBOX>
+ それじゃ マックスさんに<LINE>
+ ぶじ あえるように いのってるわ<END>
+
+//POINTER #51 @ $1CF7D4 - STRING #51 @ $1CED37
+
+#WRITE(GBA,$1CF7D4)
+ ここのガケぞいに ひがしに あるいて<LINE>
+ いくと おんせんが あるのよ<NEWBOX>
+ ガケぞいの みちの きたがわにある<LINE>
+ こおりのカベの むこうが<NEWBOX>
+ じょうかまち みなみイプシロンよ<NEWBOX>
+ あ! おんせんのほうに いっても<LINE>
+ まちへの いりぐちは ないからね<NEWBOX>
+ まちに はいりたければ かべぞいに<LINE>
+ おんせんと はんたいほうこうよ<END>
+
+//POINTER #52 @ $1CF7D8 - STRING #52 @ $1CEDD6
+
+#WRITE(GBA,$1CF7D8)
+<CONTROL_CODE><$01><$01>コ8キ さいきん さむかったせいか<LINE>
+ じわれが おこっちまってな<NEWBOX>
+ こっちから じょうかまちの<LINE>
+ イプシロンに いけなくなっちまった<NEWBOX>
+ ガケぞいに にしに いくと はしが<LINE>
+ かけられそうな ところが あるんだが<NEWBOX>
+ ガケの むこうがわにいる<LINE>
+ ヘンなやつらが ジャマをするんだ<NEWBOX>
+ だれか あいつらを<LINE>
+ やっつけてくれないかなぁ‥‥<END>
+
+//POINTER #53 @ $1CF7DC - STRING #53 @ $1CEE7E
+
+#WRITE(GBA,$1CF7DC)
+<CONTROL_CODE><$01><$01>カ8ク このさきに あやしいやつらが<LINE>
+ あつまって なにか やってるのよ<NEWBOX>
+ なんか ドカ-ンって おととか<LINE>
+ キャラボンの なきごえとか してたわ<END>
+
+//POINTER #54 @ $1CF7E0 - STRING #54 @ $1CEECB
+
+#WRITE(GBA,$1CF7E0)
+<CONTROL_CODE><$0D><$0B><$FD><CONTROL_CODE><$01><$01>ナ8コ メダリオンは ぜんぶで 4つですから<LINE>
+ のこりは 1つ‥‥<NEWBOX>
+ おそらく かざんの ほうに<LINE>
+ あるのではないかと おもいます<NEWBOX>
+ わたしたちが てんくうから<LINE>
+ ここへ にげるときに つかった<NEWBOX>
+ さばくへの ゲ-トを<LINE>
+ ひらかせておきます<NEWBOX>
+ ばしょは きたイプシロンの そばです<LINE>
+ いけば すぐわかると おもいます<NEWBOX>
+ そこから かざんへ むかってください<LINE>
+ それでは どうぞ おきをつけて‥‥<END>
+
+//POINTER #55 @ $1CF7E4 - STRING #55 @ $1CEECE
+
+#WRITE(GBA,$1CF7E4)
+<$FD><CONTROL_CODE><$01><$01>ナ8コ メダリオンは ぜんぶで 4つですから<LINE>
+ のこりは 1つ‥‥<NEWBOX>
+ おそらく かざんの ほうに<LINE>
+ あるのではないかと おもいます<NEWBOX>
+ わたしたちが てんくうから<LINE>
+ ここへ にげるときに つかった<NEWBOX>
+ さばくへの ゲ-トを<LINE>
+ ひらかせておきます<NEWBOX>
+ ばしょは きたイプシロンの そばです<LINE>
+ いけば すぐわかると おもいます<NEWBOX>
+ そこから かざんへ むかってください<LINE>
+ それでは どうぞ おきをつけて‥‥<END>
+
+//POINTER #56 @ $1CF7E8 - STRING #56 @ $1CEECF
+
+#WRITE(GBA,$1CF7E8)
+<CONTROL_CODE><$01><$01>ナ8コ メダリオンは ぜんぶで 4つですから<LINE>
+ のこりは 1つ‥‥<NEWBOX>
+ おそらく かざんの ほうに<LINE>
+ あるのではないかと おもいます<NEWBOX>
+ わたしたちが てんくうから<LINE>
+ ここへ にげるときに つかった<NEWBOX>
+ さばくへの ゲ-トを<LINE>
+ ひらかせておきます<NEWBOX>
+ ばしょは きたイプシロンの そばです<LINE>
+ いけば すぐわかると おもいます<NEWBOX>
+ そこから かざんへ むかってください<LINE>
+ それでは どうぞ おきをつけて‥‥<END>
+
+//POINTER #57 @ $1CF7EC - STRING #57 @ $1CEF98
+
+#WRITE(GBA,$1CF7EC)
+<CONTROL_CODE><$0D><$10><$FD><CONTROL_CODE><$03><$00>れ ボンバ-マンは<LINE>
+ こおりづけのはなをてにいれた!<CONTROL_CODE><$12><$0C><END>
+
+//POINTER #58 @ $1CF7F0 - STRING #58 @ $1CEF9B
+
+#WRITE(GBA,$1CF7F0)
+<$FD><CONTROL_CODE><$03><$00>れ ボンバ-マンは<LINE>
+ こおりづけのはなをてにいれた!<CONTROL_CODE><$12><$0C><END>
+
+//POINTER #59 @ $1CF7F4 - STRING #59 @ $1CEF9C
+
+#WRITE(GBA,$1CF7F4)
+<CONTROL_CODE><$03><$00>れ ボンバ-マンは<LINE>
+ こおりづけのはなをてにいれた!<CONTROL_CODE><$12><$0C><END>
+
+//POINTER #60 @ $1CF7F8 - STRING #60 @ $1CEFBD
+
+#WRITE(GBA,$1CF7F8)
+ プハ- おいしかった-!<LINE>
+ ‥‥え? キミの はなだったの?<NEWBOX>
+ ‥‥ごめんよう‥‥ここ さいきん<LINE>
+ たべたこと なかったんだよう‥‥<NEWBOX>
+ ‥‥え? ゆるしてくれるの?<LINE>
+ ありがとう-! やさしいんだね!<NEWBOX>
+ おわびといってはなんだけど<LINE>
+ これから キミの おてつだいをするよ<NEWBOX>
+ ボクは プテラドン<LINE>
+ これから よろしくおねがいしま-す<NEWBOX>
+ キャラボン プテラドンが<LINE>
+ なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
+ ボクの のうりょくは<LINE>
+ かりょくダウンだよ<NEWBOX>
+ セットしていると ばくふうが<LINE>
+ 1レベル ちいさくなるんだ<NEWBOX>
+ Bボタンにボクを セットする?<LINE>
+  はい  いいえ<CONTROL_CODE><$05><$01>1418ぉ8っ<CONTROL_CODE><$0D><$0D><$FD> このさき みなみイプシロン<LINE>
+ さらに すすむと きたイプシロン<END>
+
+//POINTER #61 @ $1CF7FC - STRING #61 @ $1CF0D9
+
+#WRITE(GBA,$1CF7FC)
+<CONTROL_CODE><$0D><$0D><$FD> このさき みなみイプシロン<LINE>
+ さらに すすむと きたイプシロン<END>
+
+//POINTER #62 @ $1CF800 - STRING #62 @ $1CF0DC
+
+#WRITE(GBA,$1CF800)
+<$FD> このさき みなみイプシロン<LINE>
+ さらに すすむと きたイプシロン<END>
+
+//POINTER #63 @ $1CF804 - STRING #63 @ $1CF0DD
+
+#WRITE(GBA,$1CF804)
+ このさき みなみイプシロン<LINE>
+ さらに すすむと きたイプシロン<END>
+
+//POINTER #64 @ $1CF808 - STRING #64 @ $1CF0FE
+
+#WRITE(GBA,$1CF808)
+ みなみイプシロンへ ようこそ!<NEWBOX>
+ フェアリ-パレスに いく かたは<LINE>
+ すぐそばの はしを わたってください<END>
+
+//POINTER #65 @ $1CF80C - STRING #65 @ $1CF135
+
+#WRITE(GBA,$1CF80C)
+ きたイプシロンへ ようこそ!<END>
+
+//POINTER #66 @ $1CF810 - STRING #66 @ $1CF145
+
+#WRITE(GBA,$1CF810)
+ さきほど エメラリ-ダさまに<LINE>
+ つかえる 4けんじゃの ひとり‥‥<NEWBOX>
+ ブゥさまが もどられて あなたに<LINE>
+ でんごんを のこしていかれました<NEWBOX>
+ でんごんを おつたえします<NEWBOX>
+ ‥‥ワシら 4けんじゃは あるひ<LINE>
+ きょうあくボンバ-たちを<NEWBOX>
+ たおすほうほうについての<LINE>
+ ある じょうほうを てにいれたのぢゃ<NEWBOX>
+ じつは ヤツらには それぞれ<LINE>
+ にがてとする キャラボンが いる<NEWBOX>
+ ‥‥という じょうほうを もとに<LINE>
+ ワシらは かくちに ちり<NEWBOX>
+ みつけた キャラボンを つれて<LINE>
+ それぞれの ようさいに いったんぢゃ<NEWBOX>
+ ぢゃが それは ブレインボンバ-が<LINE>
+ ながした にせじょうほうぢゃった‥‥<NEWBOX>
+ けっかてきに ワシらは やつらを<LINE>
+ パワ-アップさせる キャラボンを<NEWBOX>
+ あつめる てだすけを させられて<LINE>
+ しまったのぢゃ‥‥めんぼくない<NEWBOX>
+ ‥‥でんごん おわります<LINE>
+ ‥‥にてました?<END>
+
+//POINTER #67 @ $1CF814 - STRING #67 @ $1CF2CA
+
+#WRITE(GBA,$1CF814)
+<CONTROL_CODE><$12><$4C> ボンバ-マンは あいのメダリオンを<LINE>
+ てにいれた!<NEWBOX>
+ ボンバ-マンの ハ-トの かずが<LINE>
+ 1つ ふえた!<END>
+
+//POINTER #68 @ $1CF818 - STRING #68 @ $1CF304
+
+#WRITE(GBA,$1CF818)
+ いま オレの いるところから<LINE>
+ おまえのいるところが よくみえるぞ<NEWBOX>
+ おまえが つぎに いくべきところもだ<LINE>
+ そう‥‥<NEWBOX>
+ かつて このほしを<LINE>
+ おさめていたものが‥‥<NEWBOX>
+ すべてを みていた ばしょで<LINE>
+ オレは まっている<NEWBOX>
+ はやく おまえも ここにこい<LINE>
+ ‥‥まっているぞ<END>
+
+//POINTER #69 @ $1CF81C - STRING #69 @ $1CF38E
+
+#WRITE(GBA,$1CF81C)
+ え? おしろにいきたいの‥‥?<LINE>
+ それは ムリよ ムリ ムリ!<NEWBOX>
+ だって いま おしろに いくための<LINE>
+ はしが こおって おちちゃってるもん<NEWBOX>
+ いま おしろと ここを<LINE>
+ いったりきたりできるのは‥‥<NEWBOX>
+ あそこの ガケを ひとっとび! の<LINE>
+ ビ-ストポミュぐらいのものよ<END>
+
+//POINTER #70 @ $1CF820 - STRING #70 @ $1CF416
+
+#WRITE(GBA,$1CF820)
+ みてみて! おしろの こおりが<LINE>
+ とけたんだよ!<END>
+
+//POINTER #71 @ $1CF824 - STRING #71 @ $1CF430
+
+#WRITE(GBA,$1CF824)
+ おぉ わかいの!<LINE>
+ このへんは はじめてか?<NEWBOX>
+ ここにきたら やはり<LINE>
+ おんせんに はいらんとな!<NEWBOX>
+ まぁ しかし わかりにくいところに<LINE>
+ あるからな<NEWBOX>
+ ここにくるまえに みかけたなら<LINE>
+ かなり ラッキ-じゃぞ<NEWBOX>
+ おお! もう はいってきたのか<LINE>
+ さすがじゃのう<NEWBOX>
+ あの おんせんは なかなか<LINE>
+ いい ゆかげんだったじゃろう<END>
+
+//POINTER #72 @ $1CF828 - STRING #72 @ $1CF4D4
+
+#WRITE(GBA,$1CF828)
+ ずいぶん ハデな なだれが<LINE>
+ あったみたいだな<NEWBOX>
+ ここにも すごい おとが<LINE>
+ きこえてきてたぜ‥‥<NEWBOX>
+ ‥‥え!? さっきの なだれで<LINE>
+ ガケが うまった!?<NEWBOX>
+ ガケのところにいた ヘンなやつらも<LINE>
+ もういないって?<NEWBOX>
+ そりゃあ たすかった!<LINE>
+ みんなにも しらせないとな!<END>
+
+//POINTER #73 @ $1CF82C - STRING #73 @ $1CF55E
+
+#WRITE(GBA,$1CF82C)
+ このさきに あやしいやつらが<LINE>
+ あつまって なにか やってるのよ<NEWBOX>
+ なんか ドカ-ンって おととか<LINE>
+ キャラボンの なきごえとか してたわ<NEWBOX>
+ でも なんか きゅうに しずかに<LINE>
+ なったわねぇ‥‥<NEWBOX>
+ あら あなたが しずかに させたの?<LINE>
+ ありがとう たすかったわ<END>
+
+//POINTER #74 @ $1CF830 - STRING #74 @ $1CF5E3
+
+#WRITE(GBA,$1CF830)
+ こんにちは きょうも さむいわね<NEWBOX>
+ そういえば ここらへんには<LINE>
+ こおりづけのはな という‥‥<NEWBOX>
+ はなが さくんだけど あなたは<LINE>
+ もう みた?<NEWBOX>
+ ‥‥え? あなた こおりづけのはな<LINE>
+ もってるの? みせて みせて!<NEWBOX>
+ あらあら‥‥はなびらが 1まい<LINE>
+ たべられちゃってるのね‥‥<NEWBOX>
+ でも そのていどで すんでいるモノを<LINE>
+ みつけるなんて あるいみ ラッキ-よ<END>
+
+//POINTER #75 @ $1CF834 - STRING #75 @ $1CF699
+
+#WRITE(GBA,$1CF834)
+ とうとう メダリオンを すべて<LINE>
+ あつめられたのですね<NEWBOX>
+ それら 4つの メダリオンが あれば<LINE>
+ ファンタシ-へ いけるはずです<NEWBOX>
+ どうか ファンタシ-を<LINE>
+ とりもどしてください<NEWBOX>
+ よろしくおねがいいたします‥‥<END>

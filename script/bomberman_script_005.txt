@@ -1,0 +1,1375 @@
+// Define a TABLE
+#VAR(Table, TABLE)
+#VAR(engTable, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/bomberman.tbl", Table)
+#ADDTBL("melissa font/melissa8x8.tbl", engTable)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($55E000)
+
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #005 NAME:		Block 6 (POINTER)
+
+//POINTER #0 @ $1CA1F8 - STRING #0 @ $1C780C
+
+#WRITE(GBA,$1CA1F8)
+イブシのいえなら すぐそこ<LINE>
+いけの ほとりの いっけんやだよ<NEWBOX>
+みんなは バカにしてるけど<LINE>
+オレは きらいじゃないぜ あの じいさん<END>
+
+//POINTER #1 @ $1CA1FC - STRING #1 @ $1C784E
+
+#WRITE(GBA,$1CA1FC)
+かぜが ふいていれば ふうしゃが まわって<LINE>
+むこうぎしに わたれるんじゃがの<NEWBOX>
+いまは かぜが ふいてないから だめじゃ<LINE>
+かぜを おこす ボムでもあれば べつじゃがの<END>
+
+//POINTER #2 @ $1CA200 - STRING #2 @ $1C78A1
+
+#WRITE(GBA,$1CA200)
+つよいかぜで ふうしゃが まわるとな‥‥<LINE>
+ふうしゃから つながった ロ-プがまかれて<NEWBOX>
+あしばが むこうぎしに うごくんじゃ<END>
+
+//POINTER #3 @ $1CA204 - STRING #3 @ $1C78DF
+
+#WRITE(GBA,$1CA204)
+イブシじいさん たまに このへんまで<LINE>
+きを きりに くるんだよ<NEWBOX>
+カンバン っていうやつの<LINE>
+ざいりょうに するのかな?<END>
+
+//POINTER #4 @ $1CA208 - STRING #4 @ $1C791A
+
+#WRITE(GBA,$1CA208)
+がけを こえて きたに いったところに<LINE>
+イブシっていう じいさんが すんでるんだ<NEWBOX>
+カンバンとかいうものを つくってる<LINE>
+ヘンな じいさんさ<NEWBOX>
+きのいたに もじを かいて<LINE>
+じめんに たてるんだとさ<NEWBOX>
+それが なんの やくにたつのか しらんが<LINE>
+とにかく かわりものだよ<END>
+
+//POINTER #5 @ $1CA20C - STRING #5 @ $1C799C
+
+#WRITE(GBA,$1CA20C)
+なんじゃ さいきんの わかいもんは<LINE>
+かわった かっこうを しておるのう‥‥<NEWBOX>
+そういえば ついさいきん<LINE>
+ひがしの たいようしんでんの ほうにも<NEWBOX>
+かわった かっこうの だんたいが<LINE>
+やってきたとか‥‥‥‥<NEWBOX>
+おまえさんの ともだちかい?<END>
+
+//POINTER #6 @ $1CA210 - STRING #6 @ $1C7A0F
+
+#WRITE(GBA,$1CA210)
+この ノンビリにはね たいようと つき<LINE>
+ふたつの しんでんが あるんだよ<NEWBOX>
+たいようの しんでんは アクアむらをでて<LINE>
+ひがしにいって がけの むこうに あるよ<NEWBOX>
+まぁ とくべつな ひとしか<LINE>
+しんでんには はいれないけどね<END>
+
+//POINTER #7 @ $1CA214 - STRING #7 @ $1C7A7C
+
+#WRITE(GBA,$1CA214)
+こんにちは ここは アクアむらよ<NEWBOX>
+ず-っと ひがしにいくと フォレスっていう<LINE>
+おおきな まちが あるのよ<END>
+
+//POINTER #8 @ $1CA218 - STRING #8 @ $1C7AB1
+
+#WRITE(GBA,$1CA218)
+きたにいくと イブシっていう<LINE>
+ヘンな おじいさんが すんでるわよ<NEWBOX>
+なんでも カンバン とかいうものを<LINE>
+つくっているんですって<NEWBOX>
+あなたも みたでしょ?<LINE>
+かわのよこにあった アレよ<END>
+
+//POINTER #9 @ $1CA21C - STRING #9 @ $1C7B0A
+
+#WRITE(GBA,$1CA21C)
+うわぁ- おにいちゃん<LINE>
+かっこいい ふくを きているね!<NEWBOX>
+どこかの くにの おうじさまなの?<END>
+
+//POINTER #10 @ $1CA220 - STRING #10 @ $1C7B39
+
+#WRITE(GBA,$1CA220)
+あたし おおきくなったら<LINE>
+つきしんでんの しんかんに なるんだ!<END>
+
+//POINTER #11 @ $1CA224 - STRING #11 @ $1C7B5A
+
+#WRITE(GBA,$1CA224)
+<CONTROL_CODE><$01><$02>か6いいらっしゃい しょうひんを<LINE>
+てにとって みてちょうだい<NEWBOX>
+コロコロの さいしんごうは<LINE>
+まだ にゅうかしてないよ<END>
+
+//POINTER #12 @ $1CA228 - STRING #12 @ $1C7B97
+
+#WRITE(GBA,$1CA228)
+いらっしゃい しょうひんを<LINE>
+てにとって みてちょうだい<NEWBOX>
+コロコロの さいしんごうが<LINE>
+にゅうかしたよ!<END>
+
+//POINTER #13 @ $1CA22C - STRING #13 @ $1C7BCA
+
+#WRITE(GBA,$1CA22C)
+この もりの きたに<LINE>
+こおりの どうくつが あるんじゃ<NEWBOX>
+どうくつの おくには<LINE>
+とても おおきな こおりが あってな<NEWBOX>
+その こおりが なかなかとけない<LINE>
+ふしぎな こおりなんじゃよ<NEWBOX>
+そういえば おおきな こおりの うえに<LINE>
+なにか あかいものが のっていたな‥‥<END>
+
+//POINTER #14 @ $1CA230 - STRING #14 @ $1C7C4B
+
+#WRITE(GBA,$1CA230)
+フォレスタウンにある つきしんでんには<LINE>
+だいしんかんの キミドリさんが いるんだよ<NEWBOX>
+まえに いっかい みたこと あるけど<LINE>
+けっこう キレイな ひとでさ‥‥<END>
+
+//POINTER #15 @ $1CA234 - STRING #15 @ $1C7C99
+
+#WRITE(GBA,$1CA234)
+たいようしんでんは とくべつな ばしょだから<LINE>
+ふつうのひとは はいっては いけないのよ<NEWBOX>
+しんかんか とくべつに しんかんに<LINE>
+みとめられた ひとしか はいれないのよ<END>
+
+//POINTER #16 @ $1CA238 - STRING #16 @ $1C7CEB
+
+#WRITE(GBA,$1CA238)
+このさきの きたの もりに<LINE>
+ふしぎな キノコが はえているんだ<NEWBOX>
+うえにのると フニフニうごいて<LINE>
+はなれた ところに とばされるんだ<NEWBOX>
+キノコの いろによって<LINE>
+とばされる きょりが ちがうみたいだよ<END>
+
+//POINTER #17 @ $1CA23C - STRING #17 @ $1C7D4D
+
+#WRITE(GBA,$1CA23C)
+フォレスタウンに いきたければ<LINE>
+たいようしんでんから きたに いき<NEWBOX>
+だんがいを ひがしに すすむんだよ<LINE>
+すると イブシのたてた カンベン‥‥<NEWBOX>
+じゃなかった カンボン‥‥でもない‥‥<LINE>
+なんだっけ? まぁいいや アレがみえてくるよ<END>
+
+//POINTER #18 @ $1CA240 - STRING #18 @ $1C7D4D
+
+#WRITE(GBA,$1CA240)
+フォレスタウンに いきたければ<LINE>
+たいようしんでんから きたに いき<NEWBOX>
+だんがいを ひがしに すすむんだよ<LINE>
+すると イブシのたてた カンベン‥‥<NEWBOX>
+じゃなかった カンボン‥‥でもない‥‥<LINE>
+なんだっけ? まぁいいや アレがみえてくるよ<END>
+
+//POINTER #19 @ $1CA244 - STRING #19 @ $1C7DBF
+
+#WRITE(GBA,$1CA244)
+<CONTROL_CODE><$16><$07>ロあら あなた けがをしてるじゃないの<LINE>
+ちょっと じっとしていてね‥‥<NEWBOX>
+<CONTROL_CODE><$11><$E0>くよハイ これでだいじょうぶ<LINE>
+あんまり ムリしちゃ ダメよ<END>
+
+//POINTER #20 @ $1CA248 - STRING #20 @ $1C7E07
+
+#WRITE(GBA,$1CA248)
+いらっしゃいませ しょうひんを<LINE>
+てにとって ごらんください<END>
+
+//POINTER #21 @ $1CA24C - STRING #21 @ $1C7E25
+
+#WRITE(GBA,$1CA24C)
+この だんがいを こえると<LINE>
+フォレスタウンに でるんじゃ<END>
+
+//POINTER #22 @ $1CA250 - STRING #22 @ $1C7E42
+
+#WRITE(GBA,$1CA250)
+そとに ちいさな きのめが はえていたろう<LINE>
+アレは とくべつな ツタの いっしゅでね<NEWBOX>
+みずを かけてやると アッというまに<LINE>
+せいちょう するんだよ<NEWBOX>
+せいちょうした ツタは とても じょうぶで<LINE>
+おとなが のっても おれないんだよ<END>
+
+//POINTER #23 @ $1CA254 - STRING #23 @ $1C7EB4
+
+#WRITE(GBA,$1CA254)
+しんでんの たからばこは おおがかりな<LINE>
+トラップで まもられているんだ<NEWBOX>
+きいたはなしだと へやごと いどうして<LINE>
+たからばこを まもるとか‥‥<NEWBOX>
+やじるしの かいてある あかいパネルが<LINE>
+いどうするへやの カギになっているらしい<NEWBOX>
+さらに そのほかに<LINE>
+めにみえない かいだんなんかも あるとか‥‥<NEWBOX>
+みえない かいだんなんて<LINE>
+どうやって つかうんだろうな‥‥<END>
+
+//POINTER #24 @ $1CA258 - STRING #24 @ $1C7F63
+
+#WRITE(GBA,$1CA258)
+ここに くるとちゅうで じめんに<LINE>
+とりのえが かいてあるのを みたか?<NEWBOX>
+あれは たいようのつばさ といってな<LINE>
+とりのえの ちゅうしんに はいると<NEWBOX>
+もうひとつの えのちゅうしんに<LINE>
+いどう できるものなんじゃ<NEWBOX>
+どんな しかけで うごいているのか<LINE>
+まったく そうぞうも つかんがの‥‥<END>
+
+//POINTER #25 @ $1CA25C - STRING #25 @ $1C7FEF
+
+#WRITE(GBA,$1CA25C)
+たいようのつばさは つきしんでんにいる<LINE>
+キミドリさんが かんり しておるんじゃ<NEWBOX>
+とくべつな ぎしきの ときだけ<LINE>
+キミドリさんが うごかしてくれるのさ<END>
+
+//POINTER #26 @ $1CA260 - STRING #26 @ $1C803A
+
+#WRITE(GBA,$1CA260)
+<CONTROL_CODE><$01><$02>ォ6ちフォレスタウンに ようこそ<LINE>
+つきしんでんは まちの みなみに あるわよ<END>
+
+//POINTER #27 @ $1CA264 - STRING #27 @ $1C8064
+
+#WRITE(GBA,$1CA264)
+フォレスタウンに ようこそ<LINE>
+つきしんでんは まちの みなみに あるわよ<NEWBOX>
+いいなぁ キミドリさん‥‥<LINE>
+あたしも いつか おとなになったら<NEWBOX>
+おにいちゃんみたいな かっこいいひとに<LINE>
+あおいはなを もらうんだ!<END>
+
+//POINTER #28 @ $1CA268 - STRING #28 @ $1C80CA
+
+#WRITE(GBA,$1CA268)
+にしにある たいようしんでん<LINE>
+この フォレスタウンにある つきしんでん<NEWBOX>
+たいようしんでんは とくべつな ぎしきが<LINE>
+あるときだけ ひらかれるんだよ<NEWBOX>
+かみさまに つかえる しんかんは<LINE>
+ふだん つきしんでんで くらしているのさ<END>
+
+//POINTER #29 @ $1CA26C - STRING #29 @ $1C8139
+
+#WRITE(GBA,$1CA26C)
+にしの たいようしんでんの てっぺんには<LINE>
+まものが まちに はいってこないように<NEWBOX>
+こうせんほうが そなえつけて あるんだよ<END>
+
+//POINTER #30 @ $1CA270 - STRING #30 @ $1C8177
+
+#WRITE(GBA,$1CA270)
+このまえ あまり みかけない ひとたちが<LINE>
+たいようしんでんに はいっていったわ<NEWBOX>
+しんでんの なかには きけんな ワナが<LINE>
+いっぱい しかけてあるの<NEWBOX>
+なかに はいったひとたちは<LINE>
+ぶじかしら‥‥‥‥<END>
+
+//POINTER #31 @ $1CA274 - STRING #31 @ $1C81D8
+
+#WRITE(GBA,$1CA274)
+あ~ はたらくのは めんどうだなぁ~<LINE>
+ラクして ダラダラ いきていきたいな~<END>
+
+//POINTER #32 @ $1CA278 - STRING #32 @ $1C81FF
+
+#WRITE(GBA,$1CA278)
+あのあと おかあさんに すっごく<LINE>
+しかられちゃったよ‥‥<NEWBOX>
+しかたないから こんどは みなみのもりの<LINE>
+たつまきのどうくつで あそんで こようかな<NEWBOX>
+あそこの たつまきは かべに つきあたると<LINE>
+ひだりに むきをかえて すすむんだよ<END>
+
+//POINTER #33 @ $1CA27C - STRING #33 @ $1C8270
+
+#WRITE(GBA,$1CA27C)
+おかあさんに こってり しぼられちゃった<LINE>
+‥‥もう だんがいに いくのは やめようっと<END>
+
+//POINTER #34 @ $1CA280 - STRING #34 @ $1C829C
+
+#WRITE(GBA,$1CA280)
+このまちから みなみへでる もんは<LINE>
+おとなりの おくさんが かんりしているのよ<NEWBOX>
+みなみへ いきたければ おとなりさんに<LINE>
+たのめば もんを あけてくれるわよ<END>
+
+//POINTER #35 @ $1CA284 - STRING #35 @ $1C82EA
+
+#WRITE(GBA,$1CA284)
+<CONTROL_CODE><$01><$02>ォ6はみなみの モリモリのもりには<LINE>
+たつまきのどうくつが あってな<NEWBOX>
+その おくでは ちいさいたつまきが<LINE>
+はしりまわって いるんじゃ<NEWBOX>
+どうにかすると その たつまきを<LINE>
+つかまえる ことが できるらしいが‥‥<END>
+
+//POINTER #36 @ $1CA288 - STRING #36 @ $1C8354
+
+#WRITE(GBA,$1CA288)
+へぇ アンタ キミドリさんに<LINE>
+あおいはなを わたしたのかい‥‥<NEWBOX>
+フフフ‥‥‥‥<LINE>
+なかなか やるじゃないか<END>
+
+//POINTER #37 @ $1CA28C - STRING #37 @ $1C8389
+
+#WRITE(GBA,$1CA28C)
+<CONTROL_CODE><$16><$07>ワちょっと まっていてくださいね<NEWBOX>
+<CONTROL_CODE><$11><$E0>くよこれで だいじょうぶ<LINE>
+あまり ムリは しないことです<END>
+
+//POINTER #38 @ $1CA290 - STRING #38 @ $1C83BD
+
+#WRITE(GBA,$1CA290)
+たいようしんでんには きょうりょくな<LINE>
+こうせんほうが おいてありますが<NEWBOX>
+しんでんのなかは おおくの<LINE>
+トラップで まもられているので<NEWBOX>
+だれも あの こうせんほうを<LINE>
+もちだそうとする ひとなんて いませんよ<END>
+
+//POINTER #39 @ $1CA294 - STRING #39 @ $1C8423
+
+#WRITE(GBA,$1CA294)
+たいようしんでんの ないぶには<LINE>
+しんにゅうしゃを げきたい するための<NEWBOX>
+きけんな トラップが<LINE>
+たくさん しかけられています<NEWBOX>
+とくに じゅうような たからばこは<LINE>
+へやごと いどうする しかけで<NEWBOX>
+なかなか たどりつけないように<LINE>
+なっているのです<END>
+
+//POINTER #40 @ $1CA298 - STRING #40 @ $1C849C
+
+#WRITE(GBA,$1CA298)
+‥‥‥‥‥‥‥‥‥‥‥‥?<END>
+
+//POINTER #41 @ $1CA29C - STRING #41 @ $1C84AA
+
+#WRITE(GBA,$1CA29C)
+‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
+ボンバ-マンは カンバンをたてた!<END>
+
+//POINTER #42 @ $1CA2A0 - STRING #42 @ $1C84C9
+
+#WRITE(GBA,$1CA2A0)
+<CONTROL_CODE><$01><$01>ゆ6むイブシのいえ<LINE>
+カンバン つくります<END>
+
+//POINTER #43 @ $1CA2A4 - STRING #43 @ $1C84E1
+
+#WRITE(GBA,$1CA2A4)
+イブシのいえ<LINE>
+カンバン つくります<NEWBOX>
+あ たててくれて ありがとう<LINE>
+イブシじいさんは もう としだから<NEWBOX>
+あんまり とおくまで カンバンを<LINE>
+たてに いけないんだよ<END>
+
+//POINTER #44 @ $1CA2A8 - STRING #44 @ $1C8531
+
+#WRITE(GBA,$1CA2A8)
+<CONTROL_CODE><$01><$01>ゆ6もあしばから おちないように ちゅうい!<END>
+
+//POINTER #45 @ $1CA2AC - STRING #45 @ $1C854B
+
+#WRITE(GBA,$1CA2AC)
+あしばから おちないように ちゅうい!<NEWBOX>
+なぁ しってるかい?<LINE>
+あおいはなを おんなのひとに わたすのは<NEWBOX>
+ノンビリせいでの プロポ-ズなんだぜ<END>
+
+//POINTER #46 @ $1CA2B0 - STRING #46 @ $1C8592
+
+#WRITE(GBA,$1CA2B0)
+<CONTROL_CODE><$01><$01>ゆ6ゆひがし アクアむら<LINE>
+きた イブシのいえ<END>
+
+//POINTER #47 @ $1CA2B4 - STRING #47 @ $1C85AC
+
+#WRITE(GBA,$1CA2B4)
+ひがし アクアむら<LINE>
+きた イブシのいえ<NEWBOX>
+キャラボンずかんは ぜんぶ うまったかい?<LINE>
+ぜんぶの キャラボンを きろくしたら<NEWBOX>
+キャラボンけんきゅうかの ところに<LINE>
+いってみるといいよ<END>
+
+//POINTER #48 @ $1CA2B8 - STRING #48 @ $1C8605
+
+#WRITE(GBA,$1CA2B8)
+‥‥‥‥‥‥‥‥‥‥‥‥?<END>
+
+//POINTER #49 @ $1CA2BC - STRING #49 @ $1C8613
+
+#WRITE(GBA,$1CA2BC)
+‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
+ボンバ-マンは カンバンをたてた!<END>
+
+//POINTER #50 @ $1CA2C0 - STRING #50 @ $1C8632
+
+#WRITE(GBA,$1CA2C0)
+<CONTROL_CODE><$01><$01>ゆ6るどうくつの こおりは みんなの ものです<LINE>
+とりすぎないように しましょう<END>
+
+//POINTER #51 @ $1CA2C4 - STRING #51 @ $1C865D
+
+#WRITE(GBA,$1CA2C4)
+どうくつの こおりは みんなの ものです<LINE>
+とりすぎないように しましょう<NEWBOX>
+それぞれの エリアに たおしたときに<LINE>
+ごうせいそざいを おとす てきがいるよ<END>
+
+//POINTER #52 @ $1CA2C8 - STRING #52 @ $1C86A9
+
+#WRITE(GBA,$1CA2C8)
+<CONTROL_CODE><$01><$01>ゆ6ろきた ソレいけ<LINE>
+フニフニキノコに ちゅうい<END>
+
+//POINTER #53 @ $1CA2CC - STRING #53 @ $1C86C5
+
+#WRITE(GBA,$1CA2CC)
+きた ソレいけ<LINE>
+フニフニキノコに ちゅうい<NEWBOX>
+かくされた ハ-トは ぜんぶで 3こ<LINE>
+キミは いくつ みつけられたかな?<END>
+
+//POINTER #54 @ $1CA2D0 - STRING #54 @ $1C8700
+
+#WRITE(GBA,$1CA2D0)
+‥‥‥‥‥‥‥‥‥‥‥‥?<END>
+
+//POINTER #55 @ $1CA2D4 - STRING #55 @ $1C870E
+
+#WRITE(GBA,$1CA2D4)
+‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
+ボンバ-マンは カンバンをたてた!<END>
+
+//POINTER #56 @ $1CA2D8 - STRING #56 @ $1C872D
+
+#WRITE(GBA,$1CA2D8)
+<CONTROL_CODE><$01><$01>ゆ6ぁたいようしんでん たいようのつばさ<LINE>
+つかえぬものは はいる べからず<END>
+
+//POINTER #57 @ $1CA2DC - STRING #57 @ $1C8756
+
+#WRITE(GBA,$1CA2DC)
+たいようしんでん たいようのつばさ<LINE>
+つかえぬものは はいる べからず<NEWBOX>
+アンタの まえに やってきた<LINE>
+ヒゲヒゲだん とかいうやつらは<NEWBOX>
+そらとぶ えんばんに のって<LINE>
+しんでんに のりこんでいったよ<NEWBOX>
+‥‥‥‥‥‥‥‥ちょっと ズルいよな<END>
+
+//POINTER #58 @ $1CA2E0 - STRING #58 @ $1C87CA
+
+#WRITE(GBA,$1CA2E0)
+<CONTROL_CODE><$01><$01>ゆ6ぅこのさき フォレスタウン<END>
+
+//POINTER #59 @ $1CA2E4 - STRING #59 @ $1C87DD
+
+#WRITE(GBA,$1CA2E4)
+このさき フォレスタウン<NEWBOX>
+ダンジョンの たからばこで<LINE>
+クスリと どくけしが はいっている はこは<NEWBOX>
+ダンジョンに はいりなおすたびに<LINE>
+ふっかつ するんだよ しってた?<END>
+
+//POINTER #60 @ $1CA2E8 - STRING #60 @ $1C8830
+
+#WRITE(GBA,$1CA2E8)
+<CONTROL_CODE><$01><$01>ゆ6ぉこれより きたのだんがい<LINE>
+あぶないので だんがいで あそばないこと!<END>
+
+//POINTER #61 @ $1CA2EC - STRING #61 @ $1C8859
+
+#WRITE(GBA,$1CA2EC)
+これより きたのだんがい<LINE>
+あぶないので だんがいで あそばないこと!<NEWBOX>
+ところでさ‥‥ ショップと ごうせいやの<LINE>
+おじさん あやしいよな<NEWBOX>
+あの えがおが あやしい‥‥<LINE>
+めが わらってないもの<END>
+
+//POINTER #62 @ $1CA2F0 - STRING #62 @ $1C88B8
+
+#WRITE(GBA,$1CA2F0)
+<CONTROL_CODE><$01><$01>ゆ6ゃつきしんでん<LINE>
+アイテムごうせいも します<END>
+
+//POINTER #63 @ $1CA2F4 - STRING #63 @ $1C88D3
+
+#WRITE(GBA,$1CA2F4)
+つきしんでん<LINE>
+アイテムごうせいも します<NEWBOX>
+ボムの ばくはつする タイミングが<LINE>
+へんかする タイプの キャラボンは<NEWBOX>
+せいちょう するたびに<LINE>
+すこしづつ かりょくが あがっていくよ<END>
+
+//POINTER #64 @ $1CA2F8 - STRING #64 @ $1C892C
+
+#WRITE(GBA,$1CA2F8)
+<CONTROL_CODE><$01><$01>ゆ6ょこのさき たつまきの どうくつ<END>
+
+//POINTER #65 @ $1CA2FC - STRING #65 @ $1C8942
+
+#WRITE(GBA,$1CA2FC)
+このさき たつまきの どうくつ<NEWBOX>
+スロットバトルの<LINE>
+いちばん みぎの リ-ルは<NEWBOX>
+2コマまで すべって えがらを<LINE>
+そろえようと するから<NEWBOX>
+ほんの すこし はやめに<LINE>
+ボタンをおすと いいよ<END>
+
+//POINTER #66 @ $1CA300 - STRING #66 @ $1C899E
+
+#WRITE(GBA,$1CA300)
+ふぅ‥‥ タイムワ-プっていうから<LINE>
+すごく きんちょうしたけど<NEWBOX>
+じっさい やってみたら<LINE>
+たいしたこと なかったミュ~<NEWBOX>
+そんなわけで ここが<LINE>
+おおむかしの ノンビリせいだミュ!<NEWBOX>
+ボクらの すこしまえに<LINE>
+ヒゲヒゲだんが やってきてるハズだミュ~<NEWBOX>
+はやく こうせんほうの ところにいって<LINE>
+ヤツらの わるだくみを ぶっつぶすミュ!<END>
+
+//POINTER #67 @ $1CA304 - STRING #67 @ $1C8A40
+
+#WRITE(GBA,$1CA304)
+<CONTROL_CODE><$01><$02>ン6ウん? なんじゃ おまえさんは<LINE>
+めずらしい かっこうを しているな<NEWBOX>
+ワシは イブシ このもりで<LINE>
+カンバンというものを つくっておる<NEWBOX>
+これは いたに いろいろな もじをかいて<LINE>
+じめんに たてるものでな<NEWBOX>
+ひとびとが みちに まよわないようにと<LINE>
+ワシが かんがえて つくったんじゃ<NEWBOX>
+‥‥‥‥みたところ おまえさんは<LINE>
+はるか とおくから きたようじゃな‥‥<NEWBOX>
+そこで おまえさんを みこんで<LINE>
+たのみが あるんじゃが‥‥<NEWBOX>
+ここに ワシの つくった カンバンがある<LINE>
+この ひろい せかいには<NEWBOX>
+カンバンを ひつようとしている ばしょが<LINE>
+きっと あるはず‥‥‥‥<NEWBOX>
+そこに この 10ぽんの カンバンたちを<LINE>
+たててきて ほしいのじゃ<NEWBOX>
+‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
+‥‥‥‥‥‥‥‥おお ひきうけてくれるか!<NEWBOX>
+ボンバ-マンは カンバンを<LINE>
+<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$02>ン<CONTROL_CODE><$03><$01>やてにいれた!<NEWBOX>
+ぜんぶ たてたら おれいは するからな<LINE>
+それじゃ たのんだぞ!<END>
+
+//POINTER #68 @ $1CA308 - STRING #68 @ $1C8BE4
+
+#WRITE(GBA,$1CA308)
+<CONTROL_CODE><$20><$07>エどうじゃ? カンバンを<LINE>
+たてられそうな ばしょは みつかったか?<NEWBOX>
+ぜんぶの カンバンを たてたら<LINE>
+また ここに もどってきてくれ<NEWBOX>
+それじゃ たのんだぞ!<END>
+
+//POINTER #69 @ $1CA30C - STRING #69 @ $1C8C35
+
+#WRITE(GBA,$1CA30C)
+<CONTROL_CODE><$01><$02>ァ6オおお! すべての カンバンを<LINE>
+たててくれたか ありがとう!<NEWBOX>
+おまえさんなら カンバンの きもちが<LINE>
+わかるはず‥‥ コレを もっていってくれ<NEWBOX>
+ボンバ-マンは カンバンメガネを<LINE>
+<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$02>ァ<CONTROL_CODE><$03><$01>ゆてにいれた!<NEWBOX>
+それが あれば カンバンたちの<LINE>
+ほんとうの きもちが わかるはずじゃ<END>
+
+//POINTER #70 @ $1CA310 - STRING #70 @ $1C8CC7
+
+#WRITE(GBA,$1CA310)
+おまえさんの おかげで<LINE>
+カンバンを ひろめることができたよ<NEWBOX>
+ありがとう ボンバ-マン!<END>
+
+//POINTER #71 @ $1CA314 - STRING #71 @ $1C8CF3
+
+#WRITE(GBA,$1CA314)
+<CONTROL_CODE><$01><$02>ィ6キウチは むかしから だいだい<LINE>
+びんぼうな かけいでな‥‥<NEWBOX>
+ワシの ちちおやの だいまで<LINE>
+み-んな なまけもの ばかりで<NEWBOX>
+おかねを ためることが できなかったのじゃ<LINE>
+‥‥じゃが ワシは とうとう やったぞ!<NEWBOX>
+きんがくは ちょっと すくないが<LINE>
+ちょきんに せいこうしたのじゃ!<NEWBOX>
+そこで ワシは この ちょきんを<LINE>
+とおい しそんに のこすために<NEWBOX>
+ひみつの ばしょに かくしたんじゃ<NEWBOX>
+おまえさんは みたところ<LINE>
+しょうじきもののようだし<NEWBOX>
+ワシよりは ながいきしそうじゃな‥‥<NEWBOX>
+そこで この ひみつの いさんのありかを<LINE>
+ワシの しそんに わたしてほしいのじゃ<NEWBOX>
+ボンバ-マンは いさんのありかを<LINE>
+<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$02>ィ<CONTROL_CODE><$03><$01>めてにいれた!<NEWBOX>
+それじゃ たのんだぞい<END>
+
+//POINTER #72 @ $1CA318 - STRING #72 @ $1C8E3A
+
+#WRITE(GBA,$1CA318)
+<CONTROL_CODE><$01><$01>も6クとなりにいる ワシのむすこは<LINE>
+せんぞに にて なまけものでな‥‥<NEWBOX>
+おとなに なっても フラフラ あそびまわって<LINE>
+マジメに はたらこうと しないのじゃ<NEWBOX>
+いさんのありかは もっと みらいの<LINE>
+しそんに わたしておくれ<NEWBOX>
+それじゃ たのんだぞい<END>
+
+//POINTER #73 @ $1CA31C - STRING #73 @ $1C8EB6
+
+#WRITE(GBA,$1CA31C)
+あ! そのコインは‥‥‥‥‥‥‥‥‥‥‥<LINE>
+かってに ほりだしちゃ イカ-ン!<NEWBOX>
+きちんと もとに もどしておくように!<END>
+
+//POINTER #74 @ $1CA320 - STRING #74 @ $1C8EF1
+
+#WRITE(GBA,$1CA320)
+<CONTROL_CODE><$01><$02>ッ6サ<CONTROL_CODE><$01><$02>ェ6コ<CONTROL_CODE><$03><$02>ゥオロオロオロオロ‥‥‥‥<NEWBOX>
+ウチのこどもたち あそびに でていったきり<LINE>
+なかなか かえってこないんです‥‥<NEWBOX>
+まさか きたの だんがいのほうに<LINE>
+あそびに いったのかしら‥‥<NEWBOX>
+あのあたりは きけんだから<LINE>
+いってはだめだと おしえたのに‥‥<NEWBOX>
+あぁ‥‥ しんぱいだわ‥‥‥‥<END>
+
+//POINTER #75 @ $1CA324 - STRING #75 @ $1C8F86
+
+#WRITE(GBA,$1CA324)
+やっぱり だんがいで あそんでいたのね<LINE>
+あれほど だめだといったのに‥‥<NEWBOX>
+こどもたちを みつけてきてくれて<LINE>
+ありがとうございます<NEWBOX>
+あ みなみへ いかれるのでしたね<LINE>
+いま もんを あけますので‥‥‥‥<NEWBOX>
+<CONTROL_CODE><$1E><$04><END>
+
+//POINTER #76 @ $1CA328 - STRING #76 @ $1C8FEE
+
+#WRITE(GBA,$1CA328)
+もう‥‥ あんまり<LINE>
+しんぱい させないでほしいわ‥‥<END>
+
+//POINTER #77 @ $1CA32C - STRING #77 @ $1C9009
+
+#WRITE(GBA,$1CA32C)
+<CONTROL_CODE><$01><$02>ゥ6スここはボクの ひみつきちなんだ<NEWBOX>
+おとなたちは きけんだから<LINE>
+ここで あそんじゃ だめだって いうけど<NEWBOX>
+たのしいから いいんだも-ん!<END>
+
+//POINTER #78 @ $1CA330 - STRING #78 @ $1C9052
+
+#WRITE(GBA,$1CA330)
+え! おかあさんが しんぱい してたの?<LINE>
+たいへんだ! すぐ かえらなきゃ!<NEWBOX>
+<CONTROL_CODE><$03><$02>ェ<CONTROL_CODE><$1E><$03><END>
+
+//POINTER #79 @ $1CA334 - STRING #79 @ $1C9081
+
+#WRITE(GBA,$1CA334)
+<CONTROL_CODE><$01><$02>ゥ6ソおにいちゃんに ついてきちゃったけど<LINE>
+ほんとうは もう かえりたいなぁ‥‥<END>
+
+//POINTER #80 @ $1CA338 - STRING #80 @ $1C90AD
+
+#WRITE(GBA,$1CA338)
+え? おかあさんが しんぱいしてるの?<LINE>
+ね- おにいちゃん そろそろ かえろうよ-<END>
+
+//POINTER #81 @ $1CA33C - STRING #81 @ $1C90D7
+
+#WRITE(GBA,$1CA33C)
+<CONTROL_CODE><$01><$02>ォ6ツこのフォレスの にしにある<LINE>
+たいようしんでんは しんせいなるばしょ<NEWBOX>
+たとえ あなたが ボンバ-マンでも<LINE>
+かんたんに いれるわけには いきません<NEWBOX>
+みなみの モリモリのもりから にしにある<LINE>
+ゴツいわやまに さいている<NEWBOX>
+あおいはなを ぶじに とってこられたら<LINE>
+あなたを ゆうしゃとみとめて<NEWBOX>
+たいようしんでんに はいれるように<LINE>
+してあげましょう<END>
+
+//POINTER #82 @ $1CA340 - STRING #82 @ $1C9186
+
+#WRITE(GBA,$1CA340)
+そ‥‥‥‥ それは あおいはな!<NEWBOX>
+‥‥‥‥どうやら あなたには<LINE>
+しんでんにはいる しかくが あるようですね<NEWBOX>
+たいようのつばさを きどうします<END>
+
+//POINTER #83 @ $1CA344 - STRING #83 @ $1C91CD
+
+#WRITE(GBA,$1CA344)
+うわさでは みなれない ひとたちが<LINE>
+たいようしんでんに しのびこんだとか‥‥<NEWBOX>
+まさか こうせんほうの ところまで<LINE>
+はいられることは ないとおもいますが<NEWBOX>
+すこし しんぱいです‥‥<LINE>
+ようすを みてきてくれませんか?<NEWBOX>
+たいようしんでんの ないぶは<LINE>
+たくさんの トラップで まもられています<NEWBOX>
+‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
+むりを しないで くださいね‥‥‥‥<END>
+
+//POINTER #84 @ $1CA348 - STRING #84 @ $1C9281
+
+#WRITE(GBA,$1CA348)
+ひかる ちじょうえの ちゅうしんに はいれば<LINE>
+もうひとつの ちじょうえに ワ-プできます<END>
+
+//POINTER #85 @ $1CA34C - STRING #85 @ $1C92AE
+
+#WRITE(GBA,$1CA34C)
+ゲッ! マイティ!<LINE>
+こんなところまで おってくるとは<NEWBOX>
+わざわざ タイムマシンまで つかって<LINE>
+こうせんほうを うばいにきたのに‥‥<NEWBOX>
+え-い こうなったら せめて きねんに<LINE>
+クリスタルだけでも もらっていくぞ<NEWBOX>
+‥‥とりあえず なにかに つかえるだろ!<END>
+
+//POINTER #86 @ $1CA350 - STRING #86 @ $1C932A
+
+#WRITE(GBA,$1CA350)
+オイ マイティ!<LINE>
+こうなったら げんだいにもどって<NEWBOX>
+けっちゃくを つけようじゃないか<LINE>
+オレさまの せんかん ア-ムジョ-でまつ!<NEWBOX>
+グハハハハハハハハハハハハ‥‥‥‥<END>
+
+//POINTER #87 @ $1CA354 - STRING #87 @ $1C937D
+
+#WRITE(GBA,$1CA354)
+<CONTROL_CODE><$01><$01>ゆ6ヌかけまわる たつまきを<LINE>
+あるべき ゆかのうえに みちびけ<END>
+
+//POINTER #88 @ $1CA358 - STRING #88 @ $1C93A0
+
+#WRITE(GBA,$1CA358)
+かけまわる たつまきを<LINE>
+あるべき ゆかのうえに みちびけ<NEWBOX>
+‥‥たつまきは かべに つきあたると<LINE>
+ひだりに まがって すすむよ<END>
+
+//POINTER #89 @ $1CA35C - STRING #89 @ $1C93DF
+
+#WRITE(GBA,$1CA35C)
+もしもし こちら バ-ディ<LINE>
+ア-ムジョ-に しんにゅう できたようだな<NEWBOX>
+もうすこし したら オレたちも<LINE>
+ア-ムジョ-に つくから<NEWBOX>
+それまで かるく ないぶを<LINE>
+ちょうさ していてくれ<NEWBOX>
+オイ いいか くれぐれも ひとりで<LINE>
+ケリを つけようなんて おもうなよ!<NEWBOX>
+いいところを ぜんぶ ひとりじめしようなんて<LINE>
+オレが ゆるさないからな!<$F8>いま コスモジェッタ-で<LINE>
+そっちに むかっているボンゴ<NEWBOX>
+ちょうさによると ア-ムジョ-の ないぶは<LINE>
+4つのエリアに わかれていて<NEWBOX>
+ムジョ-は その 4つのエリアをこえた<LINE>
+いちばん おくに いるらしいボンゴ<$F8>ちょうさによると って ワイのからだを<LINE>
+かってにかいぞうして しらべたんやないけ!<NEWBOX>
+とにかく そこは てきの ほんきょち<LINE>
+きぃつけるんやで マイティ!<END>
+
+//POINTER #90 @ $1CA360 - STRING #90 @ $1C9484
+
+#WRITE(GBA,$1CA360)
+いま コスモジェッタ-で<LINE>
+そっちに むかっているボンゴ<NEWBOX>
+ちょうさによると ア-ムジョ-の ないぶは<LINE>
+4つのエリアに わかれていて<NEWBOX>
+ムジョ-は その 4つのエリアをこえた<LINE>
+いちばん おくに いるらしいボンゴ<$F8>ちょうさによると って ワイのからだを<LINE>
+かってにかいぞうして しらべたんやないけ!<NEWBOX>
+とにかく そこは てきの ほんきょち<LINE>
+きぃつけるんやで マイティ!<END>
+
+//POINTER #91 @ $1CA364 - STRING #91 @ $1C94EB
+
+#WRITE(GBA,$1CA364)
+ちょうさによると って ワイのからだを<LINE>
+かってにかいぞうして しらべたんやないけ!<NEWBOX>
+とにかく そこは てきの ほんきょち<LINE>
+きぃつけるんやで マイティ!<END>
+
+//POINTER #92 @ $1CA368 - STRING #92 @ $1C9537
+
+#WRITE(GBA,$1CA368)
+<CONTROL_CODE><$01><$02>ぶ6ジ<CONTROL_CODE><$03><$02>ぶよくきたね マイティ<LINE>
+にんむは じゅんちょうに すすんでいるかい?<NEWBOX>
+ボンバ-かんの せつめいを きくかい?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16フ6ヘここは たたかいかたを つうじて<LINE>
+おまえの うでまえを ひょうかするところじゃ<NEWBOX>
+5フロアを いかにうまく クリアするか<LINE>
+あたしに みせてごらん<NEWBOX>
+むだに ボムをおいたり アイテムを こわすと<LINE>
+とくてんが さがるから ちゅうい するのじゃ<NEWBOX>
+てきは まとめてたおすと よいじゃろう<LINE>
+すばやく クリアすることも たいせつじゃ<NEWBOX>
+しょだんいじょうの せいせきをとれたら<LINE>
+あたしが メダルをあげよう<NEWBOX>
+いいきろくは とびらのよこの<LINE>
+ランキングボ-ドに きろくされるよ<NEWBOX>
+いっかい 20Gじゃ やってみるか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ホ6マ<CONTROL_CODE><$1C><$00>こ6ミ<CONTROL_CODE><$03><$02>べ<CONTROL_CODE><$1D><$14>うむ では なかにはいるがよい<END>
+
+//POINTER #93 @ $1CA36C - STRING #93 @ $1C9591
+
+#WRITE(GBA,$1CA36C)
+ここは たたかいかたを つうじて<LINE>
+おまえの うでまえを ひょうかするところじゃ<NEWBOX>
+5フロアを いかにうまく クリアするか<LINE>
+あたしに みせてごらん<NEWBOX>
+むだに ボムをおいたり アイテムを こわすと<LINE>
+とくてんが さがるから ちゅうい するのじゃ<NEWBOX>
+てきは まとめてたおすと よいじゃろう<LINE>
+すばやく クリアすることも たいせつじゃ<NEWBOX>
+しょだんいじょうの せいせきをとれたら<LINE>
+あたしが メダルをあげよう<NEWBOX>
+いいきろくは とびらのよこの<LINE>
+ランキングボ-ドに きろくされるよ<NEWBOX>
+いっかい 20Gじゃ やってみるか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ホ6マ<CONTROL_CODE><$1C><$00>こ6ミ<CONTROL_CODE><$03><$02>べ<CONTROL_CODE><$1D><$14>うむ では なかにはいるがよい<END>
+
+//POINTER #94 @ $1CA370 - STRING #94 @ $1C9673
+
+#WRITE(GBA,$1CA370)
+いっかい 20Gじゃ やってみるか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ホ6マ<CONTROL_CODE><$1C><$00>こ6ミ<CONTROL_CODE><$03><$02>べ<CONTROL_CODE><$1D><$14>うむ では なかにはいるがよい<END>
+
+//POINTER #95 @ $1CA374 - STRING #95 @ $1C96A0
+
+#WRITE(GBA,$1CA374)
+<CONTROL_CODE><$1C><$00>こ6ミ<CONTROL_CODE><$03><$02>べ<CONTROL_CODE><$1D><$14>うむ では なかにはいるがよい<END>
+
+//POINTER #96 @ $1CA378 - STRING #96 @ $1C96BD
+
+#WRITE(GBA,$1CA378)
+<CONTROL_CODE><$13><$02>そうか‥‥ また きがむいたら<LINE>
+うでだめしに くるがいい<END>
+
+//POINTER #97 @ $1CA37C - STRING #97 @ $1C96DD
+
+#WRITE(GBA,$1CA37C)
+<CONTROL_CODE><$13><$02>すまんが おかねが たりないようじゃ<LINE>
+ほかのほしで ひとかせぎ してくるがよい<END>
+
+//POINTER #98 @ $1CA380 - STRING #98 @ $1C9708
+
+#WRITE(GBA,$1CA380)
+ふむ まだまだじゃのう<LINE>
+もっと しゅぎょうが ひつようじゃのう<NEWBOX>
+うでをみがいて またくるがよい<END>
+
+//POINTER #99 @ $1CA384 - STRING #99 @ $1C9738
+
+#WRITE(GBA,$1CA384)
+だんだん なれてきたな<LINE>
+じゃが まだまだじゃのう<NEWBOX>
+うでをみがいて またくるがよい<END>
+
+//POINTER #100 @ $1CA388 - STRING #100 @ $1C9761
+
+#WRITE(GBA,$1CA388)
+うむ うごきが よくなってきたな<LINE>
+じゃが まだまだじゃのう<NEWBOX>
+うでをみがいて またくるがよい<END>
+
+//POINTER #101 @ $1CA38C - STRING #101 @ $1C978F
+
+#WRITE(GBA,$1CA38C)
+うでを あげたな みちがえるようじゃ<LINE>
+じゃが もっとうえを めざせるはずじゃ<NEWBOX>
+てきのうごきを みきわめるのじゃ<LINE>
+うでをみがいて またくるがよい<END>
+
+//POINTER #102 @ $1CA390 - STRING #102 @ $1C97D7
+
+#WRITE(GBA,$1CA390)
+すばらしい うごきじゃ<LINE>
+まさか ここまで つよくなるとはな<NEWBOX>
+さらなる たかみを めざして<LINE>
+しょうじん するのじゃ<END>
+
+//POINTER #103 @ $1CA394 - STRING #103 @ $1C9810
+
+#WRITE(GBA,$1CA394)
+ながれる みずのような なめらかなうごき<LINE>
+もえさかる ほのおのような はげしいこうげき<NEWBOX>
+すばらしい つよさじゃ<LINE>
+そのちからに おぼれず しょうじん するのじゃ<END>
+
+//POINTER #104 @ $1CA398 - STRING #104 @ $1C9860
+
+#WRITE(GBA,$1CA398)
+うむ とうとう やったな<LINE>
+もう ワシのおしえることは なにも ない<NEWBOX>
+ここからは おのれとの たたかい<LINE>
+みずからの げんかいに いどむのじゃ<END>
+
+//POINTER #105 @ $1CA39C - STRING #105 @ $1C98A6
+
+#WRITE(GBA,$1CA39C)
+おまえさんに このメダルを あげよう<NEWBOX>
+ボンバ-マンは メダルを<LINE>
+<CONTROL_CODE><$12><$0C>てにいれた!<END>
+
+//POINTER #106 @ $1CA3A0 - STRING #106 @ $1C98D0
+
+#WRITE(GBA,$1CA3A0)
+フン ここまで たどりつくとは<LINE>
+なかなか やるじゃないか<NEWBOX>
+さすがは マイティ<LINE>
+でんせつの ボンバ-マンだ<NEWBOX>
+だが ここから いかしては かえさんぞ<LINE>
+おまえは ここで おわりだ<NEWBOX>
+カモン! メカニドラゴ-ン!<END>
+
+//POINTER #107 @ $1CA3A4 - STRING #107 @ $1C9936
+
+#WRITE(GBA,$1CA3A4)
+この せいぎょクリスタルの<LINE>
+ほんとうの つかいかたを みせてやるぜ!<END>
+
+//POINTER #108 @ $1CA3A8 - STRING #108 @ $1C9959
+
+#WRITE(GBA,$1CA3A8)
+きたのもりを ぬけると がけの むこうに<LINE>
+たいようしんでんが みえてくるわよ<END>
+
+//POINTER #109 @ $1CA3AC - STRING #109 @ $1C9980
+
+#WRITE(GBA,$1CA3AC)
+われわれは たいようと つきの<LINE>
+かみさまに つかえる しんかんです<NEWBOX>
+そして われわれを たばねているのが<LINE>
+だいしんかんの キミドリさまなのです<END>
+
+//POINTER #110 @ $1CA3B0 - STRING #110 @ $1C99C8
+
+#WRITE(GBA,$1CA3B0)
+<CONTROL_CODE><$01><$00>S6ぱ<CONTROL_CODE><$19><$04>ムジョ-こんなところまで おってくるとは<LINE>
+ほんとうに しつこい ヤツだ!<NEWBOX>
+オレさまのうつ レ-ザ-を かわして<LINE>
+そのへやから ぬけだすことが できるかな?<NEWBOX>
+この こだい ノンビリで<LINE>
+こうせんほうの えじきに なるがいい!<END>
+
+//POINTER #111 @ $1CA3B4 - STRING #111 @ $1C9A40
+
+#WRITE(GBA,$1CA3B4)
+ひがしアクアの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #112 @ $1CA3B8 - STRING #112 @ $1C9A5A
+
+#WRITE(GBA,$1CA3B8)
+きたのだんがいの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #113 @ $1CA3BC - STRING #113 @ $1C9A75
+
+#WRITE(GBA,$1CA3BC)
+けんきゅうじょの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #114 @ $1CA3C0 - STRING #114 @ $1C9A90
+
+#WRITE(GBA,$1CA3C0)
+はっくつげんばの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #115 @ $1CA3C4 - STRING #115 @ $1C9AAB
+
+#WRITE(GBA,$1CA3C4)
+サンド-むらの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #116 @ $1CA3C8 - STRING #116 @ $1C9AC5
+
+#WRITE(GBA,$1CA3C8)
+デザタウンの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #117 @ $1CA3CC - STRING #117 @ $1C9ADE
+
+#WRITE(GBA,$1CA3CC)
+じっけんきちの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #118 @ $1CA3D0 - STRING #118 @ $1C9AF8
+
+#WRITE(GBA,$1CA3D0)
+カンバンおうこくの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #119 @ $1CA3D4 - STRING #119 @ $1C9B14
+
+#WRITE(GBA,$1CA3D4)
+ボルケシティの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #120 @ $1CA3D8 - STRING #120 @ $1C9B2E
+
+#WRITE(GBA,$1CA3D8)
+ラバシティの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #121 @ $1CA3DC - STRING #121 @ $1C9B47
+
+#WRITE(GBA,$1CA3DC)
+カルデラこの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #122 @ $1CA3E0 - STRING #122 @ $1C9B60
+
+#WRITE(GBA,$1CA3E0)
+テレビきょくの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #123 @ $1CA3E4 - STRING #123 @ $1C9B7A
+
+#WRITE(GBA,$1CA3E4)
+クロノラボの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #124 @ $1CA3E8 - STRING #124 @ $1C9B93
+
+#WRITE(GBA,$1CA3E8)
+アクアむらの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #125 @ $1CA3EC - STRING #125 @ $1C9BAC
+
+#WRITE(GBA,$1CA3EC)
+きたのいわやまの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #126 @ $1CA3F0 - STRING #126 @ $1C9BC7
+
+#WRITE(GBA,$1CA3F0)
+フォレスタウンの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #127 @ $1CA3F4 - STRING #127 @ $1C9BE2
+
+#WRITE(GBA,$1CA3F4)
+たいようしんでんの ワ-プポイントを<LINE>
+チェックしました<END>
+
+//POINTER #128 @ $1CA3F8 - STRING #128 @ $1C9BFE
+
+#WRITE(GBA,$1CA3F8)
+シェルのミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$FB>シェルのミニゲ-ムを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だ<CONTROL_CODE><$1C><$00>96ぞ<CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01><$FD><CONTROL_CODE><$13><$02>ざんねんだけど おかねが たりないよ<LINE>
+おかねをためて またきてね<END>
+
+//POINTER #129 @ $1CA3FC - STRING #129 @ $1C9C49
+
+#WRITE(GBA,$1CA3FC)
+<CONTROL_CODE><$1C><$00>96ぞ<CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01><$FD><CONTROL_CODE><$13><$02>ざんねんだけど おかねが たりないよ<LINE>
+おかねをためて またきてね<END>
+
+//POINTER #130 @ $1CA400 - STRING #130 @ $1C9C56
+
+#WRITE(GBA,$1CA400)
+<CONTROL_CODE><$13><$02>ざんねんだけど おかねが たりないよ<LINE>
+おかねをためて またきてね<END>
+
+//POINTER #131 @ $1CA404 - STRING #131 @ $1C9C7A
+
+#WRITE(GBA,$1CA404)
+<CONTROL_CODE><$13><$02><$FD>せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$85><$07><$86>あしばのうえで できるだけ ながいじかん<LINE>
+とんでくるものを かわしつづけてください<NEWBOX>
+Bボタンをおすと シ-ルドをはって<LINE>
+まえからのたまを ふせぎます<NEWBOX>
+コウモリと らくせきは<LINE>
+シ-ルドで ふせぐことはできません<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #132 @ $1CA408 - STRING #132 @ $1C9C7E
+
+#WRITE(GBA,$1CA408)
+せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$85><$07><$86>あしばのうえで できるだけ ながいじかん<LINE>
+とんでくるものを かわしつづけてください<NEWBOX>
+Bボタンをおすと シ-ルドをはって<LINE>
+まえからのたまを ふせぎます<NEWBOX>
+コウモリと らくせきは<LINE>
+シ-ルドで ふせぐことはできません<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #133 @ $1CA40C - STRING #133 @ $1C9CA5
+
+#WRITE(GBA,$1CA40C)
+あしばのうえで できるだけ ながいじかん<LINE>
+とんでくるものを かわしつづけてください<NEWBOX>
+Bボタンをおすと シ-ルドをはって<LINE>
+まえからのたまを ふせぎます<NEWBOX>
+コウモリと らくせきは<LINE>
+シ-ルドで ふせぐことはできません<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #134 @ $1CA410 - STRING #134 @ $1C9D1D
+
+#WRITE(GBA,$1CA410)
+それでは がんばってください<END>
+
+//POINTER #135 @ $1CA414 - STRING #135 @ $1C9D2C
+
+#WRITE(GBA,$1CA414)
+きろくこうしんを めざして<LINE>
+また チャレンジしてください<END>
+
+//POINTER #136 @ $1CA418 - STRING #136 @ $1C9D49
+
+#WRITE(GBA,$1CA418)
+おめでとうございます しんきろくです!<LINE>
+これは しょうきんの 50Gです!<NEWBOX>
+ボンバ-マンは 50Gを<LINE>
+<CONTROL_CODE><$15><$32><CONTROL_CODE><$12><$0C>てにいれた!<NEWBOX>
+きろくこうしんを めざして<LINE>
+また チャレンジしてください<END>
+
+//POINTER #137 @ $1CA41C - STRING #137 @ $1C9DA6
+
+#WRITE(GBA,$1CA41C)
+キャラボンレ-スのミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>.<CONTROL_CODE><$08><$FB>キャラボンレ-スを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だスロットバトルのミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>にんぬき<NEWBOX>
+スロットバトルを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だこうせんほうのミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>.<CONTROL_CODE><$08><$FB>こうせんほうのミニゲ-ムを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だモトジェッタ-のミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT><NEWBOX>
+モトジェッタ-のミニゲ-ムを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だミニゲ-ムの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$8E><$07><$8F>うえからふりそそぐ こうせんをかわして<LINE>
+ゴ-ルを めざして すすみ<NEWBOX>
+どれだけ ながいじかん<LINE>
+こうせんを よけつづけられたかを きそいます<NEWBOX>
+ただし ゴ-ルできなかったばあい<LINE>
+きろくは のこらないので きをつけてください<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #138 @ $1CA420 - STRING #138 @ $1C9DF5
+
+#WRITE(GBA,$1CA420)
+スロットバトルのミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>にんぬき<NEWBOX>
+スロットバトルを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だこうせんほうのミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>.<CONTROL_CODE><$08><$FB>こうせんほうのミニゲ-ムを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だモトジェッタ-のミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT><NEWBOX>
+モトジェッタ-のミニゲ-ムを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だミニゲ-ムの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$8E><$07><$8F>うえからふりそそぐ こうせんをかわして<LINE>
+ゴ-ルを めざして すすみ<NEWBOX>
+どれだけ ながいじかん<LINE>
+こうせんを よけつづけられたかを きそいます<NEWBOX>
+ただし ゴ-ルできなかったばあい<LINE>
+きろくは のこらないので きをつけてください<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #139 @ $1CA424 - STRING #139 @ $1C9E43
+
+#WRITE(GBA,$1CA424)
+こうせんほうのミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>.<CONTROL_CODE><$08><$FB>こうせんほうのミニゲ-ムを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だモトジェッタ-のミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT><NEWBOX>
+モトジェッタ-のミニゲ-ムを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だミニゲ-ムの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$8E><$07><$8F>うえからふりそそぐ こうせんをかわして<LINE>
+ゴ-ルを めざして すすみ<NEWBOX>
+どれだけ ながいじかん<LINE>
+こうせんを よけつづけられたかを きそいます<NEWBOX>
+ただし ゴ-ルできなかったばあい<LINE>
+きろくは のこらないので きをつけてください<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #140 @ $1CA428 - STRING #140 @ $1C9E94
+
+#WRITE(GBA,$1CA428)
+モトジェッタ-のミニゲ-ム<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT><NEWBOX>
+モトジェッタ-のミニゲ-ムを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だミニゲ-ムの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$8E><$07><$8F>うえからふりそそぐ こうせんをかわして<LINE>
+ゴ-ルを めざして すすみ<NEWBOX>
+どれだけ ながいじかん<LINE>
+こうせんを よけつづけられたかを きそいます<NEWBOX>
+ただし ゴ-ルできなかったばあい<LINE>
+きろくは のこらないので きをつけてください<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #141 @ $1CA42C - STRING #141 @ $1C9EE4
+
+#WRITE(GBA,$1CA42C)
+ミニゲ-ムの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$8E><$07><$8F>うえからふりそそぐ こうせんをかわして<LINE>
+ゴ-ルを めざして すすみ<NEWBOX>
+どれだけ ながいじかん<LINE>
+こうせんを よけつづけられたかを きそいます<NEWBOX>
+ただし ゴ-ルできなかったばあい<LINE>
+きろくは のこらないので きをつけてください<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #142 @ $1CA430 - STRING #142 @ $1C9F12
+
+#WRITE(GBA,$1CA430)
+うえからふりそそぐ こうせんをかわして<LINE>
+ゴ-ルを めざして すすみ<NEWBOX>
+どれだけ ながいじかん<LINE>
+こうせんを よけつづけられたかを きそいます<NEWBOX>
+ただし ゴ-ルできなかったばあい<LINE>
+きろくは のこらないので きをつけてください<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #143 @ $1CA434 - STRING #143 @ $1C9F8E
+
+#WRITE(GBA,$1CA434)
+それでは がんばってください<END>
+
+//POINTER #144 @ $1CA438 - STRING #144 @ $1C9F9D
+
+#WRITE(GBA,$1CA438)
+ボスバトルの せつめいを ききますか?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$91><$07><$92>ボスを たおすまでの<LINE>
+じかんの はやさを きそいます<NEWBOX>
+ボスに やられてしまうと<LINE>
+きろくは のこらないので きをつけてください<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #145 @ $1CA43C - STRING #145 @ $1C9FCB
+
+#WRITE(GBA,$1CA43C)
+ボスを たおすまでの<LINE>
+じかんの はやさを きそいます<NEWBOX>
+ボスに やられてしまうと<LINE>
+きろくは のこらないので きをつけてください<NEWBOX>
+それでは がんばってください<END>
+
+//POINTER #146 @ $1CA440 - STRING #146 @ $1CA019
+
+#WRITE(GBA,$1CA440)
+それでは がんばってください<END>
+
+//POINTER #147 @ $1CA444 - STRING #147 @ $1CA028
+
+#WRITE(GBA,$1CA444)
+バトル ドリルモグネス<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル ドリルモグネスを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だバトル ネットスパイダ-<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル ネットスパイダ-を あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だバトル ブレ-ドビ-トル<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル ブレ-ドビ-トルを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だバトル ハンマ-コング<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル ハンマ-コングを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だバトル メカニドラゴ-ン<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル メカニドラゴ-ンを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だボンバ-かんの せつめいを きくかい?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>
+
+//POINTER #148 @ $1CA448 - STRING #148 @ $1CA07A
+
+#WRITE(GBA,$1CA448)
+バトル ネットスパイダ-<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル ネットスパイダ-を あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だバトル ブレ-ドビ-トル<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル ブレ-ドビ-トルを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だバトル ハンマ-コング<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル ハンマ-コングを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だバトル メカニドラゴ-ン<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル メカニドラゴ-ンを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だボンバ-かんの せつめいを きくかい?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>
+
+//POINTER #149 @ $1CA44C - STRING #149 @ $1CA0CE
+
+#WRITE(GBA,$1CA44C)
+バトル ブレ-ドビ-トル<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル ブレ-ドビ-トルを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だバトル ハンマ-コング<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル ハンマ-コングを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だバトル メカニドラゴ-ン<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル メカニドラゴ-ンを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だボンバ-かんの せつめいを きくかい?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>
+
+//POINTER #150 @ $1CA450 - STRING #150 @ $1CA122
+
+#WRITE(GBA,$1CA450)
+バトル ハンマ-コング<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル ハンマ-コングを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だバトル メカニドラゴ-ン<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル メカニドラゴ-ンを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だボンバ-かんの せつめいを きくかい?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>
+
+//POINTER #151 @ $1CA454 - STRING #151 @ $1CA174
+
+#WRITE(GBA,$1CA454)
+バトル メカニドラゴ-ン<LINE>
+げんざいの さいこうきろく <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>バトル メカニドラゴ-ンを あそびますか?<LINE>
+    はい       いいえ<CONTROL_CODE><$17><$03>1い16ぜ6だボンバ-かんの せつめいを きくかい?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>
+
+//POINTER #152 @ $1CA458 - STRING #152 @ $1CA1C8
+
+#WRITE(GBA,$1CA458)
+ボンバ-かんの せつめいを きくかい?<LINE>
+    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>

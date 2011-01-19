@@ -1,0 +1,146 @@
+// Define a TABLE
+#VAR(Table, TABLE)
+#VAR(engTable, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/bomberman.tbl", Table)
+#ADDTBL("melissa font/melissa8x8.tbl", engTable)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($550000)
+
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #000 NAME:		Block 1 - Opening Movie (POINTER)
+
+//POINTER #0 @ $1BDA90 - STRING #0 @ $1BD820
+
+#WRITE(GBA,$1BDA90)
+こうせんほうか なつかしいな‥‥<LINE>
+たしか このじけんのあと ヤツは‥‥‥‥<WAIT>
+
+//POINTER #1 @ $1BDA94 - STRING #1 @ $1BD846
+
+#WRITE(GBA,$1BDA94)
+マイティ‥‥<WAIT>
+
+//POINTER #2 @ $1BDA98 - STRING #2 @ $1BD84D
+
+#WRITE(GBA,$1BDA98)
+そうか‥‥ シャウトは マイティに<LINE>
+あったことが なかったな<WAIT>
+
+//POINTER #3 @ $1BDA9C - STRING #3 @ $1BD86C
+
+#WRITE(GBA,$1BDA9C)
+マイティって たしか でんせつの<LINE>
+ボンバ-マンと よばれた ひとでしょ?<WAIT>
+
+//POINTER #4 @ $1BDAA0 - STRING #4 @ $1BD891
+
+#WRITE(GBA,$1BDAA0)
+あぁ そのとおりさ やつは<LINE>
+オレたち ジェッタ-ズの メンバ-‥‥<WAIT>
+
+//POINTER #5 @ $1BDAA4 - STRING #5 @ $1BD8B3
+
+#WRITE(GBA,$1BDAA4)
+それに シロボンの<LINE>
+じまんの あにでもある<WAIT>
+
+//POINTER #6 @ $1BDAA8 - STRING #6 @ $1BD8C9
+
+#WRITE(GBA,$1BDAA8)
+ねぇ きかせてよ!<LINE>
+でんせつの ボンバ-マンの こと!<WAIT>
+
+//POINTER #7 @ $1BDAAC - STRING #7 @ $1BD8E5
+
+#WRITE(GBA,$1BDAAC)
+わかった‥‥ あれは<LINE>
+シャウトがはいるまえの はなしだ‥‥‥‥<WAIT>
+
+//POINTER #8 @ $1BDAB0 - STRING #8 @ $1BD905
+
+#WRITE(GBA,$1BDAB0)
+しょくん! ノンビリせいに<LINE>
+しょうたいふめいの うちゅうせんが あらわれた!<WAIT>
+
+//POINTER #9 @ $1BDAB4 - STRING #9 @ $1BD92C
+
+#WRITE(GBA,$1BDAB4)
+ノンビリせいには オレがいくぜ!!<WAIT>
+
+//POINTER #10 @ $1BDAB8 - STRING #10 @ $1BD93E
+
+#WRITE(GBA,$1BDAB8)
+だめじゃ まだ ケガのなおっていない<LINE>
+バ-ディには いかせられんな<WAIT>
+
+//POINTER #11 @ $1BDABC - STRING #11 @ $1BD960
+
+#WRITE(GBA,$1BDABC)
+おぉ いってくれるか マイティ!<WAIT>
+
+//POINTER #12 @ $1BDAC0 - STRING #12 @ $1BD971
+
+#WRITE(GBA,$1BDAC0)
+よし! ただちに<LINE>
+ノンビリせいに むかってくれ!<WAIT>
+
+//POINTER #13 @ $1BDAC4 - STRING #13 @ $1BD98A
+
+#WRITE(GBA,$1BDAC4)
+こちらバ-ディ- こちらバ-ディ-<WAIT>
+
+//POINTER #14 @ $1BDAC8 - STRING #14 @ $1BD99C
+
+#WRITE(GBA,$1BDAC8)
+マイティ おうとうしろ!<LINE>
+どうしたんだ! マイティ!!<WAIT>
+
+//POINTER #15 @ $1BDACC - STRING #15 @ $1BD9B8
+
+#WRITE(GBA,$1BDACC)
+あれいらい マイティからの れんらくは<LINE>
+とだえた ままだ‥‥‥‥<WAIT>
+
+//POINTER #16 @ $1BDAD0 - STRING #16 @ $1BD9D9
+
+#WRITE(GBA,$1BDAD0)
+ヒゲヒゲだんが あらわれた!<LINE>
+ジェッタ-ズ しゅつどうじゃ!!<WAIT>
+
+//POINTER #17 @ $1BDAD4 - STRING #17 @ $1BD9F9
+
+#WRITE(GBA,$1BDAD4)
+いくわよ! みんな!!<WAIT>
+
+//POINTER #18 @ $1BDAD8 - STRING #18 @ $1BDA05
+
+#WRITE(GBA,$1BDAD8)
+でんせつの ボンバ-マンと よばれた<LINE>
+マイティに おいつけるかな? シロボン<WAIT>
+
+//POINTER #19 @ $1BDADC - STRING #19 @ $1BDA2C
+
+#WRITE(GBA,$1BDADC)
+フフフ‥‥ これで ボンバ-マンの デ-タは<LINE>
+すべて コピ-できた‥‥‥‥<WAIT>
+
+//POINTER #20 @ $1BDAE0 - STRING #20 @ $1BDA52
+
+#WRITE(GBA,$1BDAE0)
+いよいよ さいきょうの せんし<LINE>
+マックスが たんじょうする‥‥<WAIT>
+
+//POINTER #21 @ $1BDAE4 - STRING #21 @ $1BDA72
+
+#WRITE(GBA,$1BDAE4)
+フッフッフッ‥‥‥‥<LINE>
+ハ-ッハッハッハッハッハッ‥‥‥‥<WAIT>

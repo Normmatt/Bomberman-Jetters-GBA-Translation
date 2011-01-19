@@ -1,0 +1,269 @@
+// Define a TABLE
+#VAR(Table, TABLE)
+#VAR(engTable, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/bomberman.tbl", Table)
+#ADDTBL("melissa font/melissa8x8.tbl", engTable)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($551000)
+
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #001 NAME:		Block 2 (POINTER)
+
+//POINTER #0 @ $1BDC68 - STRING #0 @ $1BDAE8
+
+#W32($1BDC68)
+ポミュ<END>
+
+//POINTER #1 @ $1BDC6C - STRING #1 @ $1BDAEC
+
+#W32($1BDC6C)
+シ-ドラン<END>
+
+//POINTER #2 @ $1BDC70 - STRING #2 @ $1BDAF2
+
+#W32($1BDC70)
+エレファン<END>
+
+//POINTER #3 @ $1BDC74 - STRING #3 @ $1BDAF8
+
+#W32($1BDC74)
+ポミュファング<END>
+
+//POINTER #4 @ $1BDC78 - STRING #4 @ $1BDB00
+
+#W32($1BDC78)
+シャ-クン<END>
+
+//POINTER #5 @ $1BDC7C - STRING #5 @ $1BDB06
+
+#W32($1BDC7C)
+サンダ-ライガ-<END>
+
+//POINTER #6 @ $1BDC80 - STRING #6 @ $1BDB0F
+
+#W32($1BDC80)
+シェル<END>
+
+//POINTER #7 @ $1BDC84 - STRING #7 @ $1BDB13
+
+#W32($1BDC84)
+ツインドラゴン<END>
+
+//POINTER #8 @ $1BDC88 - STRING #8 @ $1BDB1B
+
+#W32($1BDC88)
+ナックルポミュ<END>
+
+//POINTER #9 @ $1BDC8C - STRING #9 @ $1BDB23
+
+#W32($1BDC8C)
+シ-ポミュ<END>
+
+//POINTER #10 @ $1BDC90 - STRING #10 @ $1BDB29
+
+#W32($1BDC90)
+ストロング<END>
+
+//POINTER #11 @ $1BDC94 - STRING #11 @ $1BDB2F
+
+#W32($1BDC94)
+ビ-ストポミュ<END>
+
+//POINTER #12 @ $1BDC98 - STRING #12 @ $1BDB37
+
+#W32($1BDC98)
+プテラドン<END>
+
+//POINTER #13 @ $1BDC9C - STRING #13 @ $1BDB3D
+
+#W32($1BDC9C)
+ドラコ<END>
+
+//POINTER #14 @ $1BDCA0 - STRING #14 @ $1BDB41
+
+#W32($1BDCA0)
+ポミュドラゴン<END>
+
+//POINTER #15 @ $1BDCA4 - STRING #15 @ $1BDB49
+
+#W32($1BDCA4)
+ユニコルノス<END>
+
+//POINTER #16 @ $1BDCA8 - STRING #16 @ $1BDB50
+
+#W32($1BDCA8)
+シ-バル-ン<END>
+
+//POINTER #17 @ $1BDCAC - STRING #17 @ $1BDB57
+
+#W32($1BDCAC)
+アニマルポミュ<END>
+
+//POINTER #18 @ $1BDCB0 - STRING #18 @ $1BDB5F
+
+#W32($1BDCB0)
+マリンイ-ル<END>
+
+//POINTER #19 @ $1BDCB4 - STRING #19 @ $1BDB66
+
+#W32($1BDCB4)
+エレコング<END>
+
+//POINTER #20 @ $1BDCB8 - STRING #20 @ $1BDB6C
+
+#W32($1BDCB8)
+ユニコルネス<END>
+
+//POINTER #21 @ $1BDCBC - STRING #21 @ $1BDB73
+
+#W32($1BDCBC)
+シ-ウイング<END>
+
+//POINTER #22 @ $1BDCC0 - STRING #22 @ $1BDB7A
+
+#W32($1BDCC0)
+タ-トルキング<END>
+
+//POINTER #23 @ $1BDCC4 - STRING #23 @ $1BDB82
+
+#W32($1BDCC4)
+マリンゴン<END>
+
+//POINTER #24 @ $1BDCC8 - STRING #24 @ $1BDB88
+
+#W32($1BDCC8)
+ファイア-コング<END>
+
+//POINTER #25 @ $1BDCCC - STRING #25 @ $1BDB91
+
+#W32($1BDCCC)
+サンダ-ヘッド<END>
+
+//POINTER #26 @ $1BDCD0 - STRING #26 @ $1BDB99
+
+#W32($1BDCD0)
+バ-ニングスピン<END>
+
+//POINTER #27 @ $1BDCD4 - STRING #27 @ $1BDBA2
+
+#W32($1BDCD4)
+グランシェイカ-<END>
+
+//POINTER #28 @ $1BDCD8 - STRING #28 @ $1BDBAB
+
+#W32($1BDCD8)
+サンダ-カッタ-<END>
+
+//POINTER #29 @ $1BDCDC - STRING #29 @ $1BDBB4
+
+#W32($1BDCDC)
+アイスラッガ-<END>
+
+//POINTER #30 @ $1BDCE0 - STRING #30 @ $1BDBBC
+
+#W32($1BDCE0)
+ファイア-リング<END>
+
+//POINTER #31 @ $1BDCE4 - STRING #31 @ $1BDBC5
+
+#W32($1BDCE4)
+アクアボンバ-<END>
+
+//POINTER #32 @ $1BDCE8 - STRING #32 @ $1BDBCD
+
+#W32($1BDCE8)
+ダブルファイア-<END>
+
+//POINTER #33 @ $1BDCEC - STRING #33 @ $1BDBD6
+
+#W32($1BDCEC)
+サンダ-パンチ<END>
+
+//POINTER #34 @ $1BDCF0 - STRING #34 @ $1BDBDE
+
+#W32($1BDCF0)
+ヘヴィスコ-ル<END>
+
+//POINTER #35 @ $1BDCF4 - STRING #35 @ $1BDBE6
+
+#W32($1BDCF4)
+メガトンスト-ン<END>
+
+//POINTER #36 @ $1BDCF8 - STRING #36 @ $1BDBEF
+
+#W32($1BDCF8)
+サンダ-スピン<END>
+
+//POINTER #37 @ $1BDCFC - STRING #37 @ $1BDBF7
+
+#W32($1BDCFC)
+ファイア-ボウ<END>
+
+//POINTER #38 @ $1BDD00 - STRING #38 @ $1BDBFF
+
+#W32($1BDD00)
+ヒ-トファイア-<END>
+
+//POINTER #39 @ $1BDD04 - STRING #39 @ $1BDC08
+
+#W32($1BDD04)
+サンダ-スコ-ル<END>
+
+//POINTER #40 @ $1BDD08 - STRING #40 @ $1BDC11
+
+#W32($1BDD08)
+ヘヴィハリケ-ン<END>
+
+//POINTER #41 @ $1BDD0C - STRING #41 @ $1BDC1A
+
+#W32($1BDD0C)
+バブルシャワ-<END>
+
+//POINTER #42 @ $1BDD10 - STRING #42 @ $1BDC22
+
+#W32($1BDD10)
+サンダ-アタック<END>
+
+//POINTER #43 @ $1BDD14 - STRING #43 @ $1BDC2B
+
+#W32($1BDD14)
+マッドブリザ-ド<END>
+
+//POINTER #44 @ $1BDD18 - STRING #44 @ $1BDC34
+
+#W32($1BDD18)
+プラズマナックル<END>
+
+//POINTER #45 @ $1BDD1C - STRING #45 @ $1BDC3D
+
+#W32($1BDD1C)
+ジェットタイフ-ン<END>
+
+//POINTER #46 @ $1BDD20 - STRING #46 @ $1BDC47
+
+#W32($1BDD20)
+アクアスパイラル<END>
+
+//POINTER #47 @ $1BDD24 - STRING #47 @ $1BDC50
+
+#W32($1BDD24)
+スピンアタック<END>
+
+//POINTER #48 @ $1BDD28 - STRING #48 @ $1BDC58
+
+#W32($1BDD28)
+マリンボム<END>
+
+//POINTER #49 @ $1BDD2C - STRING #49 @ $1BDC5E
+
+#W32($1BDD2C)
+ヒ-トダッシュ<END>
