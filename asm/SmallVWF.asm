@@ -62,7 +62,7 @@ here:
 .pool
 .endarea
 
-.org 0x87FE900 ; should be free space to put code
+.org 0x8453560 ; should be free space to put code
 loadCharacter:
 	ldr r5, [jumpAdr]
 	bx r5
