@@ -39,13 +39,13 @@
 
 #WRITE(GBA,$1BDA9C)
 マイティって たしか でんせつの<LINE>
-ボンバ-マンと よばれた ひとでしょ?<WAIT>
+ボンバーマンと よばれた ひとでしょ?<WAIT>
 
 //POINTER #4 @ $1BDAA0 - STRING #4 @ $1BD891
 
 #WRITE(GBA,$1BDAA0)
 あぁ そのとおりさ やつは<LINE>
-オレたち ジェッタ-ズの メンバ-‥‥<WAIT>
+オレたち ジェッターズの メンバー‥‥<WAIT>
 
 //POINTER #5 @ $1BDAA4 - STRING #5 @ $1BD8B3
 
@@ -57,7 +57,7 @@
 
 #WRITE(GBA,$1BDAA8)
 ねぇ きかせてよ!<LINE>
-でんせつの ボンバ-マンの こと!<WAIT>
+でんせつの ボンバーマンの こと!<WAIT>
 
 //POINTER #7 @ $1BDAAC - STRING #7 @ $1BD8E5
 
@@ -80,7 +80,7 @@
 
 #WRITE(GBA,$1BDAB8)
 だめじゃ まだ ケガのなおっていない<LINE>
-バ-ディには いかせられんな<WAIT>
+バーディには いかせられんな<WAIT>
 
 //POINTER #11 @ $1BDABC - STRING #11 @ $1BD960
 
@@ -96,7 +96,7 @@
 //POINTER #13 @ $1BDAC4 - STRING #13 @ $1BD98A
 
 #WRITE(GBA,$1BDAC4)
-こちらバ-ディ- こちらバ-ディ-<WAIT>
+こちらバーディー こちらバーディー<WAIT>
 
 //POINTER #14 @ $1BDAC8 - STRING #14 @ $1BD99C
 
@@ -114,7 +114,7 @@
 
 #WRITE(GBA,$1BDAD0)
 ヒゲヒゲだんが あらわれた!<LINE>
-ジェッタ-ズ しゅつどうじゃ!!<WAIT>
+ジェッターズ しゅつどうじゃ!!<WAIT>
 
 //POINTER #17 @ $1BDAD4 - STRING #17 @ $1BD9F9
 
@@ -124,14 +124,14 @@
 //POINTER #18 @ $1BDAD8 - STRING #18 @ $1BDA05
 
 #WRITE(GBA,$1BDAD8)
-でんせつの ボンバ-マンと よばれた<LINE>
+でんせつの ボンバーマンと よばれた<LINE>
 マイティに おいつけるかな? シロボン<WAIT>
 
 //POINTER #19 @ $1BDADC - STRING #19 @ $1BDA2C
 
 #WRITE(GBA,$1BDADC)
-フフフ‥‥ これで ボンバ-マンの デ-タは<LINE>
-すべて コピ-できた‥‥‥‥<WAIT>
+フフフ‥‥ これで ボンバーマンの データは<LINE>
+すべて コピーできた‥‥‥‥<WAIT>
 
 //POINTER #20 @ $1BDAE0 - STRING #20 @ $1BDA52
 
@@ -143,4 +143,4 @@
 
 #WRITE(GBA,$1BDAE4)
 フッフッフッ‥‥‥‥<LINE>
-ハ-ッハッハッハッハッハッ‥‥‥‥<WAIT>
+ハーッハッハッハッハッハッ‥‥‥‥<WAIT>
