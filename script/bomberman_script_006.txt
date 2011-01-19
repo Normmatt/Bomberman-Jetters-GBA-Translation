@@ -1057,10 +1057,13 @@ MAXシリ-ズの ぞくへん<LINE>
 ステ-ジクリアを めざそう!<WAIT>
 
 //POINTER #164 @ $1CCAA8 - STRING #164 @ $1CBC0F
-
+#ACTIVETBL(engTable)
 #WRITE(GBA,$1CCAA8)
-セ-ブするファイルを えらんでください<LINE>
-Bボタンで ゲ-ムにもどります<WAIT>
+//セ-ブするファイルを えらんでください<LINE>
+//Bボタンで ゲ-ムにもどります<WAIT>
+Please select a save file<LINE>
+Press B button to return to the game.<WAIT>
+#ACTIVETBL(Table)
 
 //POINTER #165 @ $1CCAAC - STRING #165 @ $1CBC33
 
