@@ -1,0 +1,952 @@
+// Define a TABLE
+#VAR(Table, TABLE)
+#VAR(engTable, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/bomberman.tbl", Table)
+#ADDTBL("melissa font/melissa8x8.tbl", engTable)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($840000)
+
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #001 NAME:		Dialogue Block2 (POINTER)
+
+//POINTER #0 @ $1CC818 - STRING #0 @ $1CA45C
+
+#WRITE(GBA,$1CC818)
+<WAIT>
+//POINTER #1 @ $1CC81C - STRING #1 @ $1CA45D
+
+#WRITE(GBA,$1CC81C)
+<CONTROL_CODE><$1B><$01>ファイア-アップのせつめい<WAIT>
+//POINTER #2 @ $1CC820 - STRING #2 @ $1CA46E
+
+#WRITE(GBA,$1CC820)
+<CONTROL_CODE><$1B><$02>ボムアップのせつめい<WAIT>
+//POINTER #3 @ $1CC824 - STRING #3 @ $1CA47C
+
+#WRITE(GBA,$1CC824)
+<CONTROL_CODE><$1B><$03>カイソクシュ-ズのせつめい<WAIT>
+//POINTER #4 @ $1CC828 - STRING #4 @ $1CA48D
+
+#WRITE(GBA,$1CC828)
+<CONTROL_CODE><$1B><$04>カットビシュ-ズのせつめい<WAIT>
+//POINTER #5 @ $1CC82C - STRING #5 @ $1CA49E
+
+#WRITE(GBA,$1CC82C)
+<CONTROL_CODE><$1B><$05>カタ-イア-マ-のせつめい<WAIT>
+//POINTER #6 @ $1CC830 - STRING #6 @ $1CA4AF
+
+#WRITE(GBA,$1CC830)
+<CONTROL_CODE><$1B><$06>テッペキア-マ-のせつめい<WAIT>
+//POINTER #7 @ $1CC834 - STRING #7 @ $1CA4C0
+
+#WRITE(GBA,$1CC834)
+<CONTROL_CODE><$1B><$07>ハ-トのせつめい<WAIT>
+//POINTER #8 @ $1CC838 - STRING #8 @ $1CA4CC
+
+#WRITE(GBA,$1CC838)
+<CONTROL_CODE><$1B><$08>ボムキックのせつめい<WAIT>
+//POINTER #9 @ $1CC83C - STRING #9 @ $1CA4DA
+
+#WRITE(GBA,$1CC83C)
+<CONTROL_CODE><$1B><$09>パワ-グロ-ブのせつめい<WAIT>
+//POINTER #10 @ $1CC840 - STRING #10 @ $1CA4EA
+
+#WRITE(GBA,$1CC840)
+<CONTROL_CODE><$1B><$0A>いままでみつけた キャラボンの せつめいです<LINE>Aボタンで ずかんを よみます<WAIT>
+//POINTER #11 @ $1CC844 - STRING #11 @ $1CA514
+
+#WRITE(GBA,$1CC844)
+<CONTROL_CODE><$1B><$0B>いままでみつけた ゲ-ムソフトです<LINE>Aボタンで アルバムを みます<WAIT>
+//POINTER #12 @ $1CC848 - STRING #12 @ $1CA539
+
+#WRITE(GBA,$1CC848)
+<CONTROL_CODE><$1B><$0C>レ-ダ-のせつめい<WAIT>
+//POINTER #13 @ $1CC84C - STRING #13 @ $1CA546
+
+#WRITE(GBA,$1CC84C)
+<CONTROL_CODE><$1B><$0D>コインのせつめい<WAIT>
+//POINTER #14 @ $1CC850 - STRING #14 @ $1CA552
+
+#WRITE(GBA,$1CC850)
+<CONTROL_CODE><$1B><$0E>コインのせつめい<WAIT>
+//POINTER #15 @ $1CC854 - STRING #15 @ $1CA55E
+
+#WRITE(GBA,$1CC854)
+<CONTROL_CODE><$1B><$0F>ドルぶくろのせつめい<WAIT>
+//POINTER #16 @ $1CC858 - STRING #16 @ $1CA56C
+
+#WRITE(GBA,$1CC858)
+<CONTROL_CODE><$1B><$10>バナナのせつめい<WAIT>
+//POINTER #17 @ $1CC85C - STRING #17 @ $1CA578
+
+#WRITE(GBA,$1CC85C)
+<CONTROL_CODE><$1B><$11>イチゴのせつめい<WAIT>
+//POINTER #18 @ $1CC860 - STRING #18 @ $1CA584
+
+#WRITE(GBA,$1CC860)
+<CONTROL_CODE><$1B><$12>メロンのせつめい<WAIT>
+//POINTER #19 @ $1CC864 - STRING #19 @ $1CA590
+
+#WRITE(GBA,$1CC864)
+<CONTROL_CODE><$1B><$13>たいりょくを すこし かいふくします<LINE>Aボタンで クスリを のみます<WAIT>
+//POINTER #20 @ $1CC868 - STRING #20 @ $1CA5B6
+
+#WRITE(GBA,$1CC868)
+<CONTROL_CODE><$1B><$14>たいりょくを すべて かいふくします<LINE>Aボタンで クスリを のみます<WAIT>
+//POINTER #21 @ $1CC86C - STRING #21 @ $1CA5DC
+
+#WRITE(GBA,$1CC86C)
+<CONTROL_CODE><$1B><$15>ドクロのどくを けしさります<LINE>Aボタンで つかいます<WAIT>
+//POINTER #22 @ $1CC870 - STRING #22 @ $1CA5FA
+
+#WRITE(GBA,$1CC870)
+<CONTROL_CODE><$1B><$16>ノンビリせい はっくつげんばの<LINE>ダンジョンデ-タです<WAIT>
+//POINTER #23 @ $1CC874 - STRING #23 @ $1CA618
+
+#WRITE(GBA,$1CC874)
+<CONTROL_CODE><$1B><$17>トコトコせい じっけんきちの<LINE>ダンジョンデ-タです<WAIT>
+//POINTER #24 @ $1CC878 - STRING #24 @ $1CA635
+
+#WRITE(GBA,$1CC878)
+<CONTROL_CODE><$1B><$18>セカセカせい クロノラボの<LINE>ダンジョンデ-タです<WAIT>
+//POINTER #25 @ $1CC87C - STRING #25 @ $1CA651
+
+#WRITE(GBA,$1CC87C)
+<CONTROL_CODE><$1B><$19>こだいノンビリせい たいようしんでんの<LINE>ダンジョンデ-タです<WAIT>
+//POINTER #26 @ $1CC880 - STRING #26 @ $1CA673
+
+#WRITE(GBA,$1CC880)
+<CONTROL_CODE><$1B><$1A>せんかん ア-ムジョ-の<LINE>ダンジョンデ-タです<WAIT>
+//POINTER #27 @ $1CC884 - STRING #27 @ $1CA68E
+
+#WRITE(GBA,$1CC884)
+<CONTROL_CODE><$1B><$1B>ドクロのせつめい<WAIT>
+//POINTER #28 @ $1CC888 - STRING #28 @ $1CA69A
+
+#WRITE(GBA,$1CC888)
+<CONTROL_CODE><$1B><$1C>たからばこのせつめい<WAIT>
+//POINTER #29 @ $1CC88C - STRING #29 @ $1CA6A8
+
+#WRITE(GBA,$1CC88C)
+<CONTROL_CODE><$1B><$1D>こおりぞくせいの ボムです<LINE>ふきだすみずを こおらせます<WAIT>
+//POINTER #30 @ $1CC890 - STRING #30 @ $1CA6C8
+
+#WRITE(GBA,$1CC890)
+<CONTROL_CODE><$1B><$1E>ひかりぞくせいの ボムです<LINE>かくされたものを てらしだします<WAIT>
+//POINTER #31 @ $1CC894 - STRING #31 @ $1CA6EA
+
+#WRITE(GBA,$1CC894)
+<CONTROL_CODE><$1B><$1F>みずぞくせいの ボムです<LINE>ほのおを けすことができます<WAIT>
+//POINTER #32 @ $1CC898 - STRING #32 @ $1CA709
+
+#WRITE(GBA,$1CC898)
+<CONTROL_CODE><$1B><$20>かぜぞくせいの ボムです<LINE>おおきなはっぱや ふうしゃを うごかします<WAIT>
+//POINTER #33 @ $1CC89C - STRING #33 @ $1CA72F
+
+#WRITE(GBA,$1CC89C)
+<CONTROL_CODE><$1B><$21>ガッツなわらいと ちょうドはくりょく!<LINE>エリア1ボスの こうりゃくが かいてあります<WAIT>
+//POINTER #34 @ $1CC8A0 - STRING #34 @ $1CA75D
+
+#WRITE(GBA,$1CC8A0)
+<CONTROL_CODE><$1B><$22>ガッツなわらいと ちょうドはくりょく!<LINE>エリア2ボスの こうりゃくが かいてあります<WAIT>
+//POINTER #35 @ $1CC8A4 - STRING #35 @ $1CA78B
+
+#WRITE(GBA,$1CC8A4)
+<CONTROL_CODE><$1B><$23>ガッツなわらいと ちょうドはくりょく!<LINE>エリア3ボスの こうりゃくが かいてあります<WAIT>
+//POINTER #36 @ $1CC8A8 - STRING #36 @ $1CA7B9
+
+#WRITE(GBA,$1CC8A8)
+<CONTROL_CODE><$1B><$24>ガッツなわらいと ちょうドはくりょく!<LINE>エリア4ボスの こうりゃくが かいてあります<WAIT>
+//POINTER #37 @ $1CC8AC - STRING #37 @ $1CA7E7
+
+#WRITE(GBA,$1CC8AC)
+<CONTROL_CODE><$1B><$25>ガッツなわらいと ちょうドはくりょく!<LINE>エリア5ボスの こうりゃくが かいてあります<WAIT>
+//POINTER #38 @ $1CC8B0 - STRING #38 @ $1CA815
+
+#WRITE(GBA,$1CC8B0)
+<CONTROL_CODE><$1B><$26>なかなかとけない ふしぎなこおり<LINE>ボムノモトと ごうせいすると‥‥<WAIT>
+//POINTER #39 @ $1CC8B4 - STRING #39 @ $1CA83A
+
+#WRITE(GBA,$1CC8B4)
+<CONTROL_CODE><$1B><$27>くらやみで ひかりつづける ふしぎなこけ<LINE>ボムノモトと ごうせいすると‥‥<WAIT>
+//POINTER #40 @ $1CC8B8 - STRING #40 @ $1CA863
+
+#WRITE(GBA,$1CC8B8)
+<CONTROL_CODE><$1B><$28>カルデラこの ふしぎな しずく<LINE>ボムノモトと ごうせいすると‥‥<WAIT>
+//POINTER #41 @ $1CC8BC - STRING #41 @ $1CA887
+
+#WRITE(GBA,$1CC8BC)
+<CONTROL_CODE><$1B><$29>まわりつづける ふしぎな たつまき<LINE>ボムノモトと ごうせいすると‥‥<WAIT>
+//POINTER #42 @ $1CC8C0 - STRING #42 @ $1CA8AD
+
+#WRITE(GBA,$1CC8C0)
+<CONTROL_CODE><$1B><$2A>きれあじ ばつぐん!<LINE>だいくさんに とどけてあげよう<WAIT>
+//POINTER #43 @ $1CC8C4 - STRING #43 @ $1CA8CB
+
+#WRITE(GBA,$1CC8C4)
+<CONTROL_CODE><$1B><$2B>だいくさんが くれた ボロボロのオノ<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #44 @ $1CC8C8 - STRING #44 @ $1CA8F0
+
+#WRITE(GBA,$1CC8C8)
+<CONTROL_CODE><$1B><$2C>キラキラひかる きれいなカギ<LINE>もんばんに かえして あげよう<WAIT>
+//POINTER #45 @ $1CC8CC - STRING #45 @ $1CA912
+
+#WRITE(GBA,$1CC8CC)
+<CONTROL_CODE><$1B><$2D>なにかと ごうせいすると<LINE>あたらしいボムが できるかも‥‥<WAIT>
+//POINTER #46 @ $1CC8D0 - STRING #46 @ $1CA933
+
+#WRITE(GBA,$1CC8D0)
+<CONTROL_CODE><$1B><$2E>クスリじいさん とくせいのクスリ<LINE>びょうきで こまっているひとに あげよう<WAIT>
+//POINTER #47 @ $1CC8D4 - STRING #47 @ $1CA95C
+
+#WRITE(GBA,$1CC8D4)
+<CONTROL_CODE><$1B><$2F>からっぽの ビン<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #48 @ $1CC8D8 - STRING #48 @ $1CA977
+
+#WRITE(GBA,$1CC8D8)
+<CONTROL_CODE><$1B><$30>あずかった おてがみ<LINE>おんなのひとに とどけて あげよう<WAIT>
+//POINTER #49 @ $1CC8DC - STRING #49 @ $1CA997
+
+#WRITE(GBA,$1CC8DC)
+<CONTROL_CODE><$1B><$31>おんなのひとからの おへんじ<LINE>おとこのひとに とどけてあげよう<WAIT>
+//POINTER #50 @ $1CC8E0 - STRING #50 @ $1CA9BA
+
+#WRITE(GBA,$1CC8E0)
+<CONTROL_CODE><$1B><$32>あおい すいしょうの はいった<LINE>きれいな ゆびわ<WAIT>
+//POINTER #51 @ $1CC8E4 - STRING #51 @ $1CA9D6
+
+#WRITE(GBA,$1CC8E4)
+<CONTROL_CODE><$1B><$33>もしかして ゆびわの かわり‥‥かな?<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #52 @ $1CC8E8 - STRING #52 @ $1CA9FC
+
+#WRITE(GBA,$1CC8E8)
+<CONTROL_CODE><$1B><$34>ラバシティに はいるために<LINE>ひつようらしい<WAIT>
+//POINTER #53 @ $1CC8EC - STRING #53 @ $1CAA15
+
+#WRITE(GBA,$1CC8EC)
+<CONTROL_CODE><$1B><$35>アカネちゃんの サインだ<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #54 @ $1CC8F0 - STRING #54 @ $1CAA34
+
+#WRITE(GBA,$1CC8F0)
+<CONTROL_CODE><$1B><$36>ごせんぞさまの いさんの かくしばしょ<LINE>しそんのひとに わたしてあげよう<WAIT>
+//POINTER #55 @ $1CC8F4 - STRING #55 @ $1CAA5C
+
+#WRITE(GBA,$1CC8F4)
+<CONTROL_CODE><$1B><$37>おおむかしの コイン<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #56 @ $1CC8F8 - STRING #56 @ $1CAA79
+
+#WRITE(GBA,$1CC8F8)
+<CONTROL_CODE><$1B><$38>しょくにん イブシが つくった カンバン<LINE>あなに たててこよう あと<GET_SAVE_SLOT>ほん<WAIT>
+//POINTER #57 @ $1CC8FC - STRING #57 @ $1CAAA3
+
+#WRITE(GBA,$1CC8FC)
+<CONTROL_CODE><$1B><$39>カンバンの ホンネがきけるメガネ‥‥らしい<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #58 @ $1CC900 - STRING #58 @ $1CAACB
+
+#WRITE(GBA,$1CC900)
+<CONTROL_CODE><$1B><$3A>ボンバ-かんで がんばった ごほうびだ!<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #59 @ $1CC904 - STRING #59 @ $1CAAF2
+
+#WRITE(GBA,$1CC904)
+<CONTROL_CODE><$1B><$3B>ボンバ-かんで がんばった ごほうびだ!<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #60 @ $1CC908 - STRING #60 @ $1CAB19
+
+#WRITE(GBA,$1CC908)
+<CONTROL_CODE><$1B><$3C>ボンバ-かんで がんばった ごほうびだ!<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #61 @ $1CC90C - STRING #61 @ $1CAB40
+
+#WRITE(GBA,$1CC90C)
+<CONTROL_CODE><$1B><$3D>きれいな あかい はな<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #62 @ $1CC910 - STRING #62 @ $1CAB5E
+
+#WRITE(GBA,$1CC910)
+<CONTROL_CODE><$1B><$3E>かぐわしい あおい はな<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #63 @ $1CC914 - STRING #63 @ $1CAB7D
+
+#WRITE(GBA,$1CC914)
+<CONTROL_CODE><$1B><$3F>コケッコのおとした タマゴ<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #64 @ $1CC918 - STRING #64 @ $1CAB9D
+
+#WRITE(GBA,$1CC918)
+<CONTROL_CODE><$1B><$40>サボテンのもっていた マラカス<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #65 @ $1CC91C - STRING #65 @ $1CABBF
+
+#WRITE(GBA,$1CC91C)
+<CONTROL_CODE><$1B><$41>もえるトカゲの しっぽ<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #66 @ $1CC920 - STRING #66 @ $1CABDD
+
+#WRITE(GBA,$1CC920)
+<CONTROL_CODE><$1B><$42>バロムの‥‥‥‥<LINE>なにかと ごうせいしてみよう<WAIT>
+//POINTER #67 @ $1CC924 - STRING #67 @ $1CABF8
+
+#WRITE(GBA,$1CC924)
+<CONTROL_CODE><$1B><$43>ほのおぞくせいの ボムです<LINE>こおったみずを とかします<WAIT>
+//POINTER #68 @ $1CC928 - STRING #68 @ $1CAC17
+
+#WRITE(GBA,$1CC928)
+<CONTROL_CODE><$21><$0C>ままで チェックした<LINE>ワ-プポイントに ワ-プします<WAIT>
+//POINTER #69 @ $1CC92C - STRING #69 @ $1CAC35
+
+#WRITE(GBA,$1CC92C)
+<CONTROL_CODE><$21><$4D>ェルのからで みをまもって<LINE>まえからの てきのたまを ふせぎます<WAIT>
+//POINTER #70 @ $1CC930 - STRING #70 @ $1CAC59
+
+#WRITE(GBA,$1CC930)
+<CONTROL_CODE><$21><$1E>くべつな ブロックを おせます<LINE>セットしていなくても ゆうこうです<WAIT>
+//POINTER #71 @ $1CC934 - STRING #71 @ $1CAC7E
+
+#WRITE(GBA,$1CC934)
+<CONTROL_CODE><$21><$B3>ボタンを おしているあいだ<LINE>キャラボンにのって ダッシュします<WAIT>
+//POINTER #72 @ $1CC938 - STRING #72 @ $1CACA1
+
+#WRITE(GBA,$1CC938)
+<CONTROL_CODE><$21><$B3>ボタンをおすと すこしのあいだ<LINE>からだが とうめいに なります<WAIT>
+//POINTER #73 @ $1CC93C - STRING #73 @ $1CACC4
+
+#WRITE(GBA,$1CC93C)
+<CONTROL_CODE><$21><$0F>いたボムが せっかちボムになり<LINE>はやく ばくはつします<WAIT>
+//POINTER #74 @ $1CC940 - STRING #74 @ $1CACE3
+
+#WRITE(GBA,$1CC940)
+<CONTROL_CODE><$21><$0F>いたボムが のんびりボムになり<LINE>ゆっくり ばくはつします<WAIT>
+//POINTER #75 @ $1CC944 - STRING #75 @ $1CAD03
+
+#WRITE(GBA,$1CC944)
+<CONTROL_CODE><$21><$0F>いたボムが リモコンボムになり<LINE>すきなときに ばくはつさせられます<WAIT>
+//POINTER #76 @ $1CC948 - STRING #76 @ $1CAD28
+
+#WRITE(GBA,$1CC948)
+<WAIT>
+//POINTER #77 @ $1CC94C - STRING #77 @ $1CAD29
+
+#WRITE(GBA,$1CC94C)
+<WAIT>
+//POINTER #78 @ $1CC950 - STRING #78 @ $1CAD2A
+
+#WRITE(GBA,$1CC950)
+<WAIT>
+//POINTER #79 @ $1CC954 - STRING #79 @ $1CAD2B
+
+#WRITE(GBA,$1CC954)
+<WAIT>
+//POINTER #80 @ $1CC958 - STRING #80 @ $1CAD2C
+
+#WRITE(GBA,$1CC958)
+<WAIT>
+//POINTER #81 @ $1CC95C - STRING #81 @ $1CAD2D
+
+#WRITE(GBA,$1CC95C)
+<WAIT>
+//POINTER #82 @ $1CC960 - STRING #82 @ $1CAD2E
+
+#WRITE(GBA,$1CC960)
+<WAIT>
+//POINTER #83 @ $1CC964 - STRING #83 @ $1CAD2F
+
+#WRITE(GBA,$1CC964)
+<WAIT>
+//POINTER #84 @ $1CC968 - STRING #84 @ $1CAD30
+
+#WRITE(GBA,$1CC968)
+<WAIT>
+//POINTER #85 @ $1CC96C - STRING #85 @ $1CAD31
+
+#WRITE(GBA,$1CC96C)
+<WAIT>
+//POINTER #86 @ $1CC970 - STRING #86 @ $1CAD32
+
+#WRITE(GBA,$1CC970)
+<WAIT>
+//POINTER #87 @ $1CC974 - STRING #87 @ $1CAD33
+
+#WRITE(GBA,$1CC974)
+<WAIT>
+//POINTER #88 @ $1CC978 - STRING #88 @ $1CAD34
+
+#WRITE(GBA,$1CC978)
+<WAIT>
+//POINTER #89 @ $1CC97C - STRING #89 @ $1CAD35
+
+#WRITE(GBA,$1CC97C)
+<WAIT>
+//POINTER #90 @ $1CC980 - STRING #90 @ $1CAD36
+
+#WRITE(GBA,$1CC980)
+<WAIT>
+//POINTER #91 @ $1CC984 - STRING #91 @ $1CAD37
+
+#WRITE(GBA,$1CC984)
+<WAIT>
+//POINTER #92 @ $1CC988 - STRING #92 @ $1CAD38
+
+#WRITE(GBA,$1CC988)
+<WAIT>
+//POINTER #93 @ $1CC98C - STRING #93 @ $1CAD39
+
+#WRITE(GBA,$1CC98C)
+<WAIT>
+//POINTER #94 @ $1CC990 - STRING #94 @ $1CAD3A
+
+#WRITE(GBA,$1CC990)
+<WAIT>
+//POINTER #95 @ $1CC994 - STRING #95 @ $1CAD3B
+
+#WRITE(GBA,$1CC994)
+<WAIT>
+//POINTER #96 @ $1CC998 - STRING #96 @ $1CAD3C
+
+#WRITE(GBA,$1CC998)
+<CONTROL_CODE><$1B><$21>ボンバ-マンは コロコロコミックの<LINE>1がつごうを よんでみた<NEWBOX>エリア1の ボスは モグラがたメカ<LINE>ドリルモグネスに へんしんするぞ!<NEWBOX>バトルが はじまると<LINE>ぶんしんして おそいかかってくる!<NEWBOX>にせものには ダメ-ジを あたえられないので<LINE>ほんものを マ-クしながら たたかおう<NEWBOX>ボスと よこほうこうに ならぶと<LINE>とっしん してくるので きをつけよう<NEWBOX>ボスの れんしゃしてくる たまは<LINE>シ-ルドで ふせげるぞ<END>
+//POINTER #97 @ $1CC99C - STRING #97 @ $1CAE0B
+
+#WRITE(GBA,$1CC99C)
+<CONTROL_CODE><$1B><$22>ボンバ-マンは コロコロコミックの<LINE>2がつごうを よんでみた<NEWBOX>エリア2の ボスは クモがたメカ<LINE>ネットスパイダ-に へんしんするぞ!<NEWBOX>バトルが はじまったら まずは ライトボムで<LINE>まわりの ブロックを みえるように しよう<NEWBOX>くものすに ふれても ダメ-ジは うけないが<LINE>あるく スピ-ドが おそくなってしまうぞ<NEWBOX>ボスの うってくる ホ-ミングミサイルは<LINE>シ-ルドで ふせげるぞ!<NEWBOX>ボスが てんじょうから ぶらさがって<LINE>こうげきしてくるときは<NEWBOX>ボスのかげを よくみて よけよう<END>
+//POINTER #98 @ $1CC9A0 - STRING #98 @ $1CAEFC
+
+#WRITE(GBA,$1CC9A0)
+<CONTROL_CODE><$1B><$23>ボンバ-マンは コロコロコミックの<LINE>3がつごうを よんでみた<NEWBOX>エリア3の ボスは クワガタメカ<LINE>ブレ-ドビ-トルに へんしんするぞ!<NEWBOX>2ほんの おおあごを きりはなして<LINE>こうげき してくる!<NEWBOX>おおあごは シ-ルドで ふせげないので<LINE>ダッシュで おおきく かわそう<NEWBOX>ボスの しょうめんに たつと<LINE>すごいスピ-ドで とっしんしてくるぞ<END>
+//POINTER #99 @ $1CC9A4 - STRING #99 @ $1CAFA5
+
+#WRITE(GBA,$1CC9A4)
+<CONTROL_CODE><$1B><$24>ボンバ-マンは コロコロコミックの<LINE>4がつごうを よんでみた<NEWBOX>エリア4の ボスは ゴリラがたメカ<LINE>ハンマ-コングに へんしんするぞ!<NEWBOX>りょううでの てっきゅうを<LINE>ふりまわして こうげきしてくるぞ<NEWBOX>ボスと ちょくせんじょうに ならぶと<LINE>てっきゅうヨ-ヨ-で こうげきしてくるので<NEWBOX>ダッシュで まあいをとって<LINE>ラインを ずらしながら たたかおう<NEWBOX>2かいダメ-ジを あたえるごとに<LINE>ボスは たまと ボムを ばらまいてくるぞ<END>
+//POINTER #100 @ $1CC9A8 - STRING #100 @ $1CB079
+
+#WRITE(GBA,$1CC9A8)
+<CONTROL_CODE><$1B><$25>ボンバ-マンは コロコロコミックの<LINE>5がつごうを よんでみた<NEWBOX>エリア5ボスは ドラゴンがたメカ<LINE>メカニドラゴ-ンに へんしん するぞ!<NEWBOX>くうちゅうに いるあいだは<LINE>ボムにたいして むてきなので<NEWBOX>ちじょうにいる わずかなじかんしか<LINE>ダメ-ジを あたえられないぞ<NEWBOX>なかまにした キャラボンを そだてて<LINE>いままで てにいれた のうりょくを<NEWBOX>すべて くしして たたかおう!<END>
+//POINTER #101 @ $1CC9AC - STRING #101 @ $1CB133
+
+#WRITE(GBA,$1CC9AC)
+<WAIT>
+//POINTER #102 @ $1CC9B0 - STRING #102 @ $1CB134
+
+#WRITE(GBA,$1CC9B0)
+<WAIT>
+//POINTER #103 @ $1CC9B4 - STRING #103 @ $1CB135
+
+#WRITE(GBA,$1CC9B4)
+<WAIT>
+//POINTER #104 @ $1CC9B8 - STRING #104 @ $1CB136
+
+#WRITE(GBA,$1CC9B8)
+いまは つかわなくても だいじょうぶ!<WAIT>
+//POINTER #105 @ $1CC9BC - STRING #105 @ $1CB14A
+
+#WRITE(GBA,$1CC9BC)
+<CONTROL_CODE><$0A><$FC><WAIT>
+//POINTER #106 @ $1CC9C0 - STRING #106 @ $1CB14D
+
+#WRITE(GBA,$1CC9C0)
+<WAIT>
+//POINTER #107 @ $1CC9C4 - STRING #107 @ $1CB14E
+
+#WRITE(GBA,$1CC9C4)
+<WAIT>
+//POINTER #108 @ $1CC9C8 - STRING #108 @ $1CB14F
+
+#WRITE(GBA,$1CC9C8)
+<WAIT>
+//POINTER #109 @ $1CC9CC - STRING #109 @ $1CB150
+
+#WRITE(GBA,$1CC9CC)
+<WAIT>
+//POINTER #110 @ $1CC9D0 - STRING #110 @ $1CB151
+
+#WRITE(GBA,$1CC9D0)
+<WAIT>
+//POINTER #111 @ $1CC9D4 - STRING #111 @ $1CB152
+
+#WRITE(GBA,$1CC9D4)
+<WAIT>
+//POINTER #112 @ $1CC9D8 - STRING #112 @ $1CB153
+
+#WRITE(GBA,$1CC9D8)
+<CONTROL_CODE><$0A><$00><CONTROL_CODE><$0B><$FC>Bボタンで ゲ-ムにもどります<WAIT>
+//POINTER #113 @ $1CC9DC - STRING #113 @ $1CB159
+
+#WRITE(GBA,$1CC9DC)
+Bボタンで ゲ-ムにもどります<WAIT>
+//POINTER #114 @ $1CC9E0 - STRING #114 @ $1CB169
+
+#WRITE(GBA,$1CC9E0)
+ワ-プポイントを えらんでください<WAIT>
+//POINTER #115 @ $1CC9E4 - STRING #115 @ $1CB17B
+
+#WRITE(GBA,$1CC9E4)
+<CONTROL_CODE><$0A><$FC><CONTROL_CODE><$0A><$27> ワ-プしますか?<LINE>    はい       いいえ<CONTROL_CODE><$17><$03>1い17ッ7ャ<CONTROL_CODE><$03><$01><$F3><WAIT>
+//POINTER #116 @ $1CC9E8 - STRING #116 @ $1CB17E
+
+#WRITE(GBA,$1CC9E8)
+<CONTROL_CODE><$0A><$27> ワ-プしますか?<LINE>    はい       いいえ<CONTROL_CODE><$17><$03>1い17ッ7ャ<CONTROL_CODE><$03><$01><$F3><WAIT>
+//POINTER #117 @ $1CC9EC - STRING #117 @ $1CB1A5
+
+#WRITE(GBA,$1CC9EC)
+<CONTROL_CODE><$03><$01><$F3><WAIT>
+//POINTER #118 @ $1CC9F0 - STRING #118 @ $1CB1AA
+
+#WRITE(GBA,$1CC9F0)
+<CONTROL_CODE><$04><$01><$F3><WAIT>
+//POINTER #119 @ $1CC9F4 - STRING #119 @ $1CB1AF
+
+#WRITE(GBA,$1CC9F4)
+いどうさきを せんたくしてください<WAIT>
+//POINTER #120 @ $1CC9F8 - STRING #120 @ $1CB1C1
+
+#WRITE(GBA,$1CC9F8)
+<WAIT>
+//POINTER #121 @ $1CC9FC - STRING #121 @ $1CB1C2
+
+#WRITE(GBA,$1CC9FC)
+<WAIT>
+//POINTER #122 @ $1CCA00 - STRING #122 @ $1CB1C3
+
+#WRITE(GBA,$1CCA00)
+<WAIT>
+//POINTER #123 @ $1CCA04 - STRING #123 @ $1CB1C4
+
+#WRITE(GBA,$1CCA04)
+<WAIT>
+//POINTER #124 @ $1CCA08 - STRING #124 @ $1CB1C5
+
+#WRITE(GBA,$1CCA08)
+<WAIT>
+//POINTER #125 @ $1CCA0C - STRING #125 @ $1CB1C6
+
+#WRITE(GBA,$1CCA0C)
+<WAIT>
+//POINTER #126 @ $1CCA10 - STRING #126 @ $1CB1C7
+
+#WRITE(GBA,$1CCA10)
+<WAIT>
+//POINTER #127 @ $1CCA14 - STRING #127 @ $1CB1C8
+
+#WRITE(GBA,$1CCA14)
+<WAIT>
+//POINTER #128 @ $1CCA18 - STRING #128 @ $1CB1C9
+
+#WRITE(GBA,$1CCA18)
+そのエリアの いままで チェックした<LINE>ワ-プポイントに ワ-プできます<LINE>ダンジョンのなかでは そのダンジョンの<LINE>いりぐちに ワ-プします<WAIT>
+//POINTER #129 @ $1CCA1C - STRING #129 @ $1CB20E
+
+#WRITE(GBA,$1CCA1C)
+からを シ-ルドにして みをまもり<LINE>まえからとんでくる てきのたまを ふせぎます<LINE>むきをかえることは できますが<LINE>シ-ルドしたまま いどうすることは できません<WAIT>
+//POINTER #130 @ $1CCA20 - STRING #130 @ $1CB25F
+
+#WRITE(GBA,$1CCA20)
+とくべつな ブロックをおして うごかせます<LINE>セットしていなくても のうりょくを つかえます<LINE>ブロックを おすスピ-ドは ゆっくりです<WAIT>
+//POINTER #131 @ $1CCA24 - STRING #131 @ $1CB2A2
+
+#WRITE(GBA,$1CCA24)
+Bボタンを おしているあいだ<LINE>キャラボンにのって ダッシュします<LINE>まだ こどもだから スピ-ドは ゆっくりです<WAIT>
+//POINTER #132 @ $1CCA28 - STRING #132 @ $1CB2DA
+
+#WRITE(GBA,$1CCA28)
+Bボタンをおすと からだが とうめいになります<LINE>みえないだけで むてきでは ありません<LINE>とうめいになっているあいだ トラップや<LINE>てきから サ-チされません<WAIT>
+//POINTER #133 @ $1CCA2C - STRING #133 @ $1CB328
+
+#WRITE(GBA,$1CCA2C)
+このキャラボンを セットしているあいだ<LINE>おいたボムが せっかちボムになり<LINE>つうじょうの はんぶんのじかんで<LINE>ばくはつするようになります<WAIT>
+//POINTER #134 @ $1CCA30 - STRING #134 @ $1CB36C
+
+#WRITE(GBA,$1CCA30)
+このキャラボンを セットしているあいだ<LINE>おいたボムが のんびりボムになり<LINE>つうじょうの 2ばいのじかんで<LINE>ばくはつするようになります<WAIT>
+//POINTER #135 @ $1CCA34 - STRING #135 @ $1CB3AF
+
+#WRITE(GBA,$1CCA34)
+このキャラボンを セットしているあいだ<LINE>おいたボムが リモコンボムになり<LINE>Bボタンを おして おいたボムを<LINE>すきなときに ばくはつさせられます<WAIT>
+//POINTER #136 @ $1CCA38 - STRING #136 @ $1CB3F7
+
+#WRITE(GBA,$1CCA38)
+ボンバ-マン<LINE>1985ねん 12がつ ファミコン<LINE>きねんすべき ボンバ-マン だい1さく<LINE>かくしステ-ジが わだいに なった!<WAIT>
+//POINTER #137 @ $1CCA3C - STRING #137 @ $1CB437
+
+#WRITE(GBA,$1CCA3C)
+ボンバ-キング<LINE>1987ねん  8がつ ファミコン<LINE>ハドソン マルちょうシリ-ズ だい1だん<LINE>オ-プニングで テ-マソングが ながれる!<WAIT>
+//POINTER #138 @ $1CCA40 - STRING #138 @ $1CB47C
+
+#WRITE(GBA,$1CCA40)
+ボンバ-ボ-イ<LINE>1990ねん  8がつ ゲ-ムボ-イ<LINE>ゲ-ムボ-イでの デビュ-さく<LINE>つうしんケ-ブルで バトルが たのしめる!<WAIT>
+//POINTER #139 @ $1CCA44 - STRING #139 @ $1CB4BD
+
+#WRITE(GBA,$1CCA44)
+ボンバ-マン2<LINE>1991ねん  6がつ ファミコン<LINE>ファミコンでの だい2さくめ<LINE>バトルゲ-ム とうさい!<WAIT>
+//POINTER #140 @ $1CCA48 - STRING #140 @ $1CB4F3
+
+#WRITE(GBA,$1CCA48)
+ス-パ-ボンバ-マン<LINE>1993ねん  4がつ ス-パ-ファミコン<LINE>ノ-マルゲ-ムで ふたりプレイが かのうに!<LINE>じだいは マルチプレイへ<WAIT>
+//POINTER #141 @ $1CCA4C - STRING #141 @ $1CB538
+
+#WRITE(GBA,$1CCA4C)
+ス-パ-ボンバ-マン2<LINE>1994ねん  4がつ ス-パ-ファミコン<LINE>バトルゲ-ムに ゴ-ルデンボンバ-や<LINE>サドンデスなどの しんル-ルが とうじょう!<WAIT>
+//POINTER #142 @ $1CCA50 - STRING #142 @ $1CB584
+
+#WRITE(GBA,$1CCA50)
+ボンバ-マンGB<LINE>1994ねん  8がつ ゲ-ムボ-イ<LINE>あらたな のりもの モトボンバ- とうじょう!<LINE>ス-パ-ゲ-ムボ-イにも たいおう<WAIT>
+//POINTER #143 @ $1CCA54 - STRING #143 @ $1CB5CA
+
+#WRITE(GBA,$1CCA54)
+ス-パ-ボンバ-マン ぱにっくボンバ-W<LINE>1995ねん  3がつ ス-パ-ファミコン<LINE>おちものパズルゲ-ムとして しんとうじょう!<LINE>もちろん たいせんプレイも たのしめる!<WAIT>
+//POINTER #144 @ $1CCA58 - STRING #144 @ $1CB621
+
+#WRITE(GBA,$1CCA58)
+ス-パ-ボンバ-マン3<LINE>1995ねん  4がつ ス-パ-ファミコン<LINE>あたらしいなかま ル-イが とうじょう!<LINE>みそボンシステムが バトルを あつくする!<WAIT>
+//POINTER #145 @ $1CCA5C - STRING #145 @ $1CB66E
+
+#WRITE(GBA,$1CCA5C)
+ボンバ-マンGB2<LINE>1995ねん  8がつ ゲ-ムボ-イ<LINE>シロボンのそせん インディボンバ-とうじょう!<LINE>あらたに レッスンモ-ド とうさい<WAIT>
+//POINTER #146 @ $1CCA60 - STRING #146 @ $1CB6B5
+
+#WRITE(GBA,$1CCA60)
+ス-パ-ボンバ-マン4<LINE>1996ねん  4がつ ス-パ-ファミコン<LINE>なげる おす などの アクションが かのうに!<LINE>マニアックモ-ドも しんとうじょう<WAIT>
+//POINTER #147 @ $1CCA64 - STRING #147 @ $1CB701
+
+#WRITE(GBA,$1CCA64)
+ボンバ-マンコレクション<LINE>1996ねん  7がつ ゲ-ムボ-イ<LINE>ゲ-ムが かんにはいった ゲ-ムかん だい1だん<LINE>3つのタイトルが たのしめる おトクなソフト!<WAIT>
+//POINTER #148 @ $1CCA68 - STRING #148 @ $1CB752
+
+#WRITE(GBA,$1CCA68)
+ボンバ-マンビ-ダマン<LINE>1996ねん 12がつ ス-パ-ファミコン<LINE>ビ-ダマンが ス-パ-ファミコンに とうじょう!<LINE>なんと オリジナル ビ-ダマンつき<WAIT>
+//POINTER #149 @ $1CCA6C - STRING #149 @ $1CB79F
+
+#WRITE(GBA,$1CCA6C)
+ボンバ-マンGB3<LINE>1996ねん 12がつ ゲ-ムボ-イ<LINE>とくてんによって だんいを にんていする<LINE>チャレンジモ-ド とうさい<WAIT>
+//POINTER #150 @ $1CCA70 - STRING #150 @ $1CB7DF
+
+#WRITE(GBA,$1CCA70)
+ス-パ-ボンバ-マン5<LINE>1997ねん  2がつ ス-パ-ファミコン<LINE>ル-トぶんきで ぜん100めん!<LINE>セ-ブファイルで めざせ たっせいりつ 100!<WAIT>
+//POINTER #151 @ $1CCA74 - STRING #151 @ $1CB82C
+
+#WRITE(GBA,$1CCA74)
+とびだせ!ぱにボン<LINE>1997ねん  7がつ バ-チャルボ-イ<LINE>バ-チャルボ-イようソフト だい1だん!<LINE>3Dこうかをとりいれた おちものパズル<WAIT>
+//POINTER #152 @ $1CCA78 - STRING #152 @ $1CB874
+
+#WRITE(GBA,$1CCA78)
+ばくボンバ-マン<LINE>1997ねん  9がつ ニンテンドウ64<LINE>ボンバ-マンが 3Dになって<LINE>より リアルなゲ-ムへと パワ-アップ!<WAIT>
+//POINTER #153 @ $1CCA7C - STRING #153 @ $1CB8B6
+
+#WRITE(GBA,$1CCA7C)
+ポケットボンバ-マン<LINE>1997ねん 12がつ ゲ-ムボ-イ<LINE>ジャンプして ボムをしかける<LINE>しんアクション とうじょう!<WAIT>
+//POINTER #154 @ $1CCA80 - STRING #154 @ $1CB8F2
+
+#WRITE(GBA,$1CCA80)
+ボンバ-マンヒ-ロ- ミリアンおうじょをすくえ!<LINE>1998ねん  4がつ ニンテンドウ64<LINE>ステ-ジこうりゃくに おうじて<LINE>ボンバ-マンが 4つのスタイルに チェンジ!<WAIT>
+//POINTER #155 @ $1CCA84 - STRING #155 @ $1CB947
+
+#WRITE(GBA,$1CCA84)
+ボンバ-マンクエスト<LINE>1998ねん 12がつ ゲ-ムボ-イ<LINE>シリ-ズはつの RPG!<LINE>ごうせいして あたらしいボムが つくれる!<WAIT>
+//POINTER #156 @ $1CCA88 - STRING #156 @ $1CB988
+
+#WRITE(GBA,$1CCA88)
+ばくボンバ-マン2<LINE>1999ねん 12がつ ニンテンドウ64<LINE>7つのせいのうをもつボムで パワ-アップ!<LINE>いろいろなル-ルの バトルでしょうぶ!<WAIT>
+//POINTER #157 @ $1CCA8C - STRING #157 @ $1CB9D1
+
+#WRITE(GBA,$1CCA8C)
+ボンバ-マンMAX ひかりのゆうしゃ<LINE>1999ねん 12がつ ゲ-ムボ-イカラ-せんよう<LINE>ボンバ-マンはつの 2バ-ジョンで とうじょう!<LINE>エリアこうかんで グッドエンディングを めざせ<WAIT>
+//POINTER #158 @ $1CCA90 - STRING #158 @ $1CBA2F
+
+#WRITE(GBA,$1CCA90)
+ボンバ-マンMAX やみのせんし<LINE>1999ねん 12がつ ゲ-ムボ-イカラ-せんよう<LINE>あたらしいなかま キャラボン とうじょう<LINE>あつめて そだてて たたかわせよう!<WAIT>
+//POINTER #159 @ $1CCA94 - STRING #159 @ $1CBA82
+
+#WRITE(GBA,$1CCA94)
+ボンバ-マンMAX ぺんてるバ-ジョン<LINE>ひばいひん       ゲ-ムボ-イカラ-せんよう<LINE>キャンペ-ンに おうぼして もらえる ひばいひん<LINE>2バ-ジョンが 1つの ソフトに!<WAIT>
+//POINTER #160 @ $1CCA98 - STRING #160 @ $1CBADB
+
+#WRITE(GBA,$1CCA98)
+ボンバ-マンスト-リ-<LINE>2001ねん  4がつ ゲ-ムボ-イアドバンス<LINE>イベントもりだくさんの ほんかくRPG<LINE>1つのソフトで たいせんプレイ かのう!<WAIT>
+//POINTER #161 @ $1CCA9C - STRING #161 @ $1CBB28
+
+#WRITE(GBA,$1CCA9C)
+ボンバ-マン64<LINE>2001ねん 12がつ ニンテンドウ64<LINE>ボンバ-マンに テ-マパ-クが とうじょう<LINE>いろいろなミニゲ-ムが たのしめる!<WAIT>
+//POINTER #162 @ $1CCAA0 - STRING #162 @ $1CBB6F
+
+#WRITE(GBA,$1CCAA0)
+ボンバ-マンMAX2 ボンバ-マンバ-ジョン<LINE>2002ねん  2がつ ゲ-ムボ-イアドバンス<LINE>MAXシリ-ズの ぞくへん<LINE>りったいかんのある グラフィックに!<WAIT>
+//POINTER #163 @ $1CCAA4 - STRING #163 @ $1CBBBF
+
+#WRITE(GBA,$1CCAA4)
+ボンバ-マンMAX2 マックスバ-ジョン<LINE>2002ねん  2がつ ゲ-ムボ-イアドバンス<LINE>キャラボンの のうりょくを きりかえて<LINE>ステ-ジクリアを めざそう!<WAIT>
+//POINTER #164 @ $1CCAA8 - STRING #164 @ $1CBC0F
+
+#WRITE(GBA,$1CCAA8)
+#ACTIVETBL(engTable)
+//セ-ブするファイルを えらんでください<LINE>Bボタンで ゲ-ムにもどります<WAIT>
+Press A to save.<LINE>Press B to return.<WAIT>
+//POINTER #165 @ $1CCAAC - STRING #165 @ $1CBC33
+
+#WRITE(GBA,$1CCAAC)
+//ファイル<GET_SAVE_SLOT>へ セ-ブしますか?<LINE>    はい       いいえ<CONTROL_CODE><$18><$03>1い17ッ7ャファイル<GET_SAVE_SLOT>に セ-ブしました<LINE><NEWBOX><WAIT>
+Do you want to save to file <GET_SAVE_SLOT>?<LINE>         Yes              No<CONTROL_CODE_E018><$03><$02><$0C><$02><$08><$75><$08><$76>file <GET_SAVE_SLOT>was succesfully saved.<LINE><NEWBOX><WAIT>
+#ACTIVETBL(Table)
+//POINTER #166 @ $1CCAB0 - STRING #166 @ $1CBC5E
+
+#WRITE(GBA,$1CCAB0)
+ファイル<GET_SAVE_SLOT>に セ-ブしました<LINE><NEWBOX><WAIT>
+//POINTER #167 @ $1CCAB4 - STRING #167 @ $1CBC70
+
+#WRITE(GBA,$1CCAB4)
+ゲ-ムをやめて タイトルにもどります<LINE>    はい       いいえ<CONTROL_CODE><$18><$03>1い17ッ7ャロ-ドするファイルを えらんでください<LINE>Bボタンで タイトルにもどります<WAIT>
+//POINTER #168 @ $1CCAB8 - STRING #168 @ $1CBC9D
+
+#WRITE(GBA,$1CCAB8)
+ロ-ドするファイルを えらんでください<LINE>Bボタンで タイトルにもどります<WAIT>
+//POINTER #169 @ $1CCABC - STRING #169 @ $1CBCC2
+
+#WRITE(GBA,$1CCABC)
+ファイル<GET_SAVE_SLOT>で あそびますか?<LINE>    はい       いいえ<CONTROL_CODE><$17><$03>1い17ッ7ャファイル<GET_SAVE_SLOT>を ロ-ドしました<END>
+//POINTER #170 @ $1CCAC0 - STRING #170 @ $1CBCEC
+
+#WRITE(GBA,$1CCAC0)
+ファイル<GET_SAVE_SLOT>を ロ-ドしました<END>
+//POINTER #171 @ $1CCAC4 - STRING #171 @ $1CBCFC
+
+#WRITE(GBA,$1CCAC4)
+<CONTROL_CODE><$0A><$FC>ここでは セ-ブできません!<LINE><NEWBOX><WAIT>
+//POINTER #172 @ $1CCAC8 - STRING #172 @ $1CBCFF
+
+#WRITE(GBA,$1CCAC8)
+ここでは セ-ブできません!<LINE><NEWBOX><WAIT>
+//POINTER #173 @ $1CCACC - STRING #173 @ $1CBD10
+
+#WRITE(GBA,$1CCACC)
+ファイル<GET_SAVE_SLOT>へのセ-ブに しっぱいしました<LINE><NEWBOX><WAIT>
+//POINTER #174 @ $1CCAD0 - STRING #174 @ $1CBD28
+
+#WRITE(GBA,$1CCAD0)
+ファイル<GET_SAVE_SLOT>のロ-ドに しっぱいしました<LINE><NEWBOX><WAIT>
+//POINTER #175 @ $1CCAD4 - STRING #175 @ $1CBD3F
+
+#WRITE(GBA,$1CCAD4)
+<WAIT>
+//POINTER #176 @ $1CCAD8 - STRING #176 @ $1CBD40
+
+#WRITE(GBA,$1CCAD8)
+こちらバ-ディ ムジョ-のヤツ<LINE>とうとう せんかんまで だしてきやがった!<NEWBOX>いんせきぐんと せんとういんを かわして<LINE>ア-ムジョ-の いりぐちを めざすんだ!<NEWBOX>ジェッタ-ズバッジで とくてんがアップするぞ<LINE>‥‥まぁ べつに とらなくても かまわんが<NEWBOX>オレたちも すぐに おいかけるから<LINE>さきに ア-ムジョ-に せんにゅうしてくれ<END>
+//POINTER #177 @ $1CCADC - STRING #177 @ $1CBDE5
+
+#WRITE(GBA,$1CCADC)
+ミニゲ-ムの せつめいを ききますか?<LINE>    はい       いいえ<CONTROL_CODE><$18><$03>1い17ッ7ャせんとういんや しょうがいぶつを かわして<LINE>ア-ムジョ-の いりぐちを めざします<NEWBOX>ジェッタ-ズバッジを とると<LINE>とくてんが アップします<NEWBOX>とちゅうで ミスをすると<LINE>きろくは のこらないので きをつけてください<NEWBOX>それでは がんばってください<END>
+//POINTER #178 @ $1CCAE0 - STRING #178 @ $1CBE13
+
+#WRITE(GBA,$1CCAE0)
+せんとういんや しょうがいぶつを かわして<LINE>ア-ムジョ-の いりぐちを めざします<NEWBOX>ジェッタ-ズバッジを とると<LINE>とくてんが アップします<NEWBOX>とちゅうで ミスをすると<LINE>きろくは のこらないので きをつけてください<NEWBOX>それでは がんばってください<END>
+//POINTER #179 @ $1CCAE4 - STRING #179 @ $1CBE7D
+
+#WRITE(GBA,$1CCAE4)
+それでは がんばってください<END>
+//POINTER #180 @ $1CCAE8 - STRING #180 @ $1CBE8C
+
+#WRITE(GBA,$1CCAE8)
+<WAIT>
+//POINTER #181 @ $1CCAEC - STRING #181 @ $1CBE8D
+
+#WRITE(GBA,$1CCAEC)
+<WAIT>
+//POINTER #182 @ $1CCAF0 - STRING #182 @ $1CBE8E
+
+#WRITE(GBA,$1CCAF0)
+<WAIT>
+//POINTER #183 @ $1CCAF4 - STRING #183 @ $1CBE8F
+
+#WRITE(GBA,$1CCAF4)
+<WAIT>
+//POINTER #184 @ $1CCAF8 - STRING #184 @ $1CBE90
+
+#WRITE(GBA,$1CCAF8)
+<CONTROL_CODE><$21><$0C>ままで チェックした<LINE>ワ-プポイントに ワ-プします<WAIT>
+//POINTER #185 @ $1CCAFC - STRING #185 @ $1CBEAE
+
+#WRITE(GBA,$1CCAFC)
+<CONTROL_CODE><$21><$0C>ままで チェックした<LINE>ワ-プポイントに ワ-プします<WAIT>
+//POINTER #186 @ $1CCB00 - STRING #186 @ $1CBECC
+
+#WRITE(GBA,$1CCB00)
+<CONTROL_CODE><$21><$0C>ままで チェックした<LINE>ワ-プポイントに ワ-プします<WAIT>
+//POINTER #187 @ $1CCB04 - STRING #187 @ $1CBEEA
+
+#WRITE(GBA,$1CCB04)
+<CONTROL_CODE><$21><$29>えからの てきのたまを ふせぎながら<LINE>ゆっくり いどうできます<WAIT>
+//POINTER #188 @ $1CCB08 - STRING #188 @ $1CBF0D
+
+#WRITE(GBA,$1CCB08)
+<CONTROL_CODE><$21><$29>えからの てきのたまを ふせぎながら<LINE>いどうできます<WAIT>
+//POINTER #189 @ $1CCB0C - STRING #189 @ $1CBF2B
+
+#WRITE(GBA,$1CCB0C)
+<CONTROL_CODE><$21><$81>んしんを かいがらで おおって<LINE>よこや うしろからの たまも ふせぎます<WAIT>
+//POINTER #190 @ $1CCB10 - STRING #190 @ $1CBF53
+
+#WRITE(GBA,$1CCB10)
+<CONTROL_CODE><$21><$A3>ロックをおすスピ-ドが すこしアップします<LINE>セットしていなくても ゆうこうです<WAIT>
+//POINTER #191 @ $1CCB14 - STRING #191 @ $1CBF7E
+
+#WRITE(GBA,$1CCB14)
+<CONTROL_CODE><$21><$A3>ロックをおすスピ-ドが アップします<LINE>セットしていなくても ゆうこうです<WAIT>
+//POINTER #192 @ $1CCB18 - STRING #192 @ $1CBFA6
+
+#WRITE(GBA,$1CCB18)
+<CONTROL_CODE><$21><$A3>ロックをおすスピ-ドが さいだいになります<LINE>セットしていなくても ゆうこうです<WAIT>
+//POINTER #193 @ $1CCB1C - STRING #193 @ $1CBFD1
+
+#WRITE(GBA,$1CCB1C)
+<CONTROL_CODE><$21><$B3>ボタンを おしているあいだ ダッシュします<LINE>ダッシュスピ-ドが すこし アップします<WAIT>
+//POINTER #194 @ $1CCB20 - STRING #194 @ $1CBFFF
+
+#WRITE(GBA,$1CCB20)
+<CONTROL_CODE><$21><$B3>ボタンを おしているあいだ ダッシュします<LINE>ダッシュスピ-ドが アップします<WAIT>
+//POINTER #195 @ $1CCB24 - STRING #195 @ $1CC029
+
+#WRITE(GBA,$1CCB24)
+<CONTROL_CODE><$21><$B3>ボタンを おしているあいだ ダッシュします<LINE>ダッシュスピ-ドが さいだいになります<WAIT>
+//POINTER #196 @ $1CCB28 - STRING #196 @ $1CC056
+
+#WRITE(GBA,$1CCB28)
+<CONTROL_CODE><$21><$B3>ボタンで からだが とうめいになります<LINE>とうめいになるじかんが すこし アップします<WAIT>
+//POINTER #197 @ $1CCB2C - STRING #197 @ $1CC084
+
+#WRITE(GBA,$1CCB2C)
+<CONTROL_CODE><$21><$B3>ボタンで からだが とうめいになります<LINE>とうめいになるじかんが アップします<WAIT>
+//POINTER #198 @ $1CCB30 - STRING #198 @ $1CC0AE
+
+#WRITE(GBA,$1CCB30)
+<CONTROL_CODE><$21><$B3>ボタンで からだが とうめいになります<LINE>とうめいになるじかんが さいだいになります<WAIT>
+//POINTER #199 @ $1CCB34 - STRING #199 @ $1CC0DB
+
+#WRITE(GBA,$1CCB34)
+<CONTROL_CODE><$21><$0F>いたボムが せっかちボムになり<LINE>かりょくが すこし アップします<WAIT>
+//POINTER #200 @ $1CCB38 - STRING #200 @ $1CC0FF
+
+#WRITE(GBA,$1CCB38)
+<CONTROL_CODE><$21><$0F>いたボムが せっかちボムになり<LINE>かりょくが アップします<WAIT>
+//POINTER #201 @ $1CCB3C - STRING #201 @ $1CC11F
+
+#WRITE(GBA,$1CCB3C)
+<CONTROL_CODE><$21><$0F>いたボムが せっかちボムになり<LINE>かりょくが さいだいになります<WAIT>
+//POINTER #202 @ $1CCB40 - STRING #202 @ $1CC142
+
+#WRITE(GBA,$1CCB40)
+<CONTROL_CODE><$21><$0F>いたボムが のんびりボムになり<LINE>かりょくが すこし アップします<WAIT>
+//POINTER #203 @ $1CCB44 - STRING #203 @ $1CC166
+
+#WRITE(GBA,$1CCB44)
+<CONTROL_CODE><$21><$0F>いたボムが のんびりボムになり<LINE>かりょくが アップします<WAIT>
+//POINTER #204 @ $1CCB48 - STRING #204 @ $1CC186
+
+#WRITE(GBA,$1CCB48)
+<CONTROL_CODE><$21><$0F>いたボムが のんびりボムになり<LINE>かりょくが さいだいになります<WAIT>
+//POINTER #205 @ $1CCB4C - STRING #205 @ $1CC1A9
+
+#WRITE(GBA,$1CCB4C)
+<CONTROL_CODE><$21><$0F>いたボムが リモコンボムになり<LINE>かりょくが すこし アップします<WAIT>
+//POINTER #206 @ $1CCB50 - STRING #206 @ $1CC1CD
+
+#WRITE(GBA,$1CCB50)
+<CONTROL_CODE><$21><$0F>いたボムが リモコンボムになり<LINE>かりょくが アップします<WAIT>
+//POINTER #207 @ $1CCB54 - STRING #207 @ $1CC1ED
+
+#WRITE(GBA,$1CCB54)
+<CONTROL_CODE><$21><$0F>いたボムが リモコンボムになり<LINE>かりょくが さいだいになります<WAIT>
+//POINTER #208 @ $1CCB58 - STRING #208 @ $1CC210
+
+#WRITE(GBA,$1CCB58)
+そのエリアの いままで チェックした<LINE>ワ-プポイントに ワ-プできます<LINE>ダンジョンのなかでは そのダンジョンの<LINE>いりぐちに ワ-プします<WAIT>
+//POINTER #209 @ $1CCB5C - STRING #209 @ $1CC255
+
+#WRITE(GBA,$1CCB5C)
+そのエリアの いままで チェックした<LINE>ワ-プポイントに ワ-プできます<LINE>ダンジョンのなかでは そのダンジョンの<LINE>いりぐちに ワ-プします<WAIT>
+//POINTER #210 @ $1CCB60 - STRING #210 @ $1CC29A
+
+#WRITE(GBA,$1CCB60)
+そのエリアの いままで チェックした<LINE>ワ-プポイントに ワ-プできます<LINE>ダンジョンのなかでは そのダンジョンの<LINE>いりぐちに ワ-プします<WAIT>
+//POINTER #211 @ $1CCB64 - STRING #211 @ $1CC2DF
+
+#WRITE(GBA,$1CCB64)
+からを シ-ルドにして みをまもり<LINE>まえからとんでくる てきのたまを ふせぎます<LINE>シ-ルドを かまえたまま<LINE>ゆっくり あるくことが できます<WAIT>
+//POINTER #212 @ $1CCB68 - STRING #212 @ $1CC326
+
+#WRITE(GBA,$1CCB68)
+からを シ-ルドにして みをまもり<LINE>まえからとんでくる てきのたまを ふせぎます<LINE>シ-ルドを かまえたまま あるくスピ-ドが<LINE>すこし アップしました<WAIT>
+//POINTER #213 @ $1CCB6C - STRING #213 @ $1CC371
+
+#WRITE(GBA,$1CCB6C)
+からを あたまから スッポリかぶって<LINE>すべての ほうこうからの たまを ふせぎます<LINE>からを かぶったまま あるくこともできます<WAIT>
+//POINTER #214 @ $1CCB70 - STRING #214 @ $1CC3B1
+
+#WRITE(GBA,$1CCB70)
+とくべつな ブロックをおして うごかせます<LINE>セットしていなくても のうりょくを つかえます<LINE>ブロックをおす スピ-ドが<LINE>すこし アップしました<WAIT>
+//POINTER #215 @ $1CCB74 - STRING #215 @ $1CC3F9
+
+#WRITE(GBA,$1CCB74)
+とくべつな ブロックをおして うごかせます<LINE>セットしていなくても のうりょくを つかえます<LINE>ブロックをおす スピ-ドが<LINE>かなり アップしました<WAIT>
+//POINTER #216 @ $1CCB78 - STRING #216 @ $1CC441
+
+#WRITE(GBA,$1CCB78)
+とくべつな ブロックをおして うごかせます<LINE>セットしていなくても のうりょくを つかえます<LINE>さいだいの スピ-ドで ブロックを おせます<WAIT>
+//POINTER #217 @ $1CCB7C - STRING #217 @ $1CC486
+
+#WRITE(GBA,$1CCB7C)
+Bボタンを おしているあいだ<LINE>キャラボンにのって ダッシュします<LINE>ダッシュする スピ-ドが<LINE>すこし アップしました<WAIT>
+//POINTER #218 @ $1CCB80 - STRING #218 @ $1CC4C0
+
+#WRITE(GBA,$1CCB80)
+Bボタンを おしているあいだ<LINE>キャラボンにのって ダッシュします<LINE>ダッシュする スピ-ドが<LINE>かなり アップしました<WAIT>
+//POINTER #219 @ $1CCB84 - STRING #219 @ $1CC4FA
+
+#WRITE(GBA,$1CCB84)
+Bボタンを おしているあいだ<LINE>キャラボンにのって ダッシュします<LINE>さいだいの スピ-ドで ダッシュできます<WAIT>
+//POINTER #220 @ $1CCB88 - STRING #220 @ $1CC530
+
+#WRITE(GBA,$1CCB88)
+からだを とうめいにして てきや<LINE>トラップから サ-チされなくなります<LINE>とうめいになっている じかんが<LINE>すこし アップしました<WAIT>
+//POINTER #221 @ $1CCB8C - STRING #221 @ $1CC570
+
+#WRITE(GBA,$1CCB8C)
+からだを とうめいにして てきや<LINE>トラップから サ-チされなくなります<LINE>とうめいになっている じかんが<LINE>かなり アップしました<WAIT>
+//POINTER #222 @ $1CCB90 - STRING #222 @ $1CC5B0
+
+#WRITE(GBA,$1CCB90)
+からだを とうめいにして てきや<LINE>トラップから サ-チされなくなります<LINE>とうめいになっている じかんが<LINE>さいだいまで アップしました<WAIT>
+//POINTER #223 @ $1CCB94 - STRING #223 @ $1CC5F3
+
+#WRITE(GBA,$1CCB94)
+このキャラボンを セットしているあいだ<LINE>おいたボムが せっかちボムになります<LINE>ボムの かりょくが すこし アップしました<WAIT>
+//POINTER #224 @ $1CCB98 - STRING #224 @ $1CC630
+
+#WRITE(GBA,$1CCB98)
+このキャラボンを セットしているあいだ<LINE>おいたボムが せっかちボムになります<LINE>ボムの かりょくが かなり アップしました<WAIT>
+//POINTER #225 @ $1CCB9C - STRING #225 @ $1CC66D
+
+#WRITE(GBA,$1CCB9C)
+このキャラボンを セットしているあいだ<LINE>おいたボムが せっかちボムになります<LINE>ボムの かりょくが さいだいに なりました<WAIT>
+//POINTER #226 @ $1CCBA0 - STRING #226 @ $1CC6AA
+
+#WRITE(GBA,$1CCBA0)
+このキャラボンを セットしているあいだ<LINE>おいたボムが のんびりボムになります<LINE>ボムの かりょくが すこし アップしました<WAIT>
+//POINTER #227 @ $1CCBA4 - STRING #227 @ $1CC6E7
+
+#WRITE(GBA,$1CCBA4)
+このキャラボンを セットしているあいだ<LINE>おいたボムが のんびりボムになります<LINE>ボムの かりょくが かなり アップしました<WAIT>
+//POINTER #228 @ $1CCBA8 - STRING #228 @ $1CC724
+
+#WRITE(GBA,$1CCBA8)
+このキャラボンを セットしているあいだ<LINE>おいたボムが のんびりボムになります<LINE>ボムの かりょくが さいだいに なりました<WAIT>
+//POINTER #229 @ $1CCBAC - STRING #229 @ $1CC761
+
+#WRITE(GBA,$1CCBAC)
+このキャラボンを セットしているあいだ<LINE>おいたボムが リモコンボムになります<LINE>ボムの かりょくが すこし アップしました<WAIT>
+//POINTER #230 @ $1CCBB0 - STRING #230 @ $1CC79E
+
+#WRITE(GBA,$1CCBB0)
+このキャラボンを セットしているあいだ<LINE>おいたボムが リモコンボムになります<LINE>ボムの かりょくが かなり アップしました<WAIT>
+//POINTER #231 @ $1CCBB4 - STRING #231 @ $1CC7DB
+
+#WRITE(GBA,$1CCBB4)
+このキャラボンを セットしているあいだ<LINE>おいたボムが リモコンボムになります<LINE>ボムの かりょくが さいだいに なりました<WAIT>
