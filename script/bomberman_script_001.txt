@@ -5,7 +5,7 @@
 // Load and activate the table
 #ADDTBL("script/bomberman.tbl", Table)
 #ADDTBL("melissa font/melissa8x8.tbl", engTable)
-#ACTIVETBL(Table)
+#ACTIVETBL(engTable)
 
 // Setup GBA pointers and Pointer Table
 #VAR(GBA, CUSTOMPOINTER)
@@ -21,249 +21,299 @@
 //POINTER #0 @ $1BDC68 - STRING #0 @ $1BDAE8
 
 #WRITE(GBA,$1BDC68)
-ポミュ<END>
+//ポミュ<END>
+Pommy<END>
 
 //POINTER #1 @ $1BDC6C - STRING #1 @ $1BDAEC
 
 #WRITE(GBA,$1BDC6C)
-シードラン<END>
+//シードラン<END>
+Sea Dran<END>
 
 //POINTER #2 @ $1BDC70 - STRING #2 @ $1BDAF2
 
 #WRITE(GBA,$1BDC70)
-エレファン<END>
+//エレファン<END>
+Elephan<END>
 
 //POINTER #3 @ $1BDC74 - STRING #3 @ $1BDAF8
 
 #WRITE(GBA,$1BDC74)
-ポミュファング<END>
+//ポミュファング<END>
+Pommy Fang<END>
 
 //POINTER #4 @ $1BDC78 - STRING #4 @ $1BDB00
 
 #WRITE(GBA,$1BDC78)
-シャークン<END>
+//シャークン<END>
+Sharkun<END>
 
 //POINTER #5 @ $1BDC7C - STRING #5 @ $1BDB06
 
 #WRITE(GBA,$1BDC7C)
-サンダーライガー<END>
+//サンダーライガー<END>
+Thunder Liger<END>
 
 //POINTER #6 @ $1BDC80 - STRING #6 @ $1BDB0F
 
 #WRITE(GBA,$1BDC80)
-シェル<END>
+//シェル<END>
+Shell<END>
 
 //POINTER #7 @ $1BDC84 - STRING #7 @ $1BDB13
 
 #WRITE(GBA,$1BDC84)
-ツインドラゴン<END>
+//ツインドラゴン<END>
+Twin Dragon's<END>
 
 //POINTER #8 @ $1BDC88 - STRING #8 @ $1BDB1B
 
 #WRITE(GBA,$1BDC88)
-ナックルポミュ<END>
+//ナックルポミュ<END>
+Knuckle Pommy<END>
 
 //POINTER #9 @ $1BDC8C - STRING #9 @ $1BDB23
 
 #WRITE(GBA,$1BDC8C)
-シーポミュ<END>
+//シーポミュ<END>
+Sea Pommy<END>
 
 //POINTER #10 @ $1BDC90 - STRING #10 @ $1BDB29
 
 #WRITE(GBA,$1BDC90)
-ストロング<END>
+//ストロング<END>
+Strong<END>
 
 //POINTER #11 @ $1BDC94 - STRING #11 @ $1BDB2F
 
 #WRITE(GBA,$1BDC94)
-ビーストポミュ<END>
+//ビーストポミュ<END>
+Beast Pommy<END>
 
 //POINTER #12 @ $1BDC98 - STRING #12 @ $1BDB37
 
 #WRITE(GBA,$1BDC98)
-プテラドン<END>
+//プテラドン<END>
+Pteradon<END>
 
 //POINTER #13 @ $1BDC9C - STRING #13 @ $1BDB3D
 
 #WRITE(GBA,$1BDC9C)
-ドラコ<END>
+//ドラコ<END>
+Draco<END>
 
 //POINTER #14 @ $1BDCA0 - STRING #14 @ $1BDB41
 
 #WRITE(GBA,$1BDCA0)
-ポミュドラゴン<END>
+//ポミュドラゴン<END>
+Dragon Pommy<END>
 
 //POINTER #15 @ $1BDCA4 - STRING #15 @ $1BDB49
 
 #WRITE(GBA,$1BDCA4)
-ユニコルノス<END>
+//ユニコルノス<END>
+Unicornos<END>
 
 //POINTER #16 @ $1BDCA8 - STRING #16 @ $1BDB50
 
 #WRITE(GBA,$1BDCA8)
-シーバルーン<END>
+//シーバルーン<END>
+Sea Balloon<END>
 
 //POINTER #17 @ $1BDCAC - STRING #17 @ $1BDB57
 
 #WRITE(GBA,$1BDCAC)
-アニマルポミュ<END>
+//アニマルポミュ<END>
+Animal Pommy<END>
 
 //POINTER #18 @ $1BDCB0 - STRING #18 @ $1BDB5F
 
 #WRITE(GBA,$1BDCB0)
-マリンイール<END>
+//マリンイール<END>
+Marine Eel<END>
 
 //POINTER #19 @ $1BDCB4 - STRING #19 @ $1BDB66
 
 #WRITE(GBA,$1BDCB4)
-エレコング<END>
+//エレコング<END>
+Electric Kong<END>
 
 //POINTER #20 @ $1BDCB8 - STRING #20 @ $1BDB6C
 
 #WRITE(GBA,$1BDCB8)
-ユニコルネス<END>
+//ユニコルネス<END>
+Unicornius<END>
 
 //POINTER #21 @ $1BDCBC - STRING #21 @ $1BDB73
 
 #WRITE(GBA,$1BDCBC)
-シーウイング<END>
+//シーウイング<END>
+Sea Wing<END>
 
 //POINTER #22 @ $1BDCC0 - STRING #22 @ $1BDB7A
 
 #WRITE(GBA,$1BDCC0)
-タートルキング<END>
+//タートルキング<END>
+Turtle King<END>
 
 //POINTER #23 @ $1BDCC4 - STRING #23 @ $1BDB82
 
 #WRITE(GBA,$1BDCC4)
-マリンゴン<END>
+//マリンゴン<END>
+Marine Gon<END>
 
 //POINTER #24 @ $1BDCC8 - STRING #24 @ $1BDB88
 
 #WRITE(GBA,$1BDCC8)
-ファイアーコング<END>
+//ファイアーコング<END>
+Fire Kong<END>
 
 //POINTER #25 @ $1BDCCC - STRING #25 @ $1BDB91
 
 #WRITE(GBA,$1BDCCC)
-サンダーヘッド<END>
+//サンダーヘッド<END>
+Thunderhead<END>
 
 //POINTER #26 @ $1BDCD0 - STRING #26 @ $1BDB99
 
 #WRITE(GBA,$1BDCD0)
-バーニングスピン<END>
+//バーニングスピン<END>
+Burning Spin<END>
 
 //POINTER #27 @ $1BDCD4 - STRING #27 @ $1BDBA2
 
 #WRITE(GBA,$1BDCD4)
-グランシェイカー<END>
+//グランシェイカー<END>
+Grand Shaker<END>
 
 //POINTER #28 @ $1BDCD8 - STRING #28 @ $1BDBAB
 
 #WRITE(GBA,$1BDCD8)
-サンダーカッター<END>
+//サンダーカッター<END>
+Thundercutter<END>
 
 //POINTER #29 @ $1BDCDC - STRING #29 @ $1BDBB4
 
 #WRITE(GBA,$1BDCDC)
-アイスラッガー<END>
+//アイスラッガー<END>
+Eye Slugger<END>
 
 //POINTER #30 @ $1BDCE0 - STRING #30 @ $1BDBBC
 
 #WRITE(GBA,$1BDCE0)
-ファイアーリング<END>
+//ファイアーリング<END>
+Fire Ring<END>
 
 //POINTER #31 @ $1BDCE4 - STRING #31 @ $1BDBC5
 
 #WRITE(GBA,$1BDCE4)
-アクアボンバー<END>
+//アクアボンバー<END>
+Aqua Bomber<END>
 
 //POINTER #32 @ $1BDCE8 - STRING #32 @ $1BDBCD
 
 #WRITE(GBA,$1BDCE8)
-ダブルファイアー<END>
+//ダブルファイアー<END>
+Double Fire<END>
 
 //POINTER #33 @ $1BDCEC - STRING #33 @ $1BDBD6
 
 #WRITE(GBA,$1BDCEC)
-サンダーパンチ<END>
+//サンダーパンチ<END>
+Thunder Punch<END>
 
 //POINTER #34 @ $1BDCF0 - STRING #34 @ $1BDBDE
 
 #WRITE(GBA,$1BDCF0)
-ヘヴィスコール<END>
+//ヘヴィスコール<END>
+Heavy Squall<END>
 
 //POINTER #35 @ $1BDCF4 - STRING #35 @ $1BDBE6
 
 #WRITE(GBA,$1BDCF4)
-メガトンストーン<END>
+//メガトンストーン<END>
+Megaton Stone<END>
 
 //POINTER #36 @ $1BDCF8 - STRING #36 @ $1BDBEF
 
 #WRITE(GBA,$1BDCF8)
-サンダースピン<END>
+//サンダースピン<END>
+Thunder Spin<END>
 
 //POINTER #37 @ $1BDCFC - STRING #37 @ $1BDBF7
 
 #WRITE(GBA,$1BDCFC)
-ファイアーボウ<END>
+//ファイアーボウ<END>
+Fire Bow<END>
 
 //POINTER #38 @ $1BDD00 - STRING #38 @ $1BDBFF
 
 #WRITE(GBA,$1BDD00)
-ヒートファイアー<END>
+//ヒートファイアー<END>
+Heat Fire<END>
 
 //POINTER #39 @ $1BDD04 - STRING #39 @ $1BDC08
 
 #WRITE(GBA,$1BDD04)
-サンダースコール<END>
+//サンダースコール<END>
+Thunder Squall<END>
 
 //POINTER #40 @ $1BDD08 - STRING #40 @ $1BDC11
 
 #WRITE(GBA,$1BDD08)
-ヘヴィハリケーン<END>
+//ヘヴィハリケーン<END>
+Heavy Hurricane<END>
 
 //POINTER #41 @ $1BDD0C - STRING #41 @ $1BDC1A
 
 #WRITE(GBA,$1BDD0C)
-バブルシャワー<END>
+//バブルシャワー<END>
+Bubble Shower<END>
 
 //POINTER #42 @ $1BDD10 - STRING #42 @ $1BDC22
 
 #WRITE(GBA,$1BDD10)
-サンダーアタック<END>
+//サンダーアタック<END>
+Thunder Attack<END>
 
 //POINTER #43 @ $1BDD14 - STRING #43 @ $1BDC2B
 
 #WRITE(GBA,$1BDD14)
-マッドブリザード<END>
+//マッドブリザード<END>
+Mad Bllizard<END>
 
 //POINTER #44 @ $1BDD18 - STRING #44 @ $1BDC34
 
 #WRITE(GBA,$1BDD18)
-プラズマナックル<END>
+//プラズマナックル<END>
+Plazma Knuckle<END>
 
 //POINTER #45 @ $1BDD1C - STRING #45 @ $1BDC3D
 
 #WRITE(GBA,$1BDD1C)
-ジェットタイフーン<END>
+//ジェットタイフーン<END>
+Jet Typhoon<END>
 
 //POINTER #46 @ $1BDD20 - STRING #46 @ $1BDC47
 
 #WRITE(GBA,$1BDD20)
-アクアスパイラル<END>
+//アクアスパイラル<END>
+Aqua Spiral<END>
 
 //POINTER #47 @ $1BDD24 - STRING #47 @ $1BDC50
 
 #WRITE(GBA,$1BDD24)
-スピンアタック<END>
+//スピンアタック<END>
+Spin Attack<END>
 
 //POINTER #48 @ $1BDD28 - STRING #48 @ $1BDC58
 
 #WRITE(GBA,$1BDD28)
-マリンボム<END>
+//マリンボム<END>
+Marine Bomb<END>
 
 //POINTER #49 @ $1BDD2C - STRING #49 @ $1BDC5E
 
 #WRITE(GBA,$1BDD2C)
-ヒートダッシュ<END>
+//ヒートダッシュ<END>
+Heat Dash<END>
