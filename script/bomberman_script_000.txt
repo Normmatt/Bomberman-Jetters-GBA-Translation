@@ -53,14 +53,14 @@ Legendary Bomberman?<WAIT>
 
 #WRITE(GBA,$1BDAA0)
 //‚ ‚Ÿ ‚»‚Ì‚Æ‚¨‚è‚³ ‚â‚Â‚Í<LINE>
-//ƒIƒŒ‚½‚¿ ƒWƒFƒbƒ^?[ƒY‚Ì ƒ?ƒ“ƒo?[?d?d<WAIT>
+//ƒIƒŒ‚½‚¿ ƒWƒFƒbƒ^?[ƒY‚Ì ƒ½ƒ“ƒo?[?d?d<WAIT>
 Yep. He's a member<LINE>
 of the Jetters...<WAIT>
 
 //POINTER #5 @ $1BDAA4 - STRING #5 @ $1BD8B3
 
 #WRITE(GBA,$1BDAA4)
-//‚»‚ê‚É ƒVƒ?ƒ{ƒ“‚Ì<LINE>
+//‚»‚ê‚É ƒVƒ½ƒ{ƒ“‚Ì<LINE>
 //‚¶‚Ü‚ñ‚Ì ‚ ‚É‚Å‚à‚ ‚é<WAIT>
 White Bomber also<LINE>
 takes pride in him.<WAIT>
