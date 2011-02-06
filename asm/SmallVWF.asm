@@ -34,7 +34,7 @@ here:
 
 .org 0x08016140 ; routine that puts a character to the map
 .area 0x08016154 - 0x08016140
-	mov r2, #15
+	mov r2, #27
 	add r2,r15
 	mov r14, r2
     ldr r2, =putChar+1    ; r2 is best variable to use for jump
@@ -44,7 +44,7 @@ here:
 
 .org 0x080164E4 ; routine that puts a number to the map
 .area 0x080164F8 - 0x080164E4
-	mov r2, #15
+	mov r2, #27
 	add r2,r15
 	mov r14, r2
     ldr r2, =putChar+1    ; r2 is best variable to use for jump
@@ -54,13 +54,16 @@ here:
 
 .org 0x0801655A ; routine that puts location on load/save screen
 .area 0x0801656E - 0x0801655A
-	mov r2, #15
+	mov r2, #27
 	add r2,r15
 	mov r14, r2
     ldr r2, =putChar+1    ; r2 is best variable to use for jump
     bx r2 
 .pool
 .endarea
+
+.org 0x081D5CAA
+	.halfword 0x0233 ;.halfword 0x0232
 
 .org 0x8453560 ; should be free space to put code
 loadCharacter:
@@ -108,30 +111,29 @@ putChar:
 	ble NoNewTile	; if overflow >8 move to next tile
     mov r2, #8
 	sub r1, r1, r2
+	; clear next tile
+	BL GetNextTile
+	bl GetNextTileAddress
+	
+	ldr r2, [mask]
+	mul r2, r7 ; times 0x11111111 by the bg color pallete index
+	str r2, [r0, #0]
+	str r2, [r0, #4]
+	str r2, [r0, #8]
+	str r2, [r0, #12]
+	str r2, [r0, #16]
+	str r2, [r0, #20]
+	str r2, [r0, #24]
+	str r2, [r0, #28]
+	
 	; original code to increment stuff
 	LDR     R2, =0x3007470
 	LDR     R0, [R2,#0x40]
 	ADD     R0, #1          ; increment map address
 	STR     R0, [R2,#0x40]
 	LDR     R0, [R2,#0x44]
-	ADD     R0, #1          ; increment tile address
+	BL      GetNextTile
 	STR     R0, [R2,#0x44]
-	
-	; clear next tile
-	LSL     R0, R0, #5
-	LDR     R3, [R2,#0x70]
-	ADD     R3, R3, R0
-	
-	ldr r2, [mask]
-	mul r2, r7 ; times 0x11111111 by the bg color pallete index
-	str r2, [r3, #0]
-	str r2, [r3, #4]
-	str r2, [r3, #8]
-	str r2, [r3, #12]
-	str r2, [r3, #16]
-	str r2, [r3, #20]
-	str r2, [r3, #24]
-	str r2, [r3, #28]
 
 NoNewTile:
 	strb r1, [r6]
@@ -141,7 +143,11 @@ NoNewTile:
 	sub r6, r6, r5	; r6 is to shift the existing background
 	
 	mov r3, r4
-	add r4, #0x20
+	
+	bl GetNextTileAddress
+	mov r4, r0
+	;add r4, #0x20
+	
 	;LDR     r0, =0x3007470
 	;LDR     R1, [R0,#0x44]
 	;ADD		R2, R1, #1
@@ -200,6 +206,34 @@ PrintHalfChar_loop:
 	cmp r7, #0x20	; are 8 rows printed?
 	bne PrintHalfChar_loop
 	bx r14
+	
+GetNextTile:
+	push {r1-r3}
+	LDR     R2, =0x3007470
+	LDR     R0, [R2,#0x44]
+	ADD     R0, #1          ; increment tile address
+	
+	;Handle case where tile address wraps around
+	LDR     R1, [R2,#0x78]
+	LDRH    R3, [R1,#0xE]   ; 0x0233
+	CMP     R0, R3
+	BLS     GetNextTile_skip
+
+	LDRH    R0, [R1,#0xC]
+
+GetNextTile_skip:
+	pop {r1-r3}
+	bx lr
+	
+GetNextTileAddress:
+	push {r1,lr}
+	
+	;bl GetNextTile
+	LDR     R1, =0x3007470
+	LSL     R0, R0, #5
+	LDR     R1, [R1,#0x70]
+	ADD     R0, R0, R1
+	pop {r1,pc}
 
 ResetOverflow:
 	; reset overflow
