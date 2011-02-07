@@ -121,7 +121,7 @@ before it's too late!<WAIT>
 //POINTER #13 @ $1BDAC4 - STRING #13 @ $1BD98A
 
 #WRITE(GBA,$1BDAC4)
-‚±‚¿‚çƒo?[ƒfƒB?[ ‚±‚¿‚çƒo?[ƒfƒB?[<WAIT>
+‚±‚¿‚çƒo[ƒfƒB[ ‚±‚¿‚çƒo[ƒfƒB[<WAIT>
 
 //POINTER #14 @ $1BDAC8 - STRING #14 @ $1BD99C
 
@@ -133,13 +133,13 @@ before it's too late!<WAIT>
 
 #WRITE(GBA,$1BDACC)
 ‚ ‚ê‚¢‚ç‚¢ ƒ}ƒCƒeƒB‚©‚ç‚Ì ‚ê‚ñ‚ç‚­‚Í<LINE>
-‚Æ‚¾‚¦‚½ ‚Ü‚Ü‚¾?d?d?d?d<WAIT>
+‚Æ‚¾‚¦‚½ ‚Ü‚Ü‚¾dddd<WAIT>
 
 //POINTER #16 @ $1BDAD0 - STRING #16 @ $1BD9D9
 
 #WRITE(GBA,$1BDAD0)
 ƒqƒQƒqƒQ‚¾‚ñ‚ª ‚ ‚ç‚í‚ê‚½!<LINE>
-ƒWƒFƒbƒ^?[ƒY ‚µ‚ã‚Â‚Ç‚¤‚¶‚á!!<WAIT>
+ƒWƒFƒbƒ^[ƒY ‚µ‚ã‚Â‚Ç‚¤‚¶‚á!!<WAIT>
 
 //POINTER #17 @ $1BDAD4 - STRING #17 @ $1BD9F9
 
@@ -149,23 +149,23 @@ before it's too late!<WAIT>
 //POINTER #18 @ $1BDAD8 - STRING #18 @ $1BDA05
 
 #WRITE(GBA,$1BDAD8)
-‚Å‚ñ‚¹‚Â‚Ì ƒ{ƒ“ƒo?[ƒ}ƒ“‚Æ ‚æ‚Î‚ê‚½<LINE>
-ƒ}ƒCƒeƒB‚É ‚¨‚¢‚Â‚¯‚é‚©‚È? ƒVƒ?ƒ{ƒ“<WAIT>
+‚Å‚ñ‚¹‚Â‚Ì ƒ{ƒ“ƒo[ƒ}ƒ“‚Æ ‚æ‚Î‚ê‚½<LINE>
+ƒ}ƒCƒeƒB‚É ‚¨‚¢‚Â‚¯‚é‚©‚È? ƒVƒƒ{ƒ“<WAIT>
 
 //POINTER #19 @ $1BDADC - STRING #19 @ $1BDA2C
 
 #WRITE(GBA,$1BDADC)
-ƒtƒtƒt?d?d ‚±‚ê‚Å ƒ{ƒ“ƒo?[ƒ}ƒ“‚Ì ƒf?[ƒ^‚Í<LINE>
-‚·‚×‚Ä ƒRƒs?[‚Å‚«‚½?d?d?d?d<WAIT>
+ƒtƒtƒtdd ‚±‚ê‚Å ƒ{ƒ“ƒo[ƒ}ƒ“‚Ì ƒf[ƒ^‚Í<LINE>
+‚·‚×‚Ä ƒRƒs[‚Å‚«‚½dddd<WAIT>
 
 //POINTER #20 @ $1BDAE0 - STRING #20 @ $1BDA52
 
 #WRITE(GBA,$1BDAE0)
 ‚¢‚æ‚¢‚æ ‚³‚¢‚«‚å‚¤‚Ì ‚¹‚ñ‚µ<LINE>
-ƒ}ƒbƒNƒX‚ª ‚½‚ñ‚¶‚å‚¤‚·‚é?d?d<WAIT>
+ƒ}ƒbƒNƒX‚ª ‚½‚ñ‚¶‚å‚¤‚·‚édd<WAIT>
 
 //POINTER #21 @ $1BDAE4 - STRING #21 @ $1BDA72
 
 #WRITE(GBA,$1BDAE4)
-ƒtƒbƒtƒbƒtƒb?d?d?d?d<LINE>
-ƒn?[ƒbƒnƒbƒnƒbƒnƒbƒnƒbƒnƒb?d?d?d?d<WAIT>
+ƒtƒbƒtƒbƒtƒbdddd<LINE>
+ƒn[ƒbƒnƒbƒnƒbƒnƒbƒnƒbƒnƒbdddd<WAIT>
