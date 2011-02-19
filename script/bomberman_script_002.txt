@@ -19,27 +19,31 @@
 //BLOCK #002 NAME:		Block 3 (POINTER)
 
 //POINTER #0 @ $1C1B3C - STRING #0 @ $1BDE7C
-
+#ACTIVETBL(engTable)
 #WRITE(GBA,$1C1B3C)
-<CONTROL_CODE><$01><$02>23ふあ! ジェッターズの おにいちゃんだ!<LINE>
-はしが おちたから きてくれたんでしょ?<NEWBOX>
-なんにちか まえに<LINE>
-おおきな じひびきがしたとおもったら<NEWBOX>
-そのショックで ひがしアクアに<LINE>
-むかうはしが おちちゃったんだ<END>
+<CONTROL_CODE_E001><$02><$03><$04><$26>Hey, it's Brother Jetters!<LINE>
+Did you come because<LINE>
+of the collapsing bridge?<NEWBOX>
+I wonder how many days<LINE>
+ago the tremor hit.<NEWBOX>
+That "shock" is what<LINE>
+caused the Bridge to East<NEWBOX>
+Aqua to collapse.<END>
 
 //POINTER #1 @ $1C1B40 - STRING #1 @ $1BDEE8
 
 #WRITE(GBA,$1C1B40)
-<CONTROL_CODE><$01><$02>23ひはしがおちただけで きてくれるなんて<LINE>
-ジェッターズは けっこうヒマなんだね<NEWBOX>
-でも はしは このむらのだいくが<LINE>
-すぐに なおしてくれるよ<NEWBOX>
-ちょっと そそっかしい ひとだけど<LINE>
-うでは いいんだよ<NEWBOX>
-ウチの ひだりのいえに<LINE>
-ふうふで すんでいるんだ<END>
-
+<CONTROL_CODE_E001><$02><$03><$04><$25>You came because of the bridge,<LINE>
+didn't you?<NEWBOX>
+You Jetters sure have a lot of<LINE>
+free time, huh?<NEWBOX>
+Anyway, the village Carpenter will<LINE>
+fix the bridge as soon as he can.<NEWBOX>
+He can be a little careless<LINE>
+sometimes, but he's strong.<NEWBOX>
+A married couple lives in<LINE>
+the house next to me.<END>
+#ACTIVETBL(Table)
 //POINTER #2 @ $1C1B44 - STRING #2 @ $1BDF67
 
 #WRITE(GBA,$1C1B44)
@@ -90,21 +94,23 @@
 きをつけて いくんだぞ<END>
 
 //POINTER #7 @ $1C1B58 - STRING #7 @ $1BE14D
-
+#ACTIVETBL(engTable)
 #WRITE(GBA,$1C1B58)
-<CONTROL_CODE><$01><$02>33ね<CONTROL_CODE><$01><$02> 3ぬウチのダンナ だいくなんだけどさ<LINE>
-えらく そそっかしくて こまるわ<NEWBOX>
-はしをなおすために きたのもりに<LINE>
-ざいもくを きりにいったんだけど<NEWBOX>
-うっかり <CONTROL_CODE><$1A><$2B>をもって<LINE>
-でていってしまったのよ<NEWBOX>
-アナタ もりにいるダンナに<LINE>
-このオノを とどけてちょうだいな<NEWBOX>
-<CONTROL_CODE><$03><$02> ボンバーマンは <CONTROL_CODE><$1A><$2A>を<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01>に<NEWBOX>
-きたのもりには ふっかつする キノコがあって<LINE>
-あぶないから きをつけてちょうだいね<END>
-
+<CONTROL_CODE_E001><$02><$04><$04><$22><CONTROL_CODE_E001><$02><$00><$04><$21>My husband is a carpenter.<LINE>
+He can be so careless sometimes.<NEWBOX>
+He went to the forest to cut lumber,<LINE>
+so that he could can fix the bridge.<NEWBOX>
+He brought the <GET_ITEM_NAME><$2B> by<LINE>
+mistake.<NEWBOX>
+Please deliver this Axe to my<LINE>
+husband in the forest.<NEWBOX>
+Bomberman recieved the<CONTROL_CODE_E003><$02><$00><LINE>
+<GET_ITEM_NAME><$2A>!<CONTROL_CODE><$12><$0C><CONTROL_CODE_E003><$01><$20><NEWBOX>
+There are Rejuvinating Mushrooms<LINE>
+in the North Forest.<NEWBOX>
+It's dangerous!<LINE>
+so please be careful alright?<END>
+#ACTIVETBL(Table)
 //POINTER #8 @ $1C1B5C - STRING #8 @ $1BE21E
 
 #WRITE(GBA,$1C1B5C)
@@ -135,33 +141,33 @@
 はいる いりぐちよ<END>
 
 //POINTER #11 @ $1C1B68 - STRING #11 @ $1BE2FB
-
+#ACTIVETBL(engTable)
 #WRITE(GBA,$1C1B68)
-ようこそ ここは にしアクア‥‥<LINE>
-あ! ジェッターズだ!<NEWBOX>
-おにいちゃん ジェッターズの ひとでしょ!<LINE>
-かっこいいなぁ‥‥<NEWBOX>
-ジェッターズが きたってことは<LINE>
-なにか じけんが あったのかなぁ‥‥<END>
+Welcome to West Aqua...<LINE>
+Ah! It's a member of Jetters!<NEWBOX>
+Brother Jetters!<LINE>
+You're so cool...<NEWBOX>
+Did you guys come because<LINE>
+something happened?<END>
 
 //POINTER #12 @ $1C1B6C - STRING #12 @ $1BE35B
 
 #WRITE(GBA,$1C1B6C)
-ずっとひがしの フォレスタウンには<LINE>
-ミドリはかせ というひとが いてな<NEWBOX>
-このほしの こだいいせきの<LINE>
-けんきゅうを してるんじゃ<NEWBOX>
-その ミドリはかせが また<LINE>
-キレイなひとでな‥‥ フェフェ<END>
+A person called Professor Green,<LINE>
+has lived in Forest Town for years.<NEWBOX>
+He researches the Star's<LINE>
+Ancient Ruins.<NEWBOX>
+This Professor Green,<LINE>
+is a clean person again... hehe.<END>
 
 //POINTER #13 @ $1C1B70 - STRING #13 @ $1BE3B9
 
 #WRITE(GBA,$1C1B70)
-ひがしへむかう ゆいいつの<LINE>
-はしが おちてしまうとは‥‥<NEWBOX>
-いったい あの じひびきは<LINE>
-なにが げんいんだったのか‥‥<END>
-
+The only bridge to the east,<LINE>
+has fallen...<NEWBOX>
+What on Earth was that tremor?<LINE>
+I wonder what would've caused it...<END>
+#ACTIVETBL(Table)
 //POINTER #14 @ $1C1B74 - STRING #14 @ $1BE3F4
 
 #WRITE(GBA,$1C1B74)
@@ -235,30 +241,33 @@
 いっぱつ あてたいんだとか‥‥<END>
 
 //POINTER #23 @ $1C1B98 - STRING #23 @ $1BE64A
-
+#ACTIVETBL(engTable)
 #WRITE(GBA,$1C1B98)
-あ~ きをきりに やってきたのに まちがえて<LINE>
-<CONTROL_CODE><$1A><$2B>を もってきちまった<NEWBOX>
-このオノじゃ ちっとも きがきれねぇや<LINE>
-いえに <CONTROL_CODE><$1A><$2A>が あるんだが<NEWBOX>
-とりにかえるのは めんどうだなぁ<CONTROL_CODE><$01><$02> 3せ<END>
+I came to cut the trees, but I made<LINE>
+a big mistake.<NEWBOX>
+See, I brought my <GET_ITEM_NAME><$2B><LINE>
+which has trouble cutting trees.<NEWBOX>
+The <GET_ITEM_NAME><$2A> is at my house.<LINE>
+I've had trouble returning there<NEWBOX>
+by bird.<CONTROL_CODE_E001><$02><$00><$04><$18><END>
+
 
 //POINTER #24 @ $1C1B9C - STRING #24 @ $1BE6A9
 
 #WRITE(GBA,$1C1B9C)
 <NEWBOX>
-お! それは オイラの オノじゃねぇか<LINE>
-とどけてくれたのか ありがとな<NEWBOX>
-よ~し これさえあれば きがきれる<LINE>
-はしなんて アッというまに なおしてやるぜ<NEWBOX>
-この <CONTROL_CODE><$1A><$2B>は<LINE>
-いらないから おまえさんに やるよ<NEWBOX>
-ボンバーマンは<LINE>
-<CONTROL_CODE><$1A><$2B>を てにいれた!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$04><$01>に<CONTROL_CODE><$03><$01>ぬ<NEWBOX>
-オイラが それをもってると<LINE>
-また まちがえて もってきちまうからな<NEWBOX>
-さぁー! きるぞー!<END>
-
+Ah, this is my Axe, isn't it!?<LINE>
+Thank you for returning it.<NEWBOX>
+Alright! now that I can cut the trees.<LINE>
+I'll fix the bridge in no time.<NEWBOX>
+I don't need this <GET_ITEM_NAME><$2B>,<LINE>
+so I'll give it to you.<NEWBOX>
+Bomberman received the<LINE>
+<GET_ITEM_NAME><$2B>!<CONTROL_CODE><$12><$0C><CONTROL_CODE_E004><$01><$20><CONTROL_CODE_E003><$01><$21><NEWBOX>
+If we bring this, we won't<LINE>
+run into another mistake.<NEWBOX>
+OK! I'll cut it!<END>
+#ACTIVETBL(Table)
 //POINTER #25 @ $1C1BA0 - STRING #25 @ $1BE75C
 
 #WRITE(GBA,$1C1BA0)
@@ -1103,7 +1112,7 @@ Bボタンをおすと まえからのたまを ふせぐよ<NEWBOX>
 //POINTER #107 @ $1C1CE8 - STRING #107 @ $1C07CA
 
 #WRITE(GBA,$1C1CE8)
-ボンバーマンは <CONTROL_CODE><$1A><$FF>を<LINE>
+ボンバーマンは <GET_ITEM_NAME><$FF>を<LINE>
 てにいれた!<CONTROL_CODE><$12><$0C><END>
 
 //POINTER #108 @ $1C1CEC - STRING #108 @ $1C07E1
@@ -1422,7 +1431,7 @@ Bボタンをおすと まえからのたまを ふせぐよ<NEWBOX>
 //POINTER #153 @ $1C1DA0 - STRING #153 @ $1C0F6E
 
 #WRITE(GBA,$1C1DA0)
-<CONTROL_CODE><$12><$0C><CONTROL_CODE><$1A><$FF>が ごうせいできた!<$F8><CONTROL_CODE><$12><$0C><CONTROL_CODE><$1A><$FF>が ごうせいできた!<NEWBOX>
+<CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF>が ごうせいできた!<$F8><CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF>が ごうせいできた!<NEWBOX>
 これはもう もっているようだね<LINE>
 30ゴールドで かいとってあげよう<$F8>つづけて ごうせい しますか?<LINE>
     はい       いいえ<CONTROL_CODE><$17><$03>1い13ダ3ヂ<CONTROL_CODE><$13><$01><WAIT>
@@ -1430,7 +1439,7 @@ Bボタンをおすと まえからのたまを ふせぐよ<NEWBOX>
 //POINTER #154 @ $1C1DA4 - STRING #154 @ $1C0F7F
 
 #WRITE(GBA,$1C1DA4)
-<CONTROL_CODE><$12><$0C><CONTROL_CODE><$1A><$FF>が ごうせいできた!<NEWBOX>
+<CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF>が ごうせいできた!<NEWBOX>
 これはもう もっているようだね<LINE>
 30ゴールドで かいとってあげよう<$F8>つづけて ごうせい しますか?<LINE>
     はい       いいえ<CONTROL_CODE><$17><$03>1い13ダ3ヂ<CONTROL_CODE><$13><$01><WAIT>
@@ -1455,7 +1464,8 @@ Bボタンをおすと まえからのたまを ふせぐよ<NEWBOX>
 
 #WRITE(GBA,$1C1DB4)
 このくみあわせで<LINE>
-<CONTROL_CODE><$1A><$FF>が できます<NEWBOX>
+<GET_ITEM_NAME><$FF>が できます<NEWBOX>
+<GET_ITEM_NAME><$FF>が できます<NEWBOX>
 ごうせい しますか?<LINE>
     はい       いいえ<CONTROL_CODE><$17><$03>1い13ぼ3ぱそれは ごうせいできません<$F8>ふ~ やっと ついたミュ~<LINE>
 さっそく じょうほうを あつめるミュ~<NEWBOX>
