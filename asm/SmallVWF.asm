@@ -62,10 +62,10 @@ here:
 .pool
 .endarea
 
-.org 0x081D5CAA
-	.halfword 0x0233 ;.halfword 0x0232
+;.org 0x081D5CAA
+;	.halfword 0x0233 ;.halfword 0x0232
 
-.org 0x8453560 ; should be free space to put code
+.org 0x08453560 ; should be free space to put code
 loadCharacter:
 	ldr r5, [jumpAdr]
 	bx r5
@@ -103,6 +103,9 @@ putChar:
 	ldr r2, =WidthTable
 	ldrb r2, [r2,r6]
 	
+	bl GetNextTileAddress
+	mov r3, r0
+	
 	ldr r6, [overflow]
 	ldrb r1, [r6]
 	mov r5, r1	; r5 = current overflow
@@ -112,8 +115,7 @@ putChar:
     mov r2, #8
 	sub r1, r1, r2
 	; clear next tile
-	BL GetNextTile
-	bl GetNextTileAddress
+	mov r0, r3
 	
 	ldr r2, [mask]
 	mul r2, r7 ; times 0x11111111 by the bg color pallete index
@@ -131,7 +133,7 @@ putChar:
 	LDR     R0, [R2,#0x40]
 	ADD     R0, #1          ; increment map address
 	STR     R0, [R2,#0x40]
-	LDR     R0, [R2,#0x44]
+	;LDR     R0, [R2,#0x44]
 	BL      GetNextTile
 	STR     R0, [R2,#0x44]
 
@@ -142,20 +144,10 @@ NoNewTile:
 	mov r6, #0x20	; i feel like this code should be somewhere else
 	sub r6, r6, r5	; r6 is to shift the existing background
 	
-	mov r3, r4
-	
-	bl GetNextTileAddress
-	mov r4, r0
-	;add r4, #0x20
-	
-	;LDR     r0, =0x3007470
-	;LDR     R1, [R0,#0x44]
-	;ADD		R2, R1, #1
-	;LSL     R2, R2, #5
-	;LSL     R1, R1, #5
-	;LDR     R0, [R0,#0x70]
-	;ADD     R3, R0, R1
-	;ADD     R4, R0, R2
+	;have to register shuffle here because dont have any other free registers
+	mov r2, r4
+	mov r4, r3
+	mov r3, r2
 
 	mov r0, sp
 	;r0 = font, r3 = VRAM, r4 = overflow tile, r5 will be shift
@@ -226,14 +218,25 @@ GetNextTile_skip:
 	bx lr
 	
 GetNextTileAddress:
-	push {r1,lr}
+	push {r1-r3}
+	LDR     R2, =0x3007470
+	LDR     R0, [R2,#0x44]
+	ADD     R0, #1          ; increment tile address
 	
-	;bl GetNextTile
-	LDR     R1, =0x3007470
+	;Handle case where tile address wraps around
+	LDR     R1, [R2,#0x78]
+	LDRH    R3, [R1,#0xE]   ; 0x0233
+	CMP     R0, R3
+	BLS     GetNextTileAddress_skip
+
+	LDRH    R0, [R1,#0xC]
+	
+GetNextTileAddress_skip:	
 	LSL     R0, R0, #5
-	LDR     R1, [R1,#0x70]
+	LDR     R1, [R2,#0x70]
 	ADD     R0, R0, R1
-	pop {r1,pc}
+	pop {r1-r3}
+	bx lr
 
 ResetOverflow:
 	; reset overflow
