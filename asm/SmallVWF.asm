@@ -78,15 +78,15 @@ jumpAdr: .word 0x08015278+1
 ; r2 - character color
 ; r3 - bg color
 putChar:
-	LDRB    R2, [R3,#0x12]
-	LDRB    R3, [R3,#0x13]
+	;LDRB    R2, [R3,#0x12]
+	;LDRB    R3, [R3,#0x13]
 
 	PUSH    {R4-R7,LR}
 	ADD  	SP,#-0x20
 	ADD     R4, R0, #0
 	ADD     R0, R1, #0
-	ADD     R1, R2, #0
-	ADD     R2, R3, #0
+	LDRB    R1, [R3,#0x12] ;ADD     R1, R2, #0
+	LDRB    R2, [R3,#0x13] ;ADD     R2, R3, #0
 	LSL     R0, R0, #0x18
 	LSR     R0, R0, #0x18
 	LSL     R1, R1, #0x18
