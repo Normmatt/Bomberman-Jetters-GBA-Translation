@@ -115,18 +115,16 @@ putChar:
     mov r2, #8
 	sub r1, r1, r2
 	; clear next tile
-	mov r0, r3
-	
 	ldr r2, [mask]
 	mul r2, r7 ; times 0x11111111 by the bg color pallete index
-	str r2, [r0, #0]
-	str r2, [r0, #4]
-	str r2, [r0, #8]
-	str r2, [r0, #12]
-	str r2, [r0, #16]
-	str r2, [r0, #20]
-	str r2, [r0, #24]
-	str r2, [r0, #28]
+	str r2, [r3, #0]
+	str r2, [r3, #4]
+	str r2, [r3, #8]
+	str r2, [r3, #12]
+	str r2, [r3, #16]
+	str r2, [r3, #20]
+	str r2, [r3, #24]
+	str r2, [r3, #28]
 	
 	; original code to increment stuff
 	LDR     R2, =0x3007470
@@ -143,14 +141,9 @@ NoNewTile:
 	lsl r5, r5, 2	; *4, for 4bpp
 	mov r6, #0x20	; i feel like this code should be somewhere else
 	sub r6, r6, r5	; r6 is to shift the existing background
-	
-	;have to register shuffle here because dont have any other free registers
-	mov r2, r4
-	mov r4, r3
-	mov r3, r2
 
 	mov r0, sp
-	;r0 = font, r3 = VRAM, r4 = overflow tile, r5 will be shift
+	;r0 = font, r3 = overflow tile, r4 = VRAM, r5 will be shift
 
 	bl PrintHalfChar
 
@@ -179,20 +172,20 @@ PrintHalfChar:
 
 PrintHalfChar_loop:
 	ldr r1, [r0,r7] ; sp = character data
-	ldr r2, [r3,r7]
+	ldr r2, [r4,r7]
 	lsl r1,r5
 	lsl r2,r6	; shift out part of background to be overwritten
 	lsr r2,r6	
 	orr r1,r2
-	str r1, [r3,r7]
+	str r1, [r4,r7]
 
 	ldr r1, [r0,r7] ; now do overflow tile
-	ldr r2, [r4,r7]
+	ldr r2, [r3,r7]
 	lsr r1,r6	; swap shifts (i think this will work)
 	lsr r2,r5
 	lsl r2,r5	
 	orr r1,r2
-	str r1, [r4,r7]
+	str r1, [r3,r7]
 
 	add r7,r7,4	; each row = 4 bytes
 	cmp r7, #0x20	; are 8 rows printed?
