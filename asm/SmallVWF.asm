@@ -65,7 +65,7 @@ here:
 ;.org 0x081D5CAA
 ;	.halfword 0x0233 ;.halfword 0x0232
 
-.org 0x08453560 ; should be free space to put code
+.org 0x08453660 ; should be free space to put code
 loadCharacter:
 	ldr r5, [jumpAdr]
 	bx r5
@@ -89,10 +89,10 @@ putChar:
 	LDRB    R2, [R3,#0x13] ;ADD     R2, R3, #0
 	LSL     R0, R0, #0x18
 	LSR     R0, R0, #0x18
-	LSL     R1, R1, #0x18
-	LSR     R1, R1, #0x18
-	LSL     R2, R2, #0x18
-	LSR     R2, R2, #0x18
+	;LSL     R1, R1, #0x18
+	;LSR     R1, R1, #0x18
+	;LSL     R2, R2, #0x18
+	;LSR     R2, R2, #0x18
 	MOV     R3, SP
 	
 	mov     r6, r0 ;store character for a second
