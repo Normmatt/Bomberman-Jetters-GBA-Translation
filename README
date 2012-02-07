@@ -1,6 +1,53 @@
 Bomberman Jetters v0.1
 ----------------------------------
 
+Notes
+------
+trigger debug menu by setting 0300492c to 0x5A on boot or modify opcode at 08000392 to mov r0, 0x5A
+CONTROL_CODE_E003 is some sort of set event flag command
+
+title screen is lz77 at 08245784/08241384 with palette 08245704/082411A4
+
+08286CE8 is the save screen gfx (lz77)
+0840AB40 is more text
+08273388 is the menu gfx (lz77)
+08286ce8 is save/load screen gfx (lz77) palette 08286B88
+081B04D4 is battle mode gfx (lz77, 16 wide)
+
+Misc GFX that need translated
+------------------------------
+080D2F54
+080F1AD4
+080F820C
+0819E914
+0819FAA4
+081A8FF0
+081AA1B4
+081ABBE0
+081ACEE0
+081AF9C0
+081B4488
+081B5278, 0840F8E4 (Some sort of font)
+081BA598
+081D8140
+081D9950
+08249214
+0824EFA8, 0824F4F4, 0824FA90, 08250014, 0825046C, 08250980 (8x8 text)
+0825EDD4
+08262604, 08262E00
+082632B4
+08264880, 08268560
+082802B8
+08283CCC
+082860D4
+08289F0C
+083F825C
+08402DCC
+08405D74, 0840607C
+08408C34
+0840AB40
+0840EAF4
+
 Credits
 --------
 Normmatt for hacking the game.
