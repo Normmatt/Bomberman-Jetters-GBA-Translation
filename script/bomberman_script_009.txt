@@ -24,19 +24,23 @@
         <END>
 
 //POINTER #1 @ $1D2EAC - STRING #1 @ $1D2BAD
-
+#ACTIVETBL(engTable)
 #WRITE(GBA,$1D2EAC)
-ファイアーアップ<END>
+//ファイアーアップ<END>
+Fire Up<END>
 
 //POINTER #2 @ $1D2EB0 - STRING #2 @ $1D2BB6
 
 #WRITE(GBA,$1D2EB0)
-ボムアップ<END>
+//ボムアップ<END>
+Bomb Up<END>
 
 //POINTER #3 @ $1D2EB4 - STRING #3 @ $1D2BBC
 
 #WRITE(GBA,$1D2EB4)
-カイソクシューズ<END>
+//カイソクシューズ<END>
+Speed Up<END>
+#ACTIVETBL(Table)
 
 //POINTER #4 @ $1D2EB8 - STRING #4 @ $1D2BC5
 
@@ -54,15 +58,17 @@
 テッペキアーマー<END>
 
 //POINTER #7 @ $1D2EC4 - STRING #7 @ $1D2BE0
-
+#ACTIVETBL(engTable)
 #WRITE(GBA,$1D2EC4)
-ハート<END>
+//ハート<END>
+Heart<END>
 
 //POINTER #8 @ $1D2EC8 - STRING #8 @ $1D2BE4
 
 #WRITE(GBA,$1D2EC8)
-ボムキック<END>
-
+//ボムキック<END>
+Bomb Kick<END>
+#ACTIVETBL(Table)
 //POINTER #9 @ $1D2ECC - STRING #9 @ $1D2BEA
 
 #WRITE(GBA,$1D2ECC)
@@ -79,10 +85,11 @@
 ボンバーアルバム<END>
 
 //POINTER #12 @ $1D2ED8 - STRING #12 @ $1D2C04
-
+#ACTIVETBL(engTable)
 #WRITE(GBA,$1D2ED8)
-レーダー<END>
-
+//レーダー<END>
+Radar<END>
+#ACTIVETBL(Table)
 //POINTER #13 @ $1D2EDC - STRING #13 @ $1D2C09
 
 #WRITE(GBA,$1D2EDC)
@@ -99,20 +106,23 @@
 ドルぶくろ<END>
 
 //POINTER #16 @ $1D2EE8 - STRING #16 @ $1D2C1F
-
+#ACTIVETBL(engTable)
 #WRITE(GBA,$1D2EE8)
-バナナ<END>
+//バナナ<END>
+Banana<END>
 
 //POINTER #17 @ $1D2EEC - STRING #17 @ $1D2C23
 
 #WRITE(GBA,$1D2EEC)
-イチゴ<END>
+//イチゴ<END>
+Strawberry<END>
 
 //POINTER #18 @ $1D2EF0 - STRING #18 @ $1D2C27
 
 #WRITE(GBA,$1D2EF0)
-メロン<END>
-
+//メロン<END>
+Melon<END>
+#ACTIVETBL(Table)
 //POINTER #19 @ $1D2EF4 - STRING #19 @ $1D2C2B
 
 #WRITE(GBA,$1D2EF4)
@@ -229,15 +239,17 @@
 ちいさいたつまき<END>
 
 //POINTER #42 @ $1D2F50 - STRING #42 @ $1D2CDD
-
+#ACTIVETBL(engTable)
 #WRITE(GBA,$1D2F50)
-よくきれるオノ<END>
+//よくきれるオノ<END>
+Sharp Axe<END>
 
 //POINTER #43 @ $1D2F54 - STRING #43 @ $1D2CE5
 
 #WRITE(GBA,$1D2F54)
-なまくらなオノ<END>
-
+//なまくらなオノ<END>
+Blunt Axe<END>
+#ACTIVETBL(Table)
 //POINTER #44 @ $1D2F58 - STRING #44 @ $1D2CED
 
 #WRITE(GBA,$1D2F58)

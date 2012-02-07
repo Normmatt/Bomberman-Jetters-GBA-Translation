@@ -46,24 +46,22 @@ Shout yet.<WAIT>
 #WRITE(GBA,$1BDA9C)
 //マイティって たしか でんせつの<LINE>
 //ボンバ?[マンと よばれた ひとでしょ?<WAIT>
-Hmm, Mighty... Isn't he the<LINE>
-Legendary Bomberman?<WAIT>
+Hmm, Mighty... Isn't he the Legendary<LINE>
+Bomberman?<WAIT>
 
 //POINTER #4 @ $1BDAA0 - STRING #4 @ $1BD891
 
 #WRITE(GBA,$1BDAA0)
 //あぁ そのとおりさ やつは<LINE>
-//オレたち ジェッタ?[ズの �ｽンバ?[?d?d<WAIT>
-Yep. He's a member<LINE>
-of the Jetters...<WAIT>
+//オレたち ジェッタ?[ズの ・ンバ?[?d?d<WAIT>
+Yep. He's a member of the Jetters...<WAIT>
 
 //POINTER #5 @ $1BDAA4 - STRING #5 @ $1BD8B3
 
 #WRITE(GBA,$1BDAA4)
-//それに シ�ｽボンの<LINE>
+//それに シ・ボンの<LINE>
 //じまんの あにでもある<WAIT>
-White Bomber also<LINE>
-takes pride in him.<WAIT>
+White Bomber also takes pride in him.<WAIT>
 
 //POINTER #6 @ $1BDAA8 - STRING #6 @ $1BD8C9
 
@@ -78,8 +76,7 @@ story of the Legendary Bomberman!<WAIT>
 #WRITE(GBA,$1BDAAC)
 //わかった?d?d あれは<LINE>
 //シャウトがはいるまえの はなしだ?d?d?d?d<WAIT>
-Yes... I told you about<LINE>
-it before......<WAIT>
+Yes... I told you about it before......<WAIT>
 
 //POINTER #8 @ $1BDAB0 - STRING #8 @ $1BD905
 
@@ -114,8 +111,8 @@ You can go in his place, Mighty!<WAIT>
 #WRITE(GBA,$1BDAC0)
 //よし! ただちに<LINE>
 //ノンビリせいに むかってくれ!<WAIT>
-Go to the Nonbiri Star,<LINE>
-before it's too late!<WAIT>
+Go to the Nonbiri Star, before it's too<LINE>
+late!<WAIT>
 #ACTIVETBL(Table)
 
 //POINTER #13 @ $1BDAC4 - STRING #13 @ $1BD98A
