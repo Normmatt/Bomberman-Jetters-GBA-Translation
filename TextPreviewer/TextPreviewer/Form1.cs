@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -44,10 +41,14 @@ namespace TextPreviewer
 
             try
             {
-                return Convert.ToInt32(table[character.ToString()],16);
+                return Convert.ToInt32(table[character.ToString()], 16);
             }
             catch
             {
+                if (character == '\r' || character == '\n')
+                {
+                    return Convert.ToInt32(table[" "], 16);
+                }
                 //System.Diagnostics.Trace.WriteLine("Byte not found in table: " + j);
                 //tmp += "{" + j + "}";
                 MessageBox.Show("Byte not found in table: " + character, appName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -116,24 +117,36 @@ namespace TextPreviewer
             Rectangle tdRect = new Rectangle(0, 0, 206, 40);
             // Create rectangle for source image.
             Rectangle tsRect = new Rectangle(0, 0, 206, 40);
+            gfx.Clear(Color.Black);
             gfx.DrawImage(textboxImage, tdRect, tsRect, units);
 
             cur_x = 15;
             cur_y = 8;
-            text = text.Replace("<LINE>", "");
-            text = text.Replace("<END>", "");
+
+            //text = text.Replace("\n", Environment.NewLine);
+            //text = text.Replace(Environment.NewLine, "\n");
+            //text = text.Replace("<LINE>", "");
+            //text = text.Replace("<END>", "");
             for (int i = 0; i < text.Length; i++)
             {
-                if (text[i] == '\r' && text[i+1] == '\n') //New Line
+                if (text[i] == '\n') //New Line
+                {
+                    cur_x = 15;
+                    cur_y += 16;
+                    i++;
+
+                    if (i >= text.Length) return;
+                }
+                else if (text[i] == '\r' && text[i + 1] == '\n') //New Line
                 {
                     cur_x = 15;
                     cur_y += 16;
                     i += 2;
 
-                    if (i >= text.Length) return;
+                    if (i >= text.Length) continue;
                 }
 
-                if (cur_x < 191)
+                if (cur_x <= 191)
                 {
                     int cur_char = GetCharacter(text[i]);
                     int cur_width = GetCharacterWidth(cur_char);
@@ -147,7 +160,6 @@ namespace TextPreviewer
                     gfx.DrawImage(fontImage, destRect, srcRect, units);
 
                     cur_x += cur_width;
-
                 }
                 //else
                 //    MessageBox.Show("The line is too long.");
@@ -193,8 +205,7 @@ namespace TextPreviewer
             return _Buffer;
         }
 
-
-        bool loadTable(string filename)
+        private bool loadTable(string filename)
         {
             try
             {
@@ -247,6 +258,18 @@ namespace TextPreviewer
                 firstIndex = nextIndex+1;
                 numNewLines++;
             }*/
+
+            string text = textBox1.Text;
+            //text = text.Replace(Environment.NewLine, " ");
+            //text = text.Replace("\n", Environment.NewLine);
+            text = text.Replace("<LINE>", "");
+            text = text.Replace("<WAIT>", "");
+            text = text.Replace("<END>", "");
+            text = text.Replace("<NEWBOX>", "");
+
+            textBox1.TextChanged -= textBox1_TextChanged;
+            textBox1.Text = text;
+            textBox1.TextChanged += textBox1_TextChanged;
             DrawText();
         }
 
@@ -270,7 +293,7 @@ namespace TextPreviewer
             }
             DrawText();
         }
-        
+
         private void button2_Click(object sender, EventArgs e)
         {
             curLine += 2;
@@ -308,14 +331,17 @@ namespace TextPreviewer
                     if (i > text.Length) i = text.Length - 1;
                     int lastSpace = text.LastIndexOf(" ", i);
                     text = text.Remove(lastSpace, 1);
-                    textBox1.Text = text.Insert(lastSpace, Environment.NewLine);
-                    return;
+                    text = text.Insert(lastSpace, Environment.NewLine);
+                    cur_x = 15;
+                    cur_y += 16;
+                    //return;
                     //MessageBox.Show("The line is too long.");
                     //return;
                 }
             }
-        }
 
-        
+            textBox1.Text = text;
+            DrawText();
+        }
     }
 }
