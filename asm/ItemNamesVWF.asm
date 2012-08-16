@@ -14,6 +14,16 @@ here:
 	.endif
 .endmacro
 
+.org 0x08015DB4
+	.word 0x03000000
+	
+.org 0x08015CF0 ; routine that puts a character to the map
+.area 0x08015CF4 - 0x08015CF0
+	mov r0, #0
+	str r0, [r6]
+.pool
+.endarea
+
 .org 0x08015D16 ; routine that puts a character to the map
 .area 0x08015D2A - 0x08015D16
 	mov r3, #79
