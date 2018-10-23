@@ -15,6 +15,8 @@
 #JMP($550000)
 
 //GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+The Legendary Bomberman
+
 
 //BLOCK #000 NAME:		Block 1 - Opening Movie (POINTER)
 
@@ -22,95 +24,96 @@
 
 #ACTIVETBL(engTable)
 #WRITE(GBA,$1BDA90)
-//‚±‚¤‚¹‚ñ‚Ù‚¤‚© ‚È‚Â‚©‚µ‚¢‚È?d?d<LINE>
-//‚½‚µ‚© ‚±‚Ì‚¶‚¯‚ñ‚Ì‚ ‚Æ ƒ„ƒc‚Í?d?d?d?d<WAIT>
-This Beam Gun is important...<LINE>
+//ã“ã†ã›ã‚“ã»ã†ã‹ ãªã¤ã‹ã—ã„ãª?d?d<LINE>
+//ãŸã—ã‹ ã“ã®ã˜ã‘ã‚“ã®ã‚ã¨ ãƒ¤ãƒ„ã¯?d?d?d?d<WAIT>
+The ray gun is nostalgic...<LINE>
 It must be behind the incident......<WAIT>
 
 //POINTER #1 @ $1BDA94 - STRING #1 @ $1BD846
 
 #WRITE(GBA,$1BDA94)
-//ƒ}ƒCƒeƒB?d?d<WAIT>
-Mighty...<WAIT>
+//ãƒžã‚¤ãƒ†ã‚£?d?d<WAIT>
+Mighty?<WAIT>
 
 //POINTER #2 @ $1BDA98 - STRING #2 @ $1BD84D
 
 #WRITE(GBA,$1BDA98)
-//‚»‚¤‚©?d?d ƒVƒƒƒEƒg‚Í ƒ}ƒCƒeƒB‚É<LINE>
-//‚ ‚Á‚½‚±‚Æ‚ª ‚È‚©‚Á‚½‚È<WAIT>
-That's right... Mighty doesn't know<LINE>
-Shout yet.<WAIT>
+//ãã†ã‹?d?d ã‚·ãƒ£ã‚¦ãƒˆã¯ ãƒžã‚¤ãƒ†ã‚£ã«<LINE>
+//ã‚ã£ãŸã“ã¨ãŒ ãªã‹ã£ãŸãª<WAIT>
+Is that so?... Call out to Mighty<LINE>
+I don't know him.<WAIT>
 
 //POINTER #3 @ $1BDA9C - STRING #3 @ $1BD86C
 
 #WRITE(GBA,$1BDA9C)
-//ƒ}ƒCƒeƒB‚Á‚Ä ‚½‚µ‚© ‚Å‚ñ‚¹‚Â‚Ì<LINE>
-//ƒ{ƒ“ƒo?[ƒ}ƒ“‚Æ ‚æ‚Î‚ê‚½ ‚Ð‚Æ‚Å‚µ‚å?<WAIT>
-Hmm, Mighty... Isn't he the Legendary<LINE>
-Bomberman?<WAIT>
+//ãƒžã‚¤ãƒ†ã‚£ã£ã¦ ãŸã—ã‹ ã§ã‚“ã›ã¤ã®<LINE>
+//ãƒœãƒ³ãƒ?[ãƒžãƒ³ã¨ ã‚ˆã°ã‚ŒãŸ ã²ã¨ã§ã—ã‚‡?<WAIT>
+Hmm, Mighty... Isn't he a legend? <LINE>
+The one they call Bomberman?<WAIT>
 
 //POINTER #4 @ $1BDAA0 - STRING #4 @ $1BD891
 
 #WRITE(GBA,$1BDAA0)
-//‚ ‚Ÿ ‚»‚Ì‚Æ‚¨‚è‚³ ‚â‚Â‚Í<LINE>
-//ƒIƒŒ‚½‚¿ ƒWƒFƒbƒ^?[ƒY‚Ì Eƒ“ƒo?[?d?d<WAIT>
-Yep. He's a member of the Jetters...<WAIT>
+//ã‚ã ãã®ã¨ãŠã‚Šã• ã‚„ã¤ã¯<LINE>
+//ã‚ªãƒ¬ãŸã¡ ã‚¸ã‚§ãƒƒã‚¿?[ã‚ºã® ãƒ»ãƒ³ãƒ?[?d?d<WAIT>
+Yes, that's right.
+Yep. Is he a member of the Jetters?<WAIT>
 
 //POINTER #5 @ $1BDAA4 - STRING #5 @ $1BD8B3
 
 #WRITE(GBA,$1BDAA4)
-//‚»‚ê‚É ƒVEƒ{ƒ“‚Ì<LINE>
-//‚¶‚Ü‚ñ‚Ì ‚ ‚É‚Å‚à‚ ‚é<WAIT>
+//ãã‚Œã« ã‚·ãƒ»ãƒœãƒ³ã®<LINE>
+//ã˜ã¾ã‚“ã® ã‚ã«ã§ã‚‚ã‚ã‚‹<WAIT>
 White Bomber also takes pride in him.<WAIT>
 
 //POINTER #6 @ $1BDAA8 - STRING #6 @ $1BD8C9
 
 #WRITE(GBA,$1BDAA8)
-//‚Ë‚¥ ‚«‚©‚¹‚Ä‚æ!<LINE>
-//‚Å‚ñ‚¹‚Â‚Ì ƒ{ƒ“ƒo?[ƒ}ƒ“‚Ì ‚±‚Æ!<WAIT>
+//ã­ã‡ ãã‹ã›ã¦ã‚ˆ!<LINE>
+//ã§ã‚“ã›ã¤ã® ãƒœãƒ³ãƒ?[ãƒžãƒ³ã® ã“ã¨!<WAIT>
 Now, I remember! This is the<LINE>
 story of the Legendary Bomberman!<WAIT>
 
 //POINTER #7 @ $1BDAAC - STRING #7 @ $1BD8E5
 
 #WRITE(GBA,$1BDAAC)
-//‚í‚©‚Á‚½?d?d ‚ ‚ê‚Í<LINE>
-//ƒVƒƒƒEƒg‚ª‚Í‚¢‚é‚Ü‚¦‚Ì ‚Í‚È‚µ‚¾?d?d?d?d<WAIT>
+//ã‚ã‹ã£ãŸ?d?d ã‚ã‚Œã¯<LINE>
+//ã‚·ãƒ£ã‚¦ãƒˆãŒã¯ã„ã‚‹ã¾ãˆã® ã¯ãªã—ã ?d?d?d?d<WAIT>
 Yes... I told you about it before......<WAIT>
 
 //POINTER #8 @ $1BDAB0 - STRING #8 @ $1BD905
 
 #WRITE(GBA,$1BDAB0)
-//‚µ‚å‚­‚ñ! ƒmƒ“ƒrƒŠ‚¹‚¢‚É<LINE>
-//‚µ‚å‚¤‚½‚¢‚Ó‚ß‚¢‚Ì ‚¤‚¿‚ã‚¤‚¹‚ñ‚ª ‚ ‚ç‚í‚ê‚½!<WAIT>
+//ã—ã‚‡ãã‚“! ãƒŽãƒ³ãƒ“ãƒªã›ã„ã«<LINE>
+//ã—ã‚‡ã†ãŸã„ãµã‚ã„ã® ã†ã¡ã‚…ã†ã›ã‚“ãŒ ã‚ã‚‰ã‚ã‚ŒãŸ!<WAIT>
 Everyone! A platoon of spaceship's<LINE>
 has appeared at the Nonbiri Star!<WAIT>
 
 //POINTER #9 @ $1BDAB4 - STRING #9 @ $1BD92C
 
 #WRITE(GBA,$1BDAB4)
-//ƒmƒ“ƒrƒŠ‚¹‚¢‚É‚Í ƒIƒŒ‚ª‚¢‚­‚º!!<WAIT>
+//ãƒŽãƒ³ãƒ“ãƒªã›ã„ã«ã¯ ã‚ªãƒ¬ãŒã„ããœ!!<WAIT>
 I'll take care of them!!<WAIT>
 
 //POINTER #10 @ $1BDAB8 - STRING #10 @ $1BD93E
 
 #WRITE(GBA,$1BDAB8)
-//‚¾‚ß‚¶‚á ‚Ü‚¾ ƒPƒK‚Ì‚È‚¨‚Á‚Ä‚¢‚È‚¢<LINE>
-//ƒo?[ƒfƒB‚É‚Í ‚¢‚©‚¹‚ç‚ê‚ñ‚È<WAIT>
+//ã ã‚ã˜ã‚ƒ ã¾ã  ã‚±ã‚¬ã®ãªãŠã£ã¦ã„ãªã„<LINE>
+//ãƒ?[ãƒ‡ã‚£ã«ã¯ ã„ã‹ã›ã‚‰ã‚Œã‚“ãª<WAIT>
 No, you're still wounded, Birdie.<LINE>
 I can't let you go.<WAIT>
 
 //POINTER #11 @ $1BDABC - STRING #11 @ $1BD960
 
 #WRITE(GBA,$1BDABC)
-//‚¨‚§ ‚¢‚Á‚Ä‚­‚ê‚é‚© ƒ}ƒCƒeƒB!<WAIT>
+//ãŠã‰ ã„ã£ã¦ãã‚Œã‚‹ã‹ ãƒžã‚¤ãƒ†ã‚£!<WAIT>
 You can go in his place, Mighty!<WAIT>
 
 //POINTER #12 @ $1BDAC0 - STRING #12 @ $1BD971
 
 #WRITE(GBA,$1BDAC0)
-//‚æ‚µ! ‚½‚¾‚¿‚É<LINE>
-//ƒmƒ“ƒrƒŠ‚¹‚¢‚É ‚Þ‚©‚Á‚Ä‚­‚ê!<WAIT>
+//ã‚ˆã—! ãŸã ã¡ã«<LINE>
+//ãƒŽãƒ³ãƒ“ãƒªã›ã„ã« ã‚€ã‹ã£ã¦ãã‚Œ!<WAIT>
 Go to the Nonbiri Star, before it's too<LINE>
 late!<WAIT>
 #ACTIVETBL(Table)
@@ -118,51 +121,51 @@ late!<WAIT>
 //POINTER #13 @ $1BDAC4 - STRING #13 @ $1BD98A
 
 #WRITE(GBA,$1BDAC4)
-‚±‚¿‚çƒo[ƒfƒB[ ‚±‚¿‚çƒo[ƒfƒB[<WAIT>
+ã“ã¡ã‚‰ãƒãƒ¼ãƒ‡ã‚£ãƒ¼ ã“ã¡ã‚‰ãƒãƒ¼ãƒ‡ã‚£ãƒ¼<WAIT>
 
 //POINTER #14 @ $1BDAC8 - STRING #14 @ $1BD99C
 
 #WRITE(GBA,$1BDAC8)
-ƒ}ƒCƒeƒB ‚¨‚¤‚Æ‚¤‚µ‚ë!<LINE>
-‚Ç‚¤‚µ‚½‚ñ‚¾! ƒ}ƒCƒeƒB!!<WAIT>
+ãƒžã‚¤ãƒ†ã‚£ ãŠã†ã¨ã†ã—ã‚!<LINE>
+ã©ã†ã—ãŸã‚“ã ! ãƒžã‚¤ãƒ†ã‚£!!<WAIT>
 
 //POINTER #15 @ $1BDACC - STRING #15 @ $1BD9B8
 
 #WRITE(GBA,$1BDACC)
-‚ ‚ê‚¢‚ç‚¢ ƒ}ƒCƒeƒB‚©‚ç‚Ì ‚ê‚ñ‚ç‚­‚Í<LINE>
-‚Æ‚¾‚¦‚½ ‚Ü‚Ü‚¾dddd<WAIT>
+ã‚ã‚Œã„ã‚‰ã„ ãƒžã‚¤ãƒ†ã‚£ã‹ã‚‰ã® ã‚Œã‚“ã‚‰ãã¯<LINE>
+ã¨ã ãˆãŸ ã¾ã¾ã â€¥â€¥â€¥â€¥<WAIT>
 
 //POINTER #16 @ $1BDAD0 - STRING #16 @ $1BD9D9
 
 #WRITE(GBA,$1BDAD0)
-ƒqƒQƒqƒQ‚¾‚ñ‚ª ‚ ‚ç‚í‚ê‚½!<LINE>
-ƒWƒFƒbƒ^[ƒY ‚µ‚ã‚Â‚Ç‚¤‚¶‚á!!<WAIT>
+ãƒ’ã‚²ãƒ’ã‚²ã ã‚“ãŒ ã‚ã‚‰ã‚ã‚ŒãŸ!<LINE>
+ã‚¸ã‚§ãƒƒã‚¿ãƒ¼ã‚º ã—ã‚…ã¤ã©ã†ã˜ã‚ƒ!!<WAIT>
 
 //POINTER #17 @ $1BDAD4 - STRING #17 @ $1BD9F9
 
 #WRITE(GBA,$1BDAD4)
-‚¢‚­‚í‚æ! ‚Ý‚ñ‚È!!<WAIT>
+ã„ãã‚ã‚ˆ! ã¿ã‚“ãª!!<WAIT>
 
 //POINTER #18 @ $1BDAD8 - STRING #18 @ $1BDA05
 
 #WRITE(GBA,$1BDAD8)
-‚Å‚ñ‚¹‚Â‚Ì ƒ{ƒ“ƒo[ƒ}ƒ“‚Æ ‚æ‚Î‚ê‚½<LINE>
-ƒ}ƒCƒeƒB‚É ‚¨‚¢‚Â‚¯‚é‚©‚È? ƒVƒƒ{ƒ“<WAIT>
+ã§ã‚“ã›ã¤ã® ãƒœãƒ³ãƒãƒ¼ãƒžãƒ³ã¨ ã‚ˆã°ã‚ŒãŸ<LINE>
+ãƒžã‚¤ãƒ†ã‚£ã« ãŠã„ã¤ã‘ã‚‹ã‹ãª? ã‚·ãƒ­ãƒœãƒ³<WAIT>
 
 //POINTER #19 @ $1BDADC - STRING #19 @ $1BDA2C
 
 #WRITE(GBA,$1BDADC)
-ƒtƒtƒtdd ‚±‚ê‚Å ƒ{ƒ“ƒo[ƒ}ƒ“‚Ì ƒf[ƒ^‚Í<LINE>
-‚·‚×‚Ä ƒRƒs[‚Å‚«‚½dddd<WAIT>
+ãƒ•ãƒ•ãƒ•â€¥â€¥ ã“ã‚Œã§ ãƒœãƒ³ãƒãƒ¼ãƒžãƒ³ã® ãƒ‡ãƒ¼ã‚¿ã¯<LINE>
+ã™ã¹ã¦ ã‚³ãƒ”ãƒ¼ã§ããŸâ€¥â€¥â€¥â€¥<WAIT>
 
 //POINTER #20 @ $1BDAE0 - STRING #20 @ $1BDA52
 
 #WRITE(GBA,$1BDAE0)
-‚¢‚æ‚¢‚æ ‚³‚¢‚«‚å‚¤‚Ì ‚¹‚ñ‚µ<LINE>
-ƒ}ƒbƒNƒX‚ª ‚½‚ñ‚¶‚å‚¤‚·‚édd<WAIT>
+ã„ã‚ˆã„ã‚ˆ ã•ã„ãã‚‡ã†ã® ã›ã‚“ã—<LINE>
+ãƒžãƒƒã‚¯ã‚¹ãŒ ãŸã‚“ã˜ã‚‡ã†ã™ã‚‹â€¥â€¥<WAIT>
 
 //POINTER #21 @ $1BDAE4 - STRING #21 @ $1BDA72
 
 #WRITE(GBA,$1BDAE4)
-ƒtƒbƒtƒbƒtƒbdddd<LINE>
-ƒn[ƒbƒnƒbƒnƒbƒnƒbƒnƒbƒnƒbdddd<WAIT>
+ãƒ•ãƒƒãƒ•ãƒƒãƒ•ãƒƒâ€¥â€¥â€¥â€¥<LINE>
+ãƒãƒ¼ãƒƒãƒãƒƒãƒãƒƒãƒãƒƒãƒãƒƒãƒãƒƒâ€¥â€¥â€¥â€¥<WAIT>
